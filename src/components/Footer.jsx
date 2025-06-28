@@ -139,17 +139,12 @@ const Footer = () => {
                 <span className="text-sm">Speaking and workshop inquiries welcome</span>
               </a>
             </div>
-            <p className="text-neutral-300 text-sm mt-4">
-              James A. Brown<br />
-              Communications Professional<br />
-              Workplace Mapping Specialist
-            </p>
           </div>
         </div>
 
         <div className="border-t border-neutral-700 mt-8 pt-8 text-center">
           <p className="text-neutral-400 text-sm">
-            © 2024 Workplace Mapping by James A. Brown. Professional communication consulting and speaking services.
+            © 2024 Workplace Mapping. Professional communication consulting and speaking services.
           </p>
         </div>
       </div>

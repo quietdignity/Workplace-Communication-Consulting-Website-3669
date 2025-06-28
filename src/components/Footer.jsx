@@ -67,8 +67,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">Workplace Mapping</h3>
             <p className="text-neutral-300 leading-relaxed mb-4">
-              Systematic communication solutions for distributed workforces. 
-              Helping organizations reach every employee segment effectively.
+              Systematic communication solutions for distributed workforces. Helping organizations reach every employee segment effectively.
             </p>
           </div>
 
@@ -96,18 +95,10 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('process')}
-                  className="text-neutral-300 hover:text-primary-300 transition-colors duration-200"
-                >
-                  How We Work
-                </button>
-              </li>
-              <li>
-                <button
                   onClick={() => scrollToSection('services')}
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200"
                 >
-                  Services
+                  How We Work
                 </button>
               </li>
               <li>

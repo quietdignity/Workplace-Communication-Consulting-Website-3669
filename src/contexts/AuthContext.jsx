@@ -17,16 +17,23 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     // Check for existing session on mount
     const savedUser = localStorage.getItem('wm_user');
-    if (savedUser) {
+    const savedToken = localStorage.getItem('wm_token');
+    const savedUserId = localStorage.getItem('userId');
+    
+    if (savedUser && savedToken && savedUserId) {
       try {
         const userData = JSON.parse(savedUser);
         if (userData.sessionExpiry > Date.now()) {
           setUser(userData);
         } else {
           localStorage.removeItem('wm_user');
+          localStorage.removeItem('wm_token');
+          localStorage.removeItem('userId');
         }
       } catch (error) {
         localStorage.removeItem('wm_user');
+        localStorage.removeItem('wm_token');
+        localStorage.removeItem('userId');
       }
     }
     setLoading(false);
@@ -41,7 +48,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const jamesCredentials = {
-      email: 'james@workplacemapping.com', 
+      email: 'james@workplacemapping.com',
       password: 'James2024!',
       role: 'owner'
     };
@@ -60,6 +67,9 @@ export const AuthProvider = ({ children }) => {
 
       setUser(userData);
       localStorage.setItem('wm_user', JSON.stringify(userData));
+      localStorage.setItem('wm_token', 'mock-token-' + Date.now());
+      localStorage.setItem('userId', userData.id);
+      
       return { success: true };
     }
 
@@ -69,11 +79,13 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     localStorage.removeItem('wm_user');
+    localStorage.removeItem('wm_token');
+    localStorage.removeItem('userId');
   };
 
   const hasPermission = (permission) => {
     if (!user) return false;
-    
+
     const permissions = {
       owner: ['view_analytics', 'edit_content', 'manage_users', 'view_leads', 'export_data'],
       admin: ['view_analytics', 'edit_content', 'view_leads'],

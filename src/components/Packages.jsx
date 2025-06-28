@@ -10,7 +10,7 @@ const Packages = () => {
     {
       name: "Discovery + Analysis Package",
       description: "Complete understanding package - investigate what's happening and analyze what it means. Perfect for organizations that want comprehensive insights before making implementation decisions.",
-      services: ["DISCOVER Service", "ANALYZE Service"],
+      services: ["DISCOVER", "ANALYZE"],
       timeline: "4-5 months total",
       pricing: "Starting at $50,000",
       features: [
@@ -26,9 +26,9 @@ const Packages = () => {
     {
       name: "Design + Sustain Package",
       description: "Implementation package - build the system and ensure it thrives. Ideal for organizations ready to create and maintain new communication strategies.",
-      services: ["DESIGN Service", "SUSTAIN Service"],
+      services: ["DESIGN", "SUSTAIN"],
       timeline: "8-12 months total",
-      pricing: "Starting at $50,000",
+      pricing: "Starting at $90,000",
       features: [
         "Custom communication architecture for your workforce",
         "Multiple pathway strategies for different employee groups",
@@ -41,10 +41,10 @@ const Packages = () => {
     },
     {
       name: "Complete Workplace Mapping Package",
-      description: "Full transformation experience - all four services integrated for comprehensive communication strategy development and implementation.",
+      description: "Full transformation experience - all four phases integrated for comprehensive communication strategy development and implementation.",
       services: ["DISCOVER", "ANALYZE", "DESIGN", "SUSTAIN"],
       timeline: "11-15 months total",
-      pricing: "Starting at $50,000",
+      pricing: "Starting at $140,000",
       features: [
         "Complete communication investigation and analysis",
         "Custom system design for your distributed workforce",
@@ -68,17 +68,14 @@ const Packages = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-            Packages: Bundled Services for Common Client Journeys
+            Packages: Bundled for Common Client Journeys
           </h2>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-6">
-            Strategic combinations of our individual services designed for typical client scenarios. Ensure seamless integration across multiple services.
+            Strategic combinations of our individual phases designed for typical client scenarios. Ensure seamless integration across multiple phases.
           </p>
           <div className="bg-white p-6 rounded-lg border border-primary-200 max-w-2xl mx-auto">
-            <p className="text-lg text-primary-800 font-semibold mb-2">
-              Package pricing starts at $50,000
-            </p>
             <p className="text-primary-700">
-              Bundled services ensure smooth transitions between phases and coordinated delivery for maximum impact.
+              Bundled phases ensure smooth transitions between phases and coordinated delivery for maximum impact.
             </p>
           </div>
         </motion.div>

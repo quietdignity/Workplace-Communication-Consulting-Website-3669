@@ -27,3 +27,22 @@ body {
 section {
   scroll-margin-top: 80px;
 }
+
+/* HelpHub z-index override to ensure it appears above all other elements */
+.quest-help-hub,
+[data-quest-component="help-hub"],
+.quest-helpdesk {
+  z-index: 9999 !important;
+}
+
+/* Ensure HelpHub button appears above navigation and sidebar */
+.quest-help-hub-button,
+[data-quest-component="help-hub-button"] {
+  z-index: 9999 !important;
+}
+
+/* Ensure HelpHub modal appears above everything */
+.quest-help-hub-modal,
+[data-quest-component="help-hub-modal"] {
+  z-index: 10000 !important;
+}

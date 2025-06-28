@@ -13,8 +13,7 @@ const Navigation = () => {
   const navItems = [
     { name: 'Communication Reality', href: 'communication-reality' },
     { name: 'Solution', href: 'solution' },
-    { name: 'How We Work', href: 'process' },
-    { name: 'Services', href: 'services' },
+    { name: 'How We Work', href: 'services' },
     { name: 'Packages', href: 'packages' },
     { name: 'Background', href: 'background' },
     { name: 'FAQ', href: 'faq', isSpecial: true },

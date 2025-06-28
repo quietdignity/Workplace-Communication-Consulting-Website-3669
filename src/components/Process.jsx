@@ -10,73 +10,69 @@ const Process = () => {
     {
       number: "1",
       title: "DISCOVER",
-      subtitle: "Investigate Your Communication Reality",
+      subtitle: "Let's See What's Really Happening (Both Formally and Informally)",
       icon: FiSearch,
       color: "blue",
-      description: "We map how communication actually works in your organization right now - both your designed systems and the informal networks that have developed naturally.",
-      approach: "Survey + Investigation Method:",
-      details: [
-        "Employee surveys across all workforce segments to understand perceptions and preferences",
-        "Communication trace analysis - we follow 3-5 recent company messages through your organization",
-        "Employee interviews across office, hybrid, and field workers to understand real information flow",
-        "Documentation of formal communication tools and how they're actually being used vs. intended use",
-        "Identification of informal networks and how they supplement or compete with official channels"
-      ]
+      description: "We start by getting a complete picture of how communication actually works in your organization right now, including both your designed systems and the informal networks that have developed.",
+      features: [
+        "Survey Component: We'll survey employees across your workforce to understand their perceptions of how communication works, what they think about current channels, and what they believe they need.",
+        "Investigation Component: We'll follow 3-5 recent company communications through your organization to document exactly where they go, how they change, and who they actually reach. We'll also identify informal communication networks and understand how they supplement or compete with your formal channels.",
+        "Employee Conversations: We'll interview people across your workforce—office staff, field workers, managers, frontline employees—to understand both how they officially receive information and how they really get and share information day-to-day.",
+        "Reality Check: We'll catalog what communication tools and channels you have available and how they're actually being used, not just how they're supposed to be used."
+      ],
+      timeline: "Timeline depends on how complex your organization is"
     },
     {
-      number: "2", 
+      number: "2",
       title: "ANALYZE",
-      subtitle: "Make Sense of Your Communication Ecosystem",
+      subtitle: "Making Sense of Your Communication Ecosystem",
       icon: FiBarChart,
-      color: "green", 
-      description: "We analyze all the survey and investigation data to understand what it means for your communication strategy and where your opportunities are.",
-      approach: "Johari Window Analysis Framework:",
-      details: [
-        "Map communication patterns to show where formal strategy works and where informal networks fill gaps",
-        "Identify blind spots where neither formal nor informal systems are addressing communication needs",
-        "Assess which formal methods actually work for different employee groups and operational constraints",
-        "Find integration opportunities where productive informal networks can be supported", 
-        "Create priority framework for maximum impact improvements based on your reality and resources"
-      ]
+      color: "green",
+      description: "Now we take all that survey and investigation data and figure out what it means for your communication strategy.",
+      features: [
+        "Johari Window Analysis: We'll map your communication patterns to show you exactly where your formal strategy is working, where informal networks have filled gaps, and where blind spots exist that neither system is addressing.",
+        "Formal vs. Informal Network Assessment: We'll evaluate which formal communication methods actually work for different types of employees and how informal networks supplement or undermine those methods.",
+        "Finding Integration Opportunities: We'll identify where your informal communication networks are actually working well and should be supported, versus where they're creating problems that need to be addressed.",
+        "Priority Setting: We'll help you prioritize where to focus your efforts for maximum impact, considering both the formal systems you can design and the informal networks you need to work with."
+      ],
+      timeline: "We'll customize the timeline to fit your needs"
     },
     {
       number: "3",
-      title: "DESIGN", 
-      subtitle: "Build Systems That Work With Reality",
+      title: "DESIGN",
+      subtitle: "Building an Intentional Strategy That Works with Reality",
       icon: FiSettings,
       color: "purple",
-      description: "We create an intentional communication strategy designed for your actual workforce distribution and communication culture, not some theoretical ideal.",
-      approach: "Integrated Architecture Approach:",
-      details: [
-        "Design communication pathways that work for office workers, hybrid employees, and field teams",
-        "Create primary formal channels with secondary backup methods for each employee segment",
-        "Develop integration strategies that leverage productive informal networks",
-        "Build two-way feedback systems so distributed workforce insights reach leadership",
-        "Create detailed implementation roadmap that acknowledges both formal changes and cultural shifts"
-      ]
+      description: "This is where we create a communication system designed for your actual workforce and communication culture, not some theoretical ideal.",
+      features: [
+        "Integrated Communication Architecture: We'll design an approach that leverages both formal channels and existing informal networks to reach your office workers, your hybrid employees, and your field teams effectively.",
+        "Multiple Pathway Strategy: For each employee group, we'll create primary formal channels, secondary backup methods, and ways to integrate productive informal networks so nothing falls through the cracks.",
+        "Feedback Loop Design: We'll build systems that help information flow both ways effectively, ensuring that insights from your distributed workforce make it back to leadership through reliable channels.",
+        "Implementation Roadmap: You'll get a detailed plan that acknowledges both the formal changes you need to make and the informal communication culture you're working with."
+      ],
+      timeline: "Timeline varies based on how complex the solution needs to be"
     },
     {
       number: "4",
       title: "SUSTAIN",
-      subtitle: "Make Your Strategy Stick and Evolve", 
+      subtitle: "Making Sure Your Intentional Strategy Thrives",
       icon: FiRefreshCw,
       color: "orange",
-      description: "We ensure your intentional communication approach becomes part of your organizational culture and can adapt as your organization grows and changes.",
-      approach: "Internal Capability Building:",
-      details: [
-        "Identify and train internal champions who can maintain workplace mapping principles",
-        "Develop communication culture training so your team works effectively with distributed workforce patterns",
-        "Create ongoing optimization systems to regularly assess formal and informal network alignment",
-        "Build adaptation framework so you can respond constructively when informal networks point to gaps",
-        "Provide 90-day post-completion support during transition to internal management"
-      ]
+      description: "The best communication system in the world doesn't help if it reverts to purely informal networks after six months. We'll make sure your intentional approach becomes part of your organizational culture.",
+      features: [
+        "Internal Champion Development: We'll identify and train people in your organization who can keep workplace mapping going and help maintain the balance between formal and informal communication.",
+        "Communication Culture Training: Your team will understand not just what to do, but how to work with the communication patterns that naturally develop in distributed workforces.",
+        "Ongoing Optimization: We'll help you build systems to regularly assess whether your intentional communication strategy is staying aligned with the informal networks that will continue to evolve.",
+        "Adaptation Framework: We'll teach your team how to recognize when informal networks are pointing to gaps in formal communication and how to respond constructively."
+      ],
+      timeline: "We'll work with you as long as you need"
     }
   ];
 
   const getColorClasses = (color) => {
     const colors = {
       blue: "bg-blue-100 text-blue-600 border-blue-200",
-      green: "bg-green-100 text-green-600 border-green-200", 
+      green: "bg-green-100 text-green-600 border-green-200",
       purple: "bg-purple-100 text-purple-600 border-purple-200",
       orange: "bg-orange-100 text-orange-600 border-orange-200"
     };
@@ -94,16 +90,11 @@ const Process = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-            How We Work: The Four-Phase Method
+            How We Work With You
           </h2>
-          <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-6">
-            Our systematic approach to understanding and improving distributed workforce communication. Each phase is valuable on its own or as part of the complete process.
+          <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
+            A systematic approach to understanding and improving your distributed workforce communication
           </p>
-          <div className="bg-white p-6 rounded-lg border border-primary-200 max-w-2xl mx-auto">
-            <p className="text-primary-800 font-medium">
-              <strong>Remember:</strong> You can start with any phase that makes sense for your situation. We meet you where you are, not where we think you should be.
-            </p>
-          </div>
         </motion.div>
 
         <div className="space-y-16">
@@ -134,60 +125,28 @@ const Process = () => {
                   <p className="text-neutral-700 leading-relaxed mb-6">
                     {phase.description}
                   </p>
-                  <div className="bg-primary-50 p-4 rounded-lg border border-primary-200">
-                    <h4 className="font-semibold text-primary-800 mb-2">
-                      {phase.approach}
-                    </h4>
+                  <div className="flex items-center gap-2 text-neutral-600">
+                    <SafeIcon icon={FiClock} className="w-5 h-5" />
+                    <span className="text-sm">{phase.timeline}</span>
                   </div>
                 </div>
-                
+
                 <div className="lg:w-2/3">
                   <ul className="space-y-4">
-                    {phase.details.map((detail, detailIndex) => (
-                      <li key={detailIndex} className="flex items-start gap-3">
+                    {phase.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-neutral-700 leading-relaxed text-sm">
-                          {detail}
+                          {feature}
                         </p>
                       </li>
                     ))}
                   </ul>
-                  
-                  <div className="mt-6 flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-neutral-600">
-                      <SafeIcon icon={FiClock} className="w-5 h-5" />
-                      <span className="text-sm font-medium">
-                        Typical timeline: 2-5 months depending on complexity
-                      </span>
-                    </div>
-                    <div className="text-sm text-primary-600 font-medium">
-                      Standalone Product
-                    </div>
-                  </div>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-primary-600 p-8 rounded-xl text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              The Key Difference: Survey + Investigation
-            </h3>
-            <p className="text-lg leading-relaxed max-w-3xl mx-auto">
-              Most communication consultants rely only on surveys, which tell you what people <em>think</em> is happening. 
-              We also investigate what's <em>actually</em> happening by following real messages through your organization. 
-              The combination gives you both the subjective experience and objective reality of your communication ecosystem.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

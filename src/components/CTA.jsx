@@ -59,7 +59,7 @@ const CTA = () => {
             className="mt-8"
           >
             <p className="text-white/70 text-sm italic">
-              Pricing varies depending on your organization's size, complexity, and needs. Individual services start at $25,000, packages start at $50,000. We can work with different budget cycles and organizational needs.
+              Pricing varies depending on your organization's size, complexity, and needs. We can work with different budget cycles and organizational needs.
             </p>
           </motion.div>
         </motion.div>

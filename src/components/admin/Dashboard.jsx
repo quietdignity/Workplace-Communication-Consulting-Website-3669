@@ -3,45 +3,35 @@ import { motion } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../../common/SafeIcon';
 import { useAuth } from '../../contexts/AuthContext';
+import { useQuestAuth } from '../../contexts/QuestAuthContext';
 import Analytics from './Analytics';
 import ContentEditor from './ContentEditor';
 import LeadManager from './LeadManager';
 import UserManager from './UserManager';
+import FeedbackButton from '../FeedbackButton';
+import HelpHub from '../HelpHub';
 
 const { FiBarChart, FiEdit, FiUsers, FiMail, FiLogOut, FiSettings } = FiIcons;
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState('analytics');
   const { user, logout, hasPermission } = useAuth();
+  const { questLogout } = useQuestAuth();
 
   const tabs = [
-    {
-      id: 'analytics',
-      name: 'Analytics',
-      icon: FiBarChart,
-      permission: 'view_analytics'
-    },
-    {
-      id: 'content',
-      name: 'Content',
-      icon: FiEdit,
-      permission: 'edit_content'
-    },
-    {
-      id: 'leads',
-      name: 'Leads',
-      icon: FiMail,
-      permission: 'view_leads'
-    },
-    {
-      id: 'users',
-      name: 'Users',
-      icon: FiUsers,
-      permission: 'manage_users'
-    }
+    { id: 'analytics', name: 'Analytics', icon: FiBarChart, permission: 'view_analytics' },
+    { id: 'content', name: 'Content', icon: FiEdit, permission: 'edit_content' },
+    { id: 'leads', name: 'Leads', icon: FiMail, permission: 'view_leads' },
+    { id: 'users', name: 'Users', icon: FiUsers, permission: 'manage_users' }
   ];
 
   const availableTabs = tabs.filter(tab => hasPermission(tab.permission));
+
+  const handleLogout = () => {
+    logout();
+    questLogout();
+    window.location.href = '/';
+  };
 
   const renderContent = () => {
     switch (activeTab) {
@@ -61,7 +51,7 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen bg-neutral-50">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b border-neutral-200">
+      <header className="bg-white shadow-sm border-b border-neutral-200" style={{ zIndex: 40 }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
@@ -74,7 +64,7 @@ const Dashboard = () => {
                 Welcome, {user?.name}
               </div>
               <button
-                onClick={logout}
+                onClick={handleLogout}
                 className="flex items-center gap-2 text-neutral-600 hover:text-neutral-900 px-3 py-2 rounded-lg hover:bg-neutral-100 transition-colors"
               >
                 <SafeIcon icon={FiLogOut} className="w-4 h-4" />
@@ -88,7 +78,7 @@ const Dashboard = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex gap-8">
           {/* Sidebar */}
-          <div className="w-64 flex-shrink-0">
+          <div className="w-64 flex-shrink-0" style={{ zIndex: 30 }}>
             <nav className="bg-white rounded-lg shadow-sm p-4">
               <div className="space-y-2">
                 {availableTabs.map((tab) => (
@@ -122,6 +112,12 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+
+      {/* Feedback Button for Admin */}
+      <FeedbackButton />
+      
+      {/* Help Hub for Admin */}
+      <HelpHub />
     </div>
   );
 };

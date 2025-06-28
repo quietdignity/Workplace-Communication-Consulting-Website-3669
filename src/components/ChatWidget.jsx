@@ -1,9 +1,9 @@
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, {useState, useMemo} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const { FiMessageCircle, FiX, FiSend, FiMail, FiSearch } = FiIcons;
+const {FiMessageCircle, FiX, FiSend, FiMail, FiSearch} = FiIcons;
 
 const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,12 +15,12 @@ const ChatWidget = () => {
     {
       text: "What is the Communication Diagnostic?",
       keywords: ["diagnostic", "communication diagnostic", "rapid", "quick", "15 days", "8500", "assessment", "gaps"],
-      response: "The Communication Diagnostic is our new rapid assessment service designed to give you immediate clarity on your communication gaps without the full investigation process.\n\nPerfect if you suspect communication problems but need concrete evidence before investing in transformation. In just 15 business days for $8,500, we'll:\n\n• Analyze 1-2 recent communications to see where they succeed and fail\n• Profile how your office/hybrid/field segments currently communicate\n• Provide 3-5 quick wins you can implement immediately\n• Give you a diagnostic report with prioritized recommendations\n• Include a 30-minute strategy session\n• Credit the full amount toward a larger engagement if you proceed within 60 days\n\nIt's the fastest way to get concrete evidence about your distributed workforce communication challenges."
+      response: "The Communication Diagnostic is our rapid assessment service designed to give you immediate clarity on your communication gaps without the full investigation process.\n\nPerfect if you suspect communication problems but need concrete evidence before investing in transformation. In just 15 business days for $8,500, we'll:\n\n• Analyze 1 to 2 recent communications to see where they succeed and fail\n• Profile how your office/hybrid/field segments currently communicate\n• Provide 3 to 5 quick wins you can implement immediately\n• Give you a diagnostic report with prioritized recommendations\n• Include a 30-minute strategy session\n• Credit the full amount toward a larger engagement if you proceed within 60 days\n\nIt's the fastest way to get concrete evidence about your distributed workforce communication challenges."
     },
     {
       text: "What is Workplace Mapping?",
       keywords: ["workplace mapping", "definition", "what is", "methodology", "approach", "communication", "distributed workforce"],
-      response: "Workplace Mapping was developed by James A. Brown while working in local government. During that time James realized two things: \"no two workplaces operate the exact same way\" and \"the question isn't whether internal communications systems exist. The question is how much control, access and understanding you will have of how your employees communicate.\"\n\nWorkplace Mapping is our systematic approach to understanding how communication actually flows through your organization—not how it's supposed to work, but how it really works. We help organizations with distributed workforces build communication systems that reach everyone effectively. Our DISCOVER • ANALYZE • DESIGN • SUSTAIN methodology maps your communication reality and creates solutions that work with your actual workforce constraints."
+      response: "Workplace Mapping is our systematic approach to understanding how communication actually flows through your organization—not how it's supposed to work, but how it really works.\n\nWe help organizations with distributed workforces build communication systems that reach everyone effectively. Our DISCOVER • ANALYZE • DESIGN • SUSTAIN methodology maps your communication reality and creates solutions that work with your actual workforce constraints, whether you have office workers, field staff, retail locations, manufacturing plants, or other distributed teams."
     },
     {
       text: "Can we schedule a consultation?",
@@ -30,44 +30,44 @@ const ChatWidget = () => {
       linkUrl: "https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"
     },
     {
+      text: "What's the investment for your services?",
+      keywords: ["cost", "price", "pricing", "budget", "investment", "fees", "expensive"],
+      response: "We offer three clear options:\n\n• Communication Diagnostic: $8,500 (15 business days) - Perfect for getting immediate clarity on your communication gaps\n\n• Retainer & Workshops: Starting at $8,500/month (3, 6, or 12 month engagements) - Ongoing support and team development\n\n• Workplace Mapping Process: Investment varies by organizational size, complexity, and scope (12 to 18 months total) - Complete transformation experience\n\nMost organizations start with the Diagnostic to understand their specific challenges, then choose the best path forward based on their needs and budget."
+    },
+    {
       text: "What's the typical timeline?",
       keywords: ["timeline", "duration", "how long", "time", "schedule", "months", "weeks"],
-      response: "Timelines vary based on service package and the size and complexity of your operations. We typically work with 8 to 12 businesses a year, allowing us to provide focused, high-quality engagement with each client.\n\nService Timelines:\n• Communication Diagnostic: 15 business days\n• DISCOVER Phase: 2-4 months\n• ANALYZE Phase: 2-4 months\n• DESIGN Phase: 3-5 months\n• SUSTAIN Phase: 4-6 months\n\nPackage Timelines:\n• Discovery + Analysis Package: 4-5 months\n• Design + Sustain Package: 8-12 months\n• Complete Workplace Mapping Transformation: 11-15 months\n\nWe can move faster or slower depending on your organization's needs and operational constraints."
+      response: "Timelines vary based on service and your organization's size and complexity:\n\n• Communication Diagnostic: 15 business days\n• Retainer & Workshops: 3, 6, or 12 month engagements\n• Complete Workplace Mapping Process: 12 to 18 months total\n\nWe can move faster or slower depending on your organization's needs and operational constraints. We typically work with 8 to 12 businesses a year, allowing us to provide focused, high-quality engagement with each organization."
     },
     {
       text: "How do you handle distributed workforces?",
       keywords: ["distributed", "remote", "field workers", "multiple locations", "sites", "virtual", "on-site"],
-      response: "We prefer to make at least one site visit to a select number of your locations. This way we get a snapshot of what's really happening on the ground, but many parts of our service including employee interviews can be done virtually. This mix of on-site and virtual work depends on the size, scope, and operational limitations of your organization."
+      response: "We prefer to make at least one site visit to select locations to get a snapshot of what's really happening on the ground. However, many parts of our service including employee interviews can be done virtually.\n\nThis mix of on-site and virtual work depends on the size, scope, and operational limitations of your organization. We're experienced in working with teams across multiple locations, shifts, and work environments."
     },
     {
       text: "What makes this different from traditional consulting?",
       keywords: ["different", "traditional", "consulting", "unique", "approach", "survey", "investigation"],
-      response: "Most consultants survey employees about communication preferences and assume everyone works the same way. We actually investigate how messages travel through your organization by following real communications and mapping both formal and informal networks. We recognize that office workers, hybrid employees, and field workers have fundamentally different communication needs and constraints."
+      response: "Most consultants survey employees about communication preferences and assume everyone works the same way. We actually investigate how messages travel through your organization by following real communications and mapping both formal and informal networks.\n\nWe recognize that office workers, hybrid employees, and field workers have fundamentally different communication needs and constraints. Our approach combines surveys (what people think is happening) with investigation (what's actually happening)."
     },
     {
       text: "What size organizations do you work with?",
       keywords: ["size", "employees", "organization", "company", "250", "3000", "team size"],
-      response: "We typically work with organizations that have 250-3,000 employees, especially those with distributed workforces across multiple locations, shifts, or work environments. This includes retail chains, manufacturing companies, logistics operations, field services, and government agencies."
+      response: "We typically work with organizations that have 250 to 3,000 employees, especially those with distributed workforces across multiple locations, shifts, or work environments.\n\nThis includes retail chains, manufacturing companies, logistics operations, field services, government agencies, and any multi-location operation where different sites have developed different communication cultures."
     },
     {
       text: "What's included in a typical engagement?",
       keywords: ["engagement", "included", "deliverables", "what do we get", "services", "package"],
-      response: "Depending on your package, we'll conduct employee interviews across your workforce segments, trace actual company messages through your organization, analyze your communication infrastructure, and develop tailored solutions. You'll receive concrete deliverables like communication trace analysis, employee persona profiles, channel effectiveness scorecards, and implementation roadmaps—not just reports."
-    },
-    {
-      text: "How much does this cost?",
-      keywords: ["cost", "price", "pricing", "budget", "investment", "fees", "expensive"],
-      response: "Our services range from our rapid Communication Diagnostic at $8,500 to full transformation packages starting at $140,000.\n\nIndividual Services:\n• Communication Diagnostic: $8,500 (15 business days)\n• DISCOVER: Starting at $25,000\n• ANALYZE: Starting at $25,000\n• DESIGN: Starting at $40,000\n• SUSTAIN: Starting at $50,000\n\nPackages:\n• Discovery + Analysis: Starting at $50,000\n• Design + Sustain: Starting at $90,000\n• Complete Transformation: Starting at $140,000\n\nPricing varies depending on your organization's size, complexity, and needs. The best way to get accurate pricing is to schedule a consultation where we can discuss your specific situation."
+      response: "Depending on your service level, we'll conduct employee interviews across your workforce segments, trace actual company messages through your organization, analyze your communication infrastructure, and develop tailored solutions.\n\nYou'll receive concrete deliverables like communication trace analysis, employee persona profiles, channel effectiveness scorecards, and implementation roadmaps—not just reports. Everything is designed to help you take action and see real results."
     },
     {
       text: "Do you work with remote/hybrid teams?",
       keywords: ["remote", "hybrid", "work from home", "virtual teams", "distributed teams"],
-      response: "Yes, but our specialty is organizations with true workforce distribution challenges—not just remote office workers, but employees who work in warehouses, retail stores, manufacturing plants, field locations, or other environments where traditional digital communication doesn't work well."
+      response: "Yes, but our specialty is organizations with true workforce distribution challenges—not just remote office workers, but employees who work in warehouses, retail stores, manufacturing plants, field locations, or other environments where traditional digital communication doesn't work well.\n\nWe help organizations reach frontline workers, field teams, and operational staff who often get left out of standard communication strategies."
     },
     {
-      text: "What's the ROI on communication improvements?",
+      text: "What kind of results can we expect?",
       keywords: ["roi", "return", "investment", "benefits", "results", "impact"],
-      response: "Communication improvements typically impact productivity, safety compliance, employee retention, and operational efficiency. While specific ROI varies by organization, many clients see returns through reduced miscommunication costs, faster information flow, improved safety incident prevention, and decreased turnover in frontline positions."
+      response: "Communication improvements typically impact productivity, safety compliance, employee retention, and operational efficiency. While specific results vary by organization, many see improvements through:\n\n• Reduced miscommunication costs and delays\n• Faster information flow to all employee segments\n• Improved safety incident prevention\n• Decreased turnover in frontline positions\n• Better alignment between leadership and operational teams"
     }
   ];
 
@@ -76,9 +76,9 @@ const ChatWidget = () => {
     if (!searchQuery.trim()) {
       return allFAQs.slice(0, 4); // Show first 4 by default
     }
-
+    
     const query = searchQuery.toLowerCase();
-    return allFAQs.filter(faq =>
+    return allFAQs.filter(faq => 
       faq.text.toLowerCase().includes(query) ||
       faq.keywords.some(keyword => keyword.toLowerCase().includes(query)) ||
       faq.response.toLowerCase().includes(query)
@@ -137,7 +137,7 @@ const ChatWidget = () => {
                       <SafeIcon icon={FiMessageCircle} className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-white">Hi, I'm Josie!</h3>
+                      <h3 className="font-semibold text-white">Hi, I'm here to help!</h3>
                       <p className="text-xs text-white/80">Workplace Mapping Assistant</p>
                     </div>
                   </div>
@@ -156,7 +156,7 @@ const ChatWidget = () => {
                     <div className="mb-4">
                       <div className="bg-neutral-100 rounded-lg p-3 mb-3">
                         <p className="text-sm text-neutral-700">
-                          👋 Hi! I'm Josie, here to help with your distributed workforce communication challenges. Search or browse below!
+                          👋 Hi! I'm here to help with your distributed workforce communication challenges. Search or browse below!
                         </p>
                       </div>
                     </div>
@@ -282,7 +282,7 @@ const ChatWidget = () => {
                       <SafeIcon icon={FiMessageCircle} className="w-3 h-3 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-sm font-semibold text-white">Hi, I'm Josie!</h3>
+                      <h3 className="text-sm font-semibold text-white">Hi, I'm here to help!</h3>
                       <p className="text-xs text-white/80">Communication Assistant</p>
                     </div>
                   </div>
@@ -300,7 +300,7 @@ const ChatWidget = () => {
                   <>
                     <div className="bg-neutral-100 rounded p-2 mb-3">
                       <p className="text-xs text-neutral-700">
-                        👋 Hi! I'm Josie. Search or browse your questions below!
+                        👋 Hi! Search or browse your questions below!
                       </p>
                     </div>
 

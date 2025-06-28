@@ -1,9 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const { FiArrowDown } = FiIcons;
+const {FiArrowDown} = FiIcons;
 
 const Hero = () => {
   const scrollToSection = (sectionId) => {
@@ -11,7 +11,10 @@ const Hero = () => {
     if (element) {
       const navHeight = 80;
       const elementPosition = element.offsetTop - navHeight;
-      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -22,9 +25,9 @@ const Hero = () => {
         <img 
           src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751076059906-IMG_8527.jpg" 
           alt="Office workers collaborating on workplace communication strategy" 
-          className="w-full h-full object-cover opacity-10"
+          className="w-full h-full object-cover opacity-10" 
           loading="eager"
-          width="1200"
+          width="1200" 
           height="800"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-50/90 to-primary-50/90"></div>
@@ -42,7 +45,7 @@ const Hero = () => {
               What About Everyone Else?
             </span>
           </h1>
-
+          
           <p className="text-lg md:text-2xl text-neutral-700 mb-12 md:mb-16 max-w-4xl mx-auto leading-relaxed">
             When you have employees across different locations, shifts, and work environments, reaching everyone effectively becomes a real challenge.
           </p>
@@ -55,7 +58,7 @@ const Hero = () => {
             >
               Discover the Solution
             </button>
-
+            
             <a
               href="https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"
               target="_blank"
@@ -65,6 +68,31 @@ const Hero = () => {
             >
               Schedule a Conversation
             </a>
+          </div>
+
+          {/* Quick Access to DADS */}
+          <div className="mt-12 md:mt-16 w-full">
+            <div className="w-full text-center">
+              <p className="text-xl md:text-2xl font-semibold text-neutral-700 mb-6 mx-auto">
+                Or explore our methodology:
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-3">
+              {[
+                { name: "DISCOVER", color: "bg-blue-100 text-blue-700 hover:bg-blue-200" },
+                { name: "ANALYZE", color: "bg-green-100 text-green-700 hover:bg-green-200" },
+                { name: "DESIGN", color: "bg-purple-100 text-purple-700 hover:bg-purple-200" },
+                { name: "SUSTAIN", color: "bg-orange-100 text-orange-700 hover:bg-orange-200" }
+              ].map((phase) => (
+                <button
+                  key={phase.name}
+                  onClick={() => scrollToSection('services')}
+                  className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors duration-200 ${phase.color}`}
+                >
+                  {phase.name}
+                </button>
+              ))}
+            </div>
           </div>
         </motion.div>
 

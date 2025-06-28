@@ -1,9 +1,9 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const { FiMail, FiMic, FiHelpCircle } = FiIcons;
+const {FiMail, FiMic, FiHelpCircle} = FiIcons;
 
 const Footer = () => {
   const location = useLocation();
@@ -22,20 +22,23 @@ const Footer = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         return;
       }
-
+      
       // If on homepage, try to find FAQ section, otherwise go to FAQ page
       if (location.pathname === '/') {
         const faqElement = document.getElementById('faq');
         if (faqElement) {
           const navHeight = 80;
           const elementPosition = faqElement.offsetTop - navHeight;
-          window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+          window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+          });
         } else {
           window.location.href = '/faq';
         }
         return;
       }
-
+      
       // From other pages, go to FAQ page
       window.location.href = '/faq';
       return;
@@ -46,7 +49,10 @@ const Footer = () => {
     if (element) {
       const navHeight = 80;
       const elementPosition = element.offsetTop - navHeight;
-      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -57,6 +63,34 @@ const Footer = () => {
     } else {
       // Navigate to FAQ page
       window.location.href = '/faq';
+    }
+  };
+
+  // Method mapping - links each service to the most relevant section
+  const handleMethodClick = (methodType) => {
+    switch(methodType) {
+      case 'investigation':
+        // Links to DISCOVER section which covers investigation
+        scrollToSection('services');
+        break;
+      case 'analysis':
+        // Links to ANALYZE section
+        scrollToSection('services');
+        break;
+      case 'design':
+        // Links to DESIGN section
+        scrollToSection('services');
+        break;
+      case 'implementation':
+        // Links to services section which covers implementation
+        scrollToSection('services');
+        break;
+      case 'capability':
+        // Links to SUSTAIN section which covers internal capability building
+        scrollToSection('services');
+        break;
+      default:
+        scrollToSection('services');
     }
   };
 
@@ -74,11 +108,46 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Method</h4>
             <ul className="space-y-2 text-neutral-300">
-              <li>Communication Investigation</li>
-              <li>Workforce Analysis</li>
-              <li>System Design</li>
-              <li>Implementation Support</li>
-              <li>Internal Capability Building</li>
+              <li>
+                <button
+                  onClick={() => handleMethodClick('investigation')}
+                  className="text-neutral-300 hover:text-primary-300 transition-colors duration-200 text-left"
+                >
+                  Communication Investigation
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleMethodClick('analysis')}
+                  className="text-neutral-300 hover:text-primary-300 transition-colors duration-200 text-left"
+                >
+                  Workforce Analysis
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleMethodClick('design')}
+                  className="text-neutral-300 hover:text-primary-300 transition-colors duration-200 text-left"
+                >
+                  System Design
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleMethodClick('implementation')}
+                  className="text-neutral-300 hover:text-primary-300 transition-colors duration-200 text-left"
+                >
+                  Implementation Support
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleMethodClick('capability')}
+                  className="text-neutral-300 hover:text-primary-300 transition-colors duration-200 text-left"
+                >
+                  Internal Capability Building
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -103,10 +172,10 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('packages')}
+                  onClick={() => scrollToSection('background')}
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200"
                 >
-                  Packages
+                  Background
                 </button>
               </li>
               <li>

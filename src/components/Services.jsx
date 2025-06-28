@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const {FiSearch,FiBarChart,FiSettings,FiRefreshCw,FiArrowRight,FiCheck,FiClock,FiZap} = FiIcons;
+const {FiZap, FiUsers, FiTarget, FiArrowRight, FiCheck, FiClock} = FiIcons;
 
 const Services = () => {
   const services = [
@@ -14,129 +14,83 @@ const Services = () => {
       color: "yellow",
       description: "Perfect if you suspect communication problems but need concrete evidence before investing in transformation. This rapid diagnostic shows exactly where your messages succeed and fail across your distributed workforce.",
       whatWeDoFeatures: [
-        "Message Flow Analysis: We'll trace 1-2 of your recent communications through your organization to document exactly where they go, how they change, and who they actually reach.",
+        "Message Flow Analysis: We'll trace 1 to 2 of your recent communications through your organization to document exactly where they go, how they change, and who they actually reach.",
         "Workforce Communication Profile: Quick assessment of how your office, hybrid, and field segments currently access and process information.",
-        "Quick Wins Identification: We'll identify 3-5 immediate improvements you can implement right away to improve communication effectiveness.",
+        "Quick Wins Identification: We'll identify 3 to 5 immediate improvements you can implement right away to improve communication effectiveness.",
         "Rapid Assessment: Focused analysis designed to give you concrete evidence of communication gaps without the full investigation process."
       ],
       deliverables: [
-        "Message flow analysis of 1-2 recent communications",
-        "Workforce communication profile (office/hybrid/field segments)", 
-        "Quick wins action plan with 3-5 immediate improvements",
+        "Message flow analysis of 1 to 2 recent communications",
+        "Workforce communication profile (office/hybrid/field segments)",
+        "Quick wins action plan with 3 to 5 immediate improvements",
         "Communication diagnostic report with prioritized recommendations",
-        "30-minute strategy session and implementation guidance",
+        "30 minute strategy session and implementation guidance",
         "Credit toward full engagement if you proceed within 60 days"
       ],
       timeline: "15 business days",
-      pricing: "Investment: $8,500",
+      pricing: "$8,500",
       popular: false,
       isNew: true
     },
     {
-      name: "DISCOVER",
-      subtitle: "Investigate Your Communication Reality",
-      icon: FiSearch,
-      color: "blue",
-      description: "Perfect if you want to understand what's really happening with your communication before making any decisions. This standalone gives you complete clarity on both your formal systems and informal networks.",
-      whatWeDoFeatures: [
-        "Survey Component: We'll survey employees across your workforce to understand their perceptions of how communication works, what they think about current channels, and what they believe they need.",
-        "Investigation Component: We'll follow 3-5 recent company communications through your organization to document exactly where they go, how they change, and who they actually reach. We'll also identify informal communication networks and understand how they supplement or compete with your formal channels.",
-        "Employee Conversations: We'll interview people across your workforce—office staff, field workers, managers, frontline employees—to understand both how they officially receive information and how they really get and share information day-to-day.",
-        "Reality Check: We'll catalog what communication tools and channels you have available and how they're actually being used, not just how they're supposed to be used."
-      ],
-      deliverables: [
-        "Complete communication investigation and employee surveys",
-        "Formal vs. informal network documentation",
-        "Communication trace analysis of recent messages",
-        "Johari Window analysis showing blind spots and gaps",
-        "Strategic roadmap with prioritized improvement opportunities",
-        "Standalone deliverable - no commitment to additional phases"
-      ],
-      timeline: "2-4 months",
-      pricing: "Starting at $25,000",
-      popular: false
-    },
-    {
-      name: "ANALYZE",
-      subtitle: "Make Sense of Your Communication Ecosystem",
-      icon: FiBarChart,
+      name: "RETAINER & WORKSHOPS",
+      subtitle: "Ongoing Support and Team Development",
+      icon: FiUsers,
       color: "green",
-      description: "Great for organizations that have data about their communication challenges and want expert analysis to make sense of it all. We'll help you understand what your communication patterns mean and what to do about them.",
+      description: "Ideal for organizations that want continuous improvement and team development. Monthly retainer includes strategic guidance, team workshops, and ongoing optimization of your communication systems.",
       whatWeDoFeatures: [
-        "Johari Window Analysis: We'll map your communication patterns to show you exactly where your formal strategy is working, where informal networks have filled gaps, and where blind spots exist that neither system is addressing.",
-        "Formal vs. Informal Network Assessment: We'll evaluate which formal communication methods actually work for different types of employees and how informal networks supplement or undermine those methods.",
-        "Finding Integration Opportunities: We'll identify where your informal communication networks are actually working well and should be supported, versus where they're creating problems that need to be addressed.",
-        "Priority Setting: We'll help you prioritize where to focus your efforts for maximum impact, considering both the formal systems you can design and the informal networks you need to work with."
+        "Monthly Strategic Sessions: Regular check ins to assess communication effectiveness and address emerging challenges across your distributed workforce.",
+        "Team Workshops: Quarterly workshops for your leadership team on workplace mapping principles and distributed workforce communication best practices.",
+        "Communication Audits: Periodic reviews of new communications to ensure they're reaching all employee segments effectively.",
+        "Crisis Communication Support: Rapid response support for urgent communication challenges or organizational changes.",
+        "Internal Champion Development: Training your team to maintain and evolve communication strategies independently."
       ],
       deliverables: [
-        "Deep analysis of your existing communication data",
-        "Employee segment communication profiles",
-        "Integration opportunities between formal and informal networks",
-        "Priority framework for maximum impact improvements",
-        "Implementation readiness assessment",
-        "Can use your data or our DISCOVER results"
+        "Monthly 2 hour strategic consultation sessions",
+        "Quarterly team workshops (virtual or on site)",
+        "Communication effectiveness reviews and recommendations",
+        "Crisis communication support and rapid response",
+        "Access to workplace mapping tools and templates",
+        "Priority email and phone support"
       ],
-      timeline: "2-4 months",
-      pricing: "Starting at $25,000",
-      popular: false
+      timeline: "3, 6, or 12 month engagements",
+      pricing: "Starting at $8,500/month",
+      popular: true,
+      isNew: false
     },
     {
-      name: "DESIGN",
-      subtitle: "Build Systems That Work With Reality",
-      icon: FiSettings,
-      color: "purple",
-      description: "For organizations ready to build intentional communication systems that work with their reality. We'll create a comprehensive strategy that leverages both formal channels and productive informal networks.",
+      name: "WORKPLACE MAPPING PROCESS",
+      subtitle: "Complete Communication Transformation",
+      icon: FiTarget,
+      color: "blue",
+      description: "Our signature comprehensive transformation experience. The complete DISCOVER → ANALYZE → DESIGN → SUSTAIN methodology for organizations ready to completely transform their distributed workforce communication.",
       whatWeDoFeatures: [
-        "Integrated Communication Architecture: We'll design an approach that leverages both formal channels and existing informal networks to reach your office workers, your hybrid employees, and your field teams effectively.",
-        "Multiple Pathway Strategy: For each employee group, we'll create primary formal channels, secondary backup methods, and ways to integrate productive informal networks so nothing falls through the cracks.",
-        "Feedback Loop Design: We'll build systems that help information flow both ways effectively, ensuring that insights from your distributed workforce make it back to leadership through reliable channels.",
-        "Implementation Roadmap: You'll get a detailed plan that acknowledges both the formal changes you need to make and the informal communication culture you're working with."
+        "Complete Investigation: Full communication investigation including employee surveys, message tracing, and informal network mapping across all workforce segments.",
+        "Deep Analysis: Comprehensive analysis using our Johari Window framework to identify blind spots, hidden areas, and optimization opportunities.",
+        "Custom System Design: Design of integrated communication architecture that works with your formal channels and productive informal networks.",
+        "Implementation Support: Full implementation support including change management, internal champion training, and organizational culture transformation.",
+        "Sustainability Planning: Systems and processes to ensure your intentional communication strategy evolves with your organization."
       ],
       deliverables: [
-        "Custom communication architecture for your workforce",
+        "Complete communication ecosystem investigation and analysis",
+        "Custom communication architecture for your distributed workforce",
         "Multiple pathway strategies for different employee groups",
-        "Integration plans for formal and informal networks",
-        "Detailed implementation roadmap",
-        "Change management framework",
-        "Can build on previous phases or start with current assessment"
+        "Detailed implementation roadmap with change management support",
+        "Internal capability building and champion training",
+        "6 month post implementation optimization support"
       ],
-      timeline: "3-5 months",
-      pricing: "Starting at $40,000",
-      popular: true
-    },
-    {
-      name: "SUSTAIN",
-      subtitle: "Make Your Strategy Stick and Evolve",
-      icon: FiRefreshCw,
-      color: "orange",
-      description: "Ensure your communication improvements stick and evolve with your organization. We'll train your team to maintain the balance between intentional design and productive informal networks.",
-      whatWeDoFeatures: [
-        "Internal Champion Development: We'll identify and train people in your organization who can keep workplace mapping going and help maintain the balance between formal and informal communication.",
-        "Communication Culture Training: Your team will understand not just what to do, but how to work with the communication patterns that naturally develop in distributed workforces.",
-        "Ongoing Optimization: We'll help you build systems to regularly assess whether your intentional communication strategy is staying aligned with the informal networks that will continue to evolve.",
-        "Adaptation Framework: We'll teach your team how to recognize when informal networks are pointing to gaps in formal communication and how to respond constructively."
-      ],
-      deliverables: [
-        "Internal champion development and training",
-        "Communication culture transformation support",
-        "Ongoing optimization systems and processes",
-        "Adaptation framework for organizational changes",
-        "90-day post-implementation support",
-        "Works with any existing communication system or our DESIGN phase"
-      ],
-      timeline: "4-6 months",
-      pricing: "Starting at $50,000",
-      popular: false
+      timeline: "12 to 18 months total",
+      pricing: "Investment varies by organizational size, complexity, and scope",
+      popular: false,
+      isNew: false
     }
   ];
 
   const getColorClasses = (color) => {
     const colors = {
       yellow: "bg-yellow-100 text-yellow-600 border-yellow-200",
-      blue: "bg-blue-100 text-blue-600 border-blue-200",
       green: "bg-green-100 text-green-600 border-green-200",
-      purple: "bg-purple-100 text-purple-600 border-purple-200",
-      orange: "bg-orange-100 text-orange-600 border-orange-200"
+      blue: "bg-blue-100 text-blue-600 border-blue-200"
     };
     return colors[color] || colors.blue;
   };
@@ -152,14 +106,14 @@ const Services = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-            How We Work: Individual Services
+            Three Ways We Help Distributed Workforces
           </h2>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-6">
-            A systematic approach to understanding and improving your distributed workforce communication. Each delivers specific, substantial value on its own.
+            Choose the level of support that matches your organization's needs and timeline. Every option delivers specific, substantial value.
           </p>
           <div className="bg-white p-6 rounded-lg border border-primary-200 max-w-3xl mx-auto">
             <p className="text-primary-700">
-              Every phase is designed to deliver complete, actionable results whether used alone or combined with others. Best results come from starting with discover and working toward sustain.
+              Start with the Diagnostic to understand your challenges, then choose ongoing support or full transformation based on your needs.
             </p>
           </div>
         </motion.div>
@@ -211,25 +165,21 @@ const Services = () => {
                     {service.description}
                   </p>
 
-                  <div className="space-y-2 mb-6">
-                    <div className="flex items-center gap-2 text-neutral-600">
+                  <div className="space-y-2 mb-6 text-center">
+                    <div className="flex items-center justify-center gap-2 text-neutral-600">
                       <SafeIcon icon={FiClock} className="w-5 h-5" />
-                      <span className="text-sm font-medium">Timeline: {service.timeline}</span>
+                      <span className="text-sm font-medium">{service.timeline}</span>
                     </div>
-                    <p className="text-green-600 font-semibold">
+                    <p className={`font-semibold text-lg ${service.name === 'WORKPLACE MAPPING PROCESS' ? 'text-primary-600' : 'text-green-600'}`}>
                       {service.pricing}
                     </p>
                   </div>
 
                   <a
                     href="mailto:team@workplacemapping.com"
-                    className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                      service.popular || service.isNew
-                        ? 'bg-primary-600 hover:bg-primary-700 text-white'
-                        : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-900'
-                    }`}
+                    className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${service.popular || service.isNew ? 'bg-primary-600 hover:bg-primary-700 text-white' : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-900'}`}
                   >
-                    Get Started
+                    {service.name === 'WORKPLACE MAPPING PROCESS' ? 'Get Custom Quote' : 'Get Started'}
                     <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
                   </a>
                 </div>
@@ -278,10 +228,10 @@ const Services = () => {
         >
           <div className="bg-white p-8 rounded-xl border border-neutral-200 shadow-lg">
             <h3 className="text-xl font-bold text-neutral-900 mb-4">
-              Not Sure Which to Start With?
+              Need Help Choosing?
             </h3>
             <p className="text-neutral-600 mb-6">
-              We'll help you determine which makes the most sense for your situation, timeline, and budget. Every organization's communication challenges are different.
+              We'll help you determine the best approach for your situation, timeline, and budget. Every organization's communication challenges are different.
             </p>
             <a
               href="https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"

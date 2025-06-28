@@ -1,9 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const { FiUser, FiUsers, FiMic } = FiIcons;
+const {FiUser, FiUsers, FiMic} = FiIcons;
 
 const Background = () => {
   return (
@@ -59,10 +59,10 @@ const Background = () => {
                 </h4>
               </div>
               <p className="text-neutral-700 leading-relaxed mb-4">
-                James Brown is a communications professional with <strong>15+ years of experience figuring out how information really moves through complex, distributed organizations</strong>—and how to work with that reality rather than fight it.
+                James Brown is a communications professional with <strong>15+ years of experience figuring out how information really moves through complex, distributed organizations</strong> and how to work with that reality rather than fight it.
               </p>
               <p className="text-neutral-600 leading-relaxed">
-                His background includes award-winning investigative reporting, where he learned to trace how information flows through organizations and communities, and managing internal communications for 3,000+ employees spread across 20+ locations in government operations. Through these experiences, he developed a special set of skills that he used to develop Workplace Mapping—a new approach to understanding how organizations communicate.
+                His background includes award winning investigative reporting, where he learned to trace how information flows through organizations and communities, and managing internal communications for 3,000+ employees spread across 20+ locations in government operations. Through these experiences, he developed a special set of skills that he used to develop Workplace Mapping, a new approach to understanding how organizations communicate.
               </p>
             </div>
 
@@ -88,10 +88,10 @@ const Background = () => {
               </div>
               <div>
                 <blockquote className="text-lg leading-relaxed italic">
-                  "As an investigative journalist, I got good at understanding how information really moves through complex organizations—not just through official channels, but through the informal networks that people create to get the information they need. In government, I had to figure out how to design formal communication systems that worked with the communication culture that already existed across field offices, operational sites, and headquarters. Now I help organizations build intentional communication strategies that leverage the informal networks that will develop anyway, rather than pretending they don't exist."
+                  "As an investigative journalist, I got good at understanding how information really moves through complex organizations not just through official channels, but through the informal networks that people create to get the information they need. In government, I had to figure out how to design formal communication systems that worked with the communication culture that already existed across field offices, operational sites, and headquarters. Now I help organizations build intentional communication strategies that leverage the informal networks that will develop anyway, rather than pretending they don't exist."
                 </blockquote>
                 <cite className="text-white/80 text-sm mt-4 block">
-                  — James A. Brown
+                  James A. Brown
                 </cite>
               </div>
             </div>

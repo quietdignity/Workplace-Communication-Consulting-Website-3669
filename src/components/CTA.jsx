@@ -1,10 +1,10 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
-import { trackEmailClick, trackCalendarBooking } from '../utils/analytics';
+import {trackEmailClick, trackCalendarBooking} from '../utils/analytics';
 
-const { FiMail, FiCalendar, FiArrowRight } = FiIcons;
+const {FiMail, FiCalendar, FiArrowRight} = FiIcons;
 
 const CTA = () => {
   const handleEmailClick = () => {

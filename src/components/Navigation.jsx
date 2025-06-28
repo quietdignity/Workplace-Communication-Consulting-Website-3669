@@ -1,24 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {motion} from 'framer-motion';
+import {useLocation} from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
-import { trackNavigation, trackCalendarBooking } from '../utils/analytics';
+import {trackNavigation, trackCalendarBooking} from '../utils/analytics';
 
-const { FiMenu, FiX } = FiIcons;
+const {FiMenu, FiX} = FiIcons;
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   const navItems = [
-    { name: 'Communication Reality', href: 'communication-reality' },
-    { name: 'Solution', href: 'solution' },
-    { name: 'How We Work', href: 'services' },
-    { name: 'Packages', href: 'packages' },
-    { name: 'Background', href: 'background' },
-    { name: 'FAQ', href: 'faq', isSpecial: true },
-    { name: 'Contact', href: 'contact' }
+    {name: 'Communication Reality', href: 'communication-reality'},
+    {name: 'Solution', href: 'solution'},
+    {name: 'How We Work', href: 'services'},
+    {name: 'Background', href: 'background'},
+    {name: 'FAQ', href: 'faq', isSpecial: true},
+    {name: 'Contact', href: 'contact'}
   ];
 
   const scrollToSection = (sectionId) => {
@@ -32,14 +31,17 @@ const Navigation = () => {
         setIsOpen(false);
         return;
       }
-
+      
       // If we're on the homepage, try to find FAQ section first
       if (location.pathname === '/') {
         const faqElement = document.getElementById('faq');
         if (faqElement) {
           const navHeight = 80;
           const elementPosition = faqElement.offsetTop - navHeight;
-          window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+          window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+          });
           setIsOpen(false);
           return;
         } else {
@@ -48,7 +50,7 @@ const Navigation = () => {
           return;
         }
       }
-
+      
       // From any other page, go to FAQ page
       window.location.href = '/faq';
       return;
@@ -65,7 +67,10 @@ const Navigation = () => {
     if (element) {
       const navHeight = 80;
       const elementPosition = element.offsetTop - navHeight;
-      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
     setIsOpen(false);
   };
@@ -97,7 +102,10 @@ const Navigation = () => {
           if (element) {
             const navHeight = 80;
             const elementPosition = element.offsetTop - navHeight;
-            window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+            window.scrollTo({
+              top: elementPosition,
+              behavior: 'smooth'
+            });
           }
         }, 100);
       }
@@ -106,6 +114,7 @@ const Navigation = () => {
     // Check for hash on initial load
     handleHashChange();
     window.addEventListener('hashchange', handleHashChange);
+    
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, [location.pathname]);
 

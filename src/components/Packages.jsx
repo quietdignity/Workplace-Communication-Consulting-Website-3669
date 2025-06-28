@@ -3,10 +3,27 @@ import { motion } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const { FiPackage, FiArrowRight, FiCheck } = FiIcons;
+const { FiPackage, FiArrowRight, FiCheck, FiZap } = FiIcons;
 
 const Packages = () => {
   const packages = [
+    {
+      name: "Communication Diagnostic",
+      description: "Rapid assessment to identify communication gaps and get immediate clarity on what's working and what isn't across your distributed workforce.",
+      services: ["DIAGNOSTIC"],
+      timeline: "15 business days",
+      pricing: "Investment: $8,500",
+      features: [
+        "Message flow analysis of 1-2 recent communications",
+        "Workforce communication profile (office/hybrid/field segments)",
+        "Quick wins action plan with 3-5 immediate improvements", 
+        "Communication diagnostic report with prioritized recommendations",
+        "30-minute strategy session and implementation guidance",
+        "Credit toward full engagement if you proceed within 60 days"
+      ],
+      popular: false,
+      isNew: true
+    },
     {
       name: "Discovery + Analysis Package",
       description: "Complete understanding package - investigate what's happening and analyze what it means. Perfect for organizations that want comprehensive insights before making implementation decisions.",
@@ -80,7 +97,7 @@ const Packages = () => {
           </div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8">
           {packages.map((pkg, index) => (
             <motion.div
               key={index}
@@ -91,20 +108,26 @@ const Packages = () => {
               className={`bg-white rounded-xl p-8 border-2 transition-all duration-300 hover:shadow-xl ${
                 pkg.popular
                   ? 'border-primary-500 shadow-lg'
+                  : pkg.isNew
+                  ? 'border-yellow-500 shadow-lg'
                   : 'border-neutral-200 hover:border-primary-300'
               }`}
             >
-              {pkg.popular && (
+              {(pkg.popular || pkg.isNew) && (
                 <div className="text-center mb-4">
-                  <span className="bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                    Most Popular
+                  <span className={`${
+                    pkg.popular
+                      ? 'bg-primary-600 text-white'
+                      : 'bg-yellow-500 text-white'
+                  } px-4 py-1 rounded-full text-sm font-semibold`}>
+                    {pkg.popular ? 'Most Popular' : 'NEW'}
                   </span>
                 </div>
               )}
 
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <SafeIcon icon={FiPackage} className="w-8 h-8 text-primary-600" />
+                  <SafeIcon icon={pkg.isNew ? FiZap : FiPackage} className="w-8 h-8 text-primary-600" />
                 </div>
                 <h4 className="text-2xl font-bold text-neutral-900 mb-4">
                   {pkg.name}
@@ -116,7 +139,11 @@ const Packages = () => {
                   {pkg.services.map((service, serviceIndex) => (
                     <span
                       key={serviceIndex}
-                      className="bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-xs font-medium"
+                      className={`${
+                        pkg.isNew
+                          ? 'bg-yellow-50 text-yellow-700'
+                          : 'bg-primary-50 text-primary-700'
+                      } px-3 py-1 rounded-full text-xs font-medium`}
                     >
                       {service}
                     </span>
@@ -142,7 +169,7 @@ const Packages = () => {
               <a
                 href="mailto:team@workplacemapping.com"
                 className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                  pkg.popular
+                  pkg.popular || pkg.isNew
                     ? 'bg-primary-600 hover:bg-primary-700 text-white'
                     : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-900'
                 }`}

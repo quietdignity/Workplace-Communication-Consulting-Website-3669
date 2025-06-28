@@ -1,12 +1,37 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const { FiSearch, FiBarChart, FiSettings, FiRefreshCw, FiArrowRight, FiCheck, FiClock } = FiIcons;
+const {FiSearch,FiBarChart,FiSettings,FiRefreshCw,FiArrowRight,FiCheck,FiClock,FiZap} = FiIcons;
 
 const Services = () => {
   const services = [
+    {
+      name: "COMMUNICATION DIAGNOSTIC",
+      subtitle: "Get Immediate Clarity on Your Communication Gaps",
+      icon: FiZap,
+      color: "yellow",
+      description: "Perfect if you suspect communication problems but need concrete evidence before investing in transformation. This rapid diagnostic shows exactly where your messages succeed and fail across your distributed workforce.",
+      whatWeDoFeatures: [
+        "Message Flow Analysis: We'll trace 1-2 of your recent communications through your organization to document exactly where they go, how they change, and who they actually reach.",
+        "Workforce Communication Profile: Quick assessment of how your office, hybrid, and field segments currently access and process information.",
+        "Quick Wins Identification: We'll identify 3-5 immediate improvements you can implement right away to improve communication effectiveness.",
+        "Rapid Assessment: Focused analysis designed to give you concrete evidence of communication gaps without the full investigation process."
+      ],
+      deliverables: [
+        "Message flow analysis of 1-2 recent communications",
+        "Workforce communication profile (office/hybrid/field segments)", 
+        "Quick wins action plan with 3-5 immediate improvements",
+        "Communication diagnostic report with prioritized recommendations",
+        "30-minute strategy session and implementation guidance",
+        "Credit toward full engagement if you proceed within 60 days"
+      ],
+      timeline: "15 business days",
+      pricing: "Investment: $8,500",
+      popular: false,
+      isNew: true
+    },
     {
       name: "DISCOVER",
       subtitle: "Investigate Your Communication Reality",
@@ -107,6 +132,7 @@ const Services = () => {
 
   const getColorClasses = (color) => {
     const colors = {
+      yellow: "bg-yellow-100 text-yellow-600 border-yellow-200",
       blue: "bg-blue-100 text-blue-600 border-blue-200",
       green: "bg-green-100 text-green-600 border-green-200",
       purple: "bg-purple-100 text-purple-600 border-purple-200",
@@ -157,14 +183,22 @@ const Services = () => {
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-neutral-900">
-                        Phase {index + 1}: {service.name}
+                        {service.name}
                       </h3>
                       <p className="text-neutral-600 font-medium">
                         {service.subtitle}
                       </p>
                     </div>
                   </div>
-                  
+
+                  {service.isNew && (
+                    <div className="mb-4">
+                      <span className="bg-yellow-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        NEW
+                      </span>
+                    </div>
+                  )}
+
                   {service.popular && (
                     <div className="mb-4">
                       <span className="bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -172,11 +206,11 @@ const Services = () => {
                       </span>
                     </div>
                   )}
-                  
+
                   <p className="text-neutral-700 leading-relaxed mb-6">
                     {service.description}
                   </p>
-                  
+
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center gap-2 text-neutral-600">
                       <SafeIcon icon={FiClock} className="w-5 h-5" />
@@ -190,7 +224,7 @@ const Services = () => {
                   <a
                     href="mailto:team@workplacemapping.com"
                     className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                      service.popular
+                      service.popular || service.isNew
                         ? 'bg-primary-600 hover:bg-primary-700 text-white'
                         : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-900'
                     }`}

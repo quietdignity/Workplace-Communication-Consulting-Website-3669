@@ -13,6 +13,11 @@ const ChatWidget = () => {
 
   const allFAQs = [
     {
+      text: "What is the Communication Diagnostic?",
+      keywords: ["diagnostic", "communication diagnostic", "rapid", "quick", "15 days", "8500", "assessment", "gaps"],
+      response: "The Communication Diagnostic is our new rapid assessment service designed to give you immediate clarity on your communication gaps without the full investigation process.\n\nPerfect if you suspect communication problems but need concrete evidence before investing in transformation. In just 15 business days for $8,500, we'll:\n\n• Analyze 1-2 recent communications to see where they succeed and fail\n• Profile how your office/hybrid/field segments currently communicate\n• Provide 3-5 quick wins you can implement immediately\n• Give you a diagnostic report with prioritized recommendations\n• Include a 30-minute strategy session\n• Credit the full amount toward a larger engagement if you proceed within 60 days\n\nIt's the fastest way to get concrete evidence about your distributed workforce communication challenges."
+    },
+    {
       text: "What is Workplace Mapping?",
       keywords: ["workplace mapping", "definition", "what is", "methodology", "approach", "communication", "distributed workforce"],
       response: "Workplace Mapping was developed by James A. Brown while working in local government. During that time James realized two things: \"no two workplaces operate the exact same way\" and \"the question isn't whether internal communications systems exist. The question is how much control, access and understanding you will have of how your employees communicate.\"\n\nWorkplace Mapping is our systematic approach to understanding how communication actually flows through your organization—not how it's supposed to work, but how it really works. We help organizations with distributed workforces build communication systems that reach everyone effectively. Our DISCOVER • ANALYZE • DESIGN • SUSTAIN methodology maps your communication reality and creates solutions that work with your actual workforce constraints."
@@ -27,7 +32,7 @@ const ChatWidget = () => {
     {
       text: "What's the typical timeline?",
       keywords: ["timeline", "duration", "how long", "time", "schedule", "months", "weeks"],
-      response: "Timelines vary based on service package and the size and complexity of your operations. We typically work with 8 to 12 businesses a year, allowing us to provide focused, high-quality engagement with each client.\n\nIndividual Phase Timelines:\n• DISCOVER Phase: 2-4 months\n• ANALYZE Phase: 2-4 months\n• DESIGN Phase: 3-5 months\n• SUSTAIN Phase: 4-6 months\n\nPackage Timelines:\n• Discovery + Analysis Package: 4-5 months\n• Design + Sustain Package: 8-12 months\n• Complete Workplace Mapping Transformation: 11-15 months\n\nWe can move faster or slower depending on your organization's needs and operational constraints."
+      response: "Timelines vary based on service package and the size and complexity of your operations. We typically work with 8 to 12 businesses a year, allowing us to provide focused, high-quality engagement with each client.\n\nService Timelines:\n• Communication Diagnostic: 15 business days\n• DISCOVER Phase: 2-4 months\n• ANALYZE Phase: 2-4 months\n• DESIGN Phase: 3-5 months\n• SUSTAIN Phase: 4-6 months\n\nPackage Timelines:\n• Discovery + Analysis Package: 4-5 months\n• Design + Sustain Package: 8-12 months\n• Complete Workplace Mapping Transformation: 11-15 months\n\nWe can move faster or slower depending on your organization's needs and operational constraints."
     },
     {
       text: "How do you handle distributed workforces?",
@@ -52,7 +57,7 @@ const ChatWidget = () => {
     {
       text: "How much does this cost?",
       keywords: ["cost", "price", "pricing", "budget", "investment", "fees", "expensive"],
-      response: "Pricing starts at $25,000 and varies depending on your organization's size, how complex your workforce distribution is, and which parts of the process make sense for you. We can work with different budget cycles and organizational needs. The best way to get accurate pricing is to schedule a consultation where we can discuss your specific situation."
+      response: "Our services range from our rapid Communication Diagnostic at $8,500 to full transformation packages starting at $140,000.\n\nIndividual Services:\n• Communication Diagnostic: $8,500 (15 business days)\n• DISCOVER: Starting at $25,000\n• ANALYZE: Starting at $25,000\n• DESIGN: Starting at $40,000\n• SUSTAIN: Starting at $50,000\n\nPackages:\n• Discovery + Analysis: Starting at $50,000\n• Design + Sustain: Starting at $90,000\n• Complete Transformation: Starting at $140,000\n\nPricing varies depending on your organization's size, complexity, and needs. The best way to get accurate pricing is to schedule a consultation where we can discuss your specific situation."
     },
     {
       text: "Do you work with remote/hybrid teams?",
@@ -73,7 +78,7 @@ const ChatWidget = () => {
     }
 
     const query = searchQuery.toLowerCase();
-    return allFAQs.filter(faq => 
+    return allFAQs.filter(faq =>
       faq.text.toLowerCase().includes(query) ||
       faq.keywords.some(keyword => keyword.toLowerCase().includes(query)) ||
       faq.response.toLowerCase().includes(query)

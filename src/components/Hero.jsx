@@ -11,10 +11,7 @@ const Hero = () => {
     if (element) {
       const navHeight = 80;
       const elementPosition = element.offsetTop - navHeight;
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
     }
   };
 
@@ -24,8 +21,11 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751076059906-IMG_8527.jpg" 
-          alt="Office workers collaborating" 
-          className="w-full h-full object-cover opacity-10" 
+          alt="Office workers collaborating on workplace communication strategy" 
+          className="w-full h-full object-cover opacity-10"
+          loading="eager"
+          width="1200"
+          height="800"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-50/90 to-primary-50/90"></div>
       </div>
@@ -42,23 +42,26 @@ const Hero = () => {
               What About Everyone Else?
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-2xl text-neutral-700 mb-12 md:mb-16 max-w-4xl mx-auto leading-relaxed">
             When you have employees across different locations, shifts, and work environments, reaching everyone effectively becomes a real challenge.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center max-w-2xl mx-auto">
             <button
               onClick={() => scrollToSection('communication-reality')}
               className="w-full sm:w-auto bg-primary-600 hover:bg-primary-700 text-white px-8 md:px-10 py-4 md:py-5 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl"
+              aria-label="Learn about workplace mapping solutions"
             >
               Discover the Solution
             </button>
+
             <a
               href="https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-8 md:px-10 py-4 md:py-5 rounded-lg text-lg font-semibold transition-all duration-200 text-center"
+              aria-label="Schedule a consultation for workplace mapping"
             >
               Schedule a Conversation
             </a>
@@ -74,6 +77,7 @@ const Hero = () => {
           <button
             onClick={() => scrollToSection('communication-reality')}
             className="cursor-pointer hover:text-primary-600 transition-colors"
+            aria-label="Scroll to learn more about communication challenges"
           >
             <SafeIcon icon={FiArrowDown} className="w-6 h-6 text-neutral-500 mx-auto animate-bounce" />
           </button>

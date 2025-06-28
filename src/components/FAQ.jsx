@@ -95,7 +95,7 @@ const FAQ = () => {
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <motion.div
+            <motion.article
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -106,21 +106,24 @@ const FAQ = () => {
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-neutral-100 transition-colors duration-200"
+                aria-expanded={openIndex === index}
+                aria-controls={`faq-answer-${index}`}
               >
                 <h3 className="text-lg font-semibold text-neutral-900 pr-4">
                   {faq.question}
                 </h3>
-                <SafeIcon
-                  icon={FiChevronDown}
+                <SafeIcon 
+                  icon={FiChevronDown} 
                   className={`w-5 h-5 text-neutral-500 transition-transform duration-200 flex-shrink-0 ${
                     openIndex === index ? 'transform rotate-180' : ''
-                  }`}
+                  }`} 
                 />
               </button>
 
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.div
+                    id={`faq-answer-${index}`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
@@ -148,7 +151,7 @@ const FAQ = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
 

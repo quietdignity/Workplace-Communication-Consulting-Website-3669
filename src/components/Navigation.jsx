@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import { trackNavigation, trackCalendarBooking } from '../utils/analytics';
 
 const { FiMenu, FiX } = FiIcons;
 
@@ -21,6 +22,8 @@ const Navigation = () => {
   ];
 
   const scrollToSection = (sectionId) => {
+    trackNavigation(sectionId);
+
     // Special handling for FAQ
     if (sectionId === 'faq') {
       // If we're already on the FAQ page, scroll to top
@@ -68,6 +71,7 @@ const Navigation = () => {
   };
 
   const goHome = () => {
+    trackNavigation('home');
     if (location.pathname !== '/') {
       window.location.href = '/';
     } else {
@@ -77,6 +81,10 @@ const Navigation = () => {
       }
     }
     setIsOpen(false);
+  };
+
+  const handleScheduleClick = () => {
+    trackCalendarBooking('navigation');
   };
 
   // Handle hash changes (for direct URL access)
@@ -97,7 +105,6 @@ const Navigation = () => {
 
     // Check for hash on initial load
     handleHashChange();
-
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, [location.pathname]);
@@ -131,6 +138,7 @@ const Navigation = () => {
                 href="https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleScheduleClick}
                 className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
                 Schedule Call
@@ -173,7 +181,10 @@ const Navigation = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary-600 hover:bg-primary-700 text-white block px-3 py-2 rounded-md text-base font-medium mt-4"
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                handleScheduleClick();
+                setIsOpen(false);
+              }}
             >
               Schedule Call
             </a>

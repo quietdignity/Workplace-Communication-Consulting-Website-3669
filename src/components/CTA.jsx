@@ -32,14 +32,14 @@ const CTA = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <a 
-              href="mailto:james@themodernfire.com"
+            <a
+              href="mailto:team@workplacemapping.com"
               className="bg-white hover:bg-neutral-100 text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl flex items-center gap-3"
             >
               <SafeIcon icon={FiMail} className="w-5 h-5" />
-              james@themodernfire.com
+              team@workplacemapping.com
             </a>
-            <a 
+            <a
               href="https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"
               target="_blank"
               rel="noopener noreferrer"
@@ -59,7 +59,7 @@ const CTA = () => {
             className="mt-8"
           >
             <p className="text-white/70 text-sm italic">
-              Pricing varies depending on your organization's size, how complex your workforce distribution is, and which parts of the process make sense for you. We can work with different budget cycles and organizational needs.
+              Pricing varies depending on your organization's size, complexity, and needs. Individual services start at $25,000, packages start at $50,000. We can work with different budget cycles and organizational needs.
             </p>
           </motion.div>
         </motion.div>

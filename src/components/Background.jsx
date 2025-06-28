@@ -17,7 +17,7 @@ const Background = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-            A Little About the Background
+            About Our Founder
           </h2>
         </motion.div>
 
@@ -30,9 +30,9 @@ const Background = () => {
             className="text-center"
           >
             <img 
-              src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751077031511-james-brown-profile.JPG"
-              alt="James A. Brown - Communications Professional"
-              className="w-80 h-80 object-cover rounded-xl shadow-lg mx-auto mb-6"
+              src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751077031511-james-brown-profile.JPG" 
+              alt="James A. Brown - Communications Professional" 
+              className="w-80 h-80 object-cover rounded-xl shadow-lg mx-auto mb-6" 
             />
             <h3 className="text-2xl font-bold text-neutral-900 mb-2">
               James A. Brown
@@ -58,11 +58,13 @@ const Background = () => {
                   15+ Years Experience
                 </h4>
               </div>
+              
               <p className="text-neutral-700 leading-relaxed mb-4">
-                I'm a communications professional with <strong>15+ years of experience figuring out how information really moves through complex, distributed organizations</strong>—and how to work with that reality rather than fight it.
+                James Brown is a communications professional with <strong>15+ years of experience figuring out how information really moves through complex, distributed organizations</strong>—and how to work with that reality rather than fight it.
               </p>
+              
               <p className="text-neutral-600 leading-relaxed">
-                My background includes award-winning investigative reporting, where I learned to trace how information flows through organizations and communities, and managing internal communications for 3,000+ employees spread across 20+ locations in government operations.
+                His background includes award-winning investigative reporting, where he learned to trace how information flows through organizations and communities, and managing internal communications for 3,000+ employees spread across 20+ locations in government operations. Through these experiences, he developed a special set of skills that he used to develop Workplace Mapping—a new approach to understanding how organizations communicate.
               </p>
             </div>
 

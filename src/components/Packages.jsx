@@ -9,48 +9,56 @@ const Packages = () => {
   const packages = [
     {
       name: "Discovery + Analysis Package",
-      price: "Starting at $55,000",
-      description: "Perfect if you want to understand both your formal communication effectiveness and your informal network reality before making any big decisions. You'll get the complete picture of your communication ecosystem and a clear roadmap of opportunities.",
+      description: "Complete understanding package - investigate what's happening and analyze what it means. Perfect for organizations that want comprehensive insights before making implementation decisions.",
+      services: ["DISCOVER Service", "ANALYZE Service"],
+      timeline: "4-5 months total",
+      pricing: "Starting at $50,000",
       features: [
-        "Complete Discovery phase with surveys and investigation",
-        "Comprehensive Analysis using Johari Window framework",
-        "Communication trace documentation",
-        "Formal vs. informal network assessment",
-        "Strategic roadmap with prioritized opportunities"
+        "Complete communication investigation and employee surveys",
+        "Communication trace analysis of recent messages",
+        "Deep analysis of your communication ecosystem",
+        "Employee segment communication profiles",
+        "Strategic roadmap with prioritized opportunities",
+        "Implementation readiness assessment"
       ],
       popular: false
     },
     {
       name: "Design + Sustain Package",
-      price: "Starting at $110,000",
-      description: "Great for organizations that already understand they need a more intentional approach and want to build both the formal system and the cultural capability to maintain the balance between designed and emergent communication.",
+      description: "Implementation package - build the system and ensure it thrives. Ideal for organizations ready to create and maintain new communication strategies.",
+      services: ["DESIGN Service", "SUSTAIN Service"],
+      timeline: "8-12 months total",
+      pricing: "Starting at $50,000",
       features: [
-        "Integrated communication architecture design",
-        "Multiple pathway strategy for different employee groups",
+        "Custom communication architecture for your workforce",
+        "Multiple pathway strategies for different employee groups",
+        "Detailed implementation roadmap",
         "Internal champion development and training",
-        "Communication culture training",
-        "Ongoing optimization framework"
+        "Communication culture transformation support",
+        "90-day post-implementation support"
       ],
       popular: true
     },
     {
-      name: "Complete Workplace Mapping Process",
-      price: "Starting at $165,000",
-      description: "The full experience—we'll work with you from initial assessment of your communication ecosystem all the way through to having your team running an effective, intentional distributed workforce communication strategy that works productively with informal networks.",
+      name: "Complete Workplace Mapping Package",
+      description: "Full transformation experience - all four services integrated for comprehensive communication strategy development and implementation.",
+      services: ["DISCOVER", "ANALYZE", "DESIGN", "SUSTAIN"],
+      timeline: "11-15 months total",
+      pricing: "Starting at $50,000",
       features: [
-        "All four phases included",
-        "Complete assessment and analysis",
-        "Custom system design that works with reality",
-        "Internal capability building",
-        "Long-term implementation support",
-        "Adaptation framework for ongoing evolution"
+        "Complete communication investigation and analysis",
+        "Custom system design for your distributed workforce",
+        "Full implementation with change management",
+        "Internal capability building and training",
+        "Ongoing optimization systems",
+        "Extended support during transition"
       ],
       popular: false
     }
   ];
 
   return (
-    <section id="packages" className="py-20 bg-white">
+    <section id="packages" className="py-20 bg-gradient-to-br from-primary-50 to-neutral-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -60,29 +68,37 @@ const Packages = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-            Ways to Work Together
+            Packages: Bundled Services for Common Client Journeys
           </h2>
-          <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-            Choose the engagement level that fits your organization's needs and communication reality
+          <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-6">
+            Strategic combinations of our individual services designed for typical client scenarios. Ensure seamless integration across multiple services.
           </p>
+          <div className="bg-white p-6 rounded-lg border border-primary-200 max-w-2xl mx-auto">
+            <p className="text-lg text-primary-800 font-semibold mb-2">
+              Package pricing starts at $50,000
+            </p>
+            <p className="text-primary-700">
+              Bundled services ensure smooth transitions between phases and coordinated delivery for maximum impact.
+            </p>
+          </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {packages.map((pkg, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`relative bg-white rounded-xl p-8 border-2 transition-all duration-300 hover:shadow-xl ${
-                pkg.popular 
-                  ? 'border-primary-500 shadow-lg' 
+              className={`bg-white rounded-xl p-8 border-2 transition-all duration-300 hover:shadow-xl ${
+                pkg.popular
+                  ? 'border-primary-500 shadow-lg'
                   : 'border-neutral-200 hover:border-primary-300'
               }`}
             >
               {pkg.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <div className="text-center mb-4">
                   <span className="bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                     Most Popular
                   </span>
@@ -93,14 +109,27 @@ const Packages = () => {
                 <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <SafeIcon icon={FiPackage} className="w-8 h-8 text-primary-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-neutral-900 mb-2">
+                <h4 className="text-2xl font-bold text-neutral-900 mb-4">
                   {pkg.name}
-                </h3>
-                <p className="text-3xl font-bold text-primary-600 mb-4">
-                  {pkg.price}
-                </p>
-                <p className="text-neutral-600 leading-relaxed text-sm">
+                </h4>
+                <p className="text-neutral-600 leading-relaxed text-sm mb-4">
                   {pkg.description}
+                </p>
+                <div className="flex flex-wrap justify-center gap-2 mb-4">
+                  {pkg.services.map((service, serviceIndex) => (
+                    <span
+                      key={serviceIndex}
+                      className="bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-xs font-medium"
+                    >
+                      {service}
+                    </span>
+                  ))}
+                </div>
+                <p className="text-primary-600 font-semibold text-sm mb-2">
+                  {pkg.timeline}
+                </p>
+                <p className="text-green-600 font-medium text-sm">
+                  {pkg.pricing}
                 </p>
               </div>
 
@@ -114,10 +143,10 @@ const Packages = () => {
               </ul>
 
               <a
-                href="mailto:james@themodernfire.com"
+                href="mailto:team@workplacemapping.com"
                 className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                  pkg.popular 
-                    ? 'bg-primary-600 hover:bg-primary-700 text-white' 
+                  pkg.popular
+                    ? 'bg-primary-600 hover:bg-primary-700 text-white'
                     : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-900'
                 }`}
               >
@@ -135,9 +164,23 @@ const Packages = () => {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <p className="text-neutral-600 italic">
-            Pricing varies depending on your organization's size, how complex your workforce distribution is, and which parts of the process make sense for you. We can work with different budget cycles and organizational needs.
-          </p>
+          <div className="bg-white p-8 rounded-xl border border-neutral-200">
+            <h3 className="text-xl font-bold text-neutral-900 mb-4">
+              Need a Custom Combination?
+            </h3>
+            <p className="text-neutral-600 mb-6">
+              While these packages cover the most common client scenarios, we can create custom combinations based on your specific needs, timeline, and budget constraints.
+            </p>
+            <a
+              href="https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+            >
+              Discuss Custom Options
+              <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

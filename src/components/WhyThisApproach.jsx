@@ -55,11 +55,12 @@ const WhyThisApproach = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="order-2 lg:order-1 text-center"
           >
             <img 
               src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751076098468-IMG_2775.jpg" 
-              alt="Professional working in field environment"
-              className="w-full h-80 object-cover rounded-xl shadow-lg"
+              alt="Professional working in field environment" 
+              className="w-full h-80 object-cover rounded-xl shadow-lg" 
             />
           </motion.div>
           
@@ -68,7 +69,7 @@ const WhyThisApproach = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-8 order-1 lg:order-2"
           >
             {reasons.slice(0, 3).map((reason, index) => (
               <motion.div
@@ -97,7 +98,7 @@ const WhyThisApproach = () => {
           </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {reasons.slice(3).map((reason, index) => (
             <motion.div
               key={index + 3}

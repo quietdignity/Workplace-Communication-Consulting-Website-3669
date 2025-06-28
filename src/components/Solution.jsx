@@ -23,7 +23,7 @@ const Solution = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-8 max-w-4xl mx-auto">
             How We Can Help: Workplace Mapping for Distributed Teams
           </h2>
           
@@ -57,7 +57,7 @@ const Solution = () => {
             </p>
             
             <div className="bg-white p-6 rounded-xl shadow-lg border border-primary-100">
-              <h3 className="text-xl font-bold text-primary-700 mb-4">
+              <h3 className="text-xl font-bold text-primary-700 mb-4 text-center">
                 What makes our approach different:
               </h3>
               <p className="text-neutral-700 leading-relaxed">
@@ -75,11 +75,12 @@ const Solution = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center"
           >
             <img 
               src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751076090963-IMG_8521.jpg" 
-              alt="Team meeting in office environment"
-              className="w-full h-80 object-cover rounded-xl shadow-lg"
+              alt="Team meeting in office environment" 
+              className="w-full h-80 object-cover rounded-xl shadow-lg" 
             />
           </motion.div>
         </div>

@@ -72,7 +72,7 @@ const Results = () => {
                   {deliverable.category}
                 </h3>
               </div>
-              
+
               <ul className="space-y-3">
                 {deliverable.items.map((item, itemIndex) => (
                   <li key={itemIndex} className="flex items-start gap-3">

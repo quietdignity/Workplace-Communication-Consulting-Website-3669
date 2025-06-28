@@ -30,11 +30,11 @@ const CTA = () => {
               Want to talk through your distributed workforce communication challenges and understand what's really happening in your organization? Let's schedule a conversation about whether workplace mapping makes sense for your situation.
             </p>
           </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 max-w-3xl mx-auto">
             <a
               href="mailto:team@workplacemapping.com"
-              className="bg-white hover:bg-neutral-100 text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl flex items-center gap-3"
+              className="w-full sm:w-auto bg-white hover:bg-neutral-100 text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl flex items-center gap-3 justify-center"
             >
               <SafeIcon icon={FiMail} className="w-5 h-5" />
               team@workplacemapping.com
@@ -43,14 +43,14 @@ const CTA = () => {
               href="https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 flex items-center gap-3"
+              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 flex items-center gap-3 justify-center"
             >
               <SafeIcon icon={FiCalendar} className="w-5 h-5" />
               Schedule a Conversation
               <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
             </a>
           </div>
-
+          
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

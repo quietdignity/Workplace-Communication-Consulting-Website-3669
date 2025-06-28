@@ -57,7 +57,7 @@ const JohariWindow = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6 max-w-5xl mx-auto">
             The Johari Window: Understanding Your Communication Reality
           </h2>
           <p className="text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
@@ -98,17 +98,19 @@ const JohariWindow = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-primary-50 p-8 rounded-xl border border-primary-200"
+          className="max-w-5xl mx-auto"
         >
-          <h3 className="text-2xl font-bold text-primary-900 mb-4">
-            Why this framework matters for your organization:
-          </h3>
-          <p className="text-lg text-primary-800 leading-relaxed mb-4">
-            Most leaders assume their communication primarily operates in the "Open Area," but distributed workforces often have extensive "Blind Spot" and "Hidden Area" activity that creates disconnection and missed opportunities.
-          </p>
-          <p className="text-lg text-primary-800 leading-relaxed">
-            Our job is to map these areas using both surveys and investigation, then help you expand that "Open Area" so information flows both ways, effectively, through both formal and informal channels. Understanding your informal communication networks isn't about controlling them—it's about designing formal systems that work with them productively rather than fighting against them.
-          </p>
+          <div className="bg-primary-50 p-8 rounded-xl border border-primary-200">
+            <h3 className="text-2xl font-bold text-primary-900 mb-4 text-center">
+              Why this framework matters for your organization:
+            </h3>
+            <p className="text-lg text-primary-800 leading-relaxed mb-4">
+              Most leaders assume their communication primarily operates in the "Open Area," but distributed workforces often have extensive "Blind Spot" and "Hidden Area" activity that creates disconnection and missed opportunities.
+            </p>
+            <p className="text-lg text-primary-800 leading-relaxed">
+              Our job is to map these areas using both surveys and investigation, then help you expand that "Open Area" so information flows both ways, effectively, through both formal and informal channels. Understanding your informal communication networks isn't about controlling them—it's about designing formal systems that work with them productively rather than fighting against them.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>

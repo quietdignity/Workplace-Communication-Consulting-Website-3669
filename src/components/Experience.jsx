@@ -89,7 +89,7 @@ const Experience = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="text-center"
+          className="text-center max-w-4xl mx-auto"
         >
           <div className="bg-primary-50 p-6 rounded-xl border border-primary-200">
             <p className="text-primary-800 font-medium">

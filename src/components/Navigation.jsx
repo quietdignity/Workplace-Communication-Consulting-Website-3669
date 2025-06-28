@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const { FiMenu, FiX, FiMail } = FiIcons;
+const { FiMenu, FiX } = FiIcons;
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -97,6 +97,7 @@ const Navigation = () => {
 
     // Check for hash on initial load
     handleHashChange();
+
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, [location.pathname]);
@@ -130,9 +131,8 @@ const Navigation = () => {
                 href="https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center gap-2"
+                className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
-                <SafeIcon icon={FiMail} className="w-4 h-4" />
                 Schedule Call
               </a>
             </div>
@@ -172,10 +172,9 @@ const Navigation = () => {
               href="https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary-600 hover:bg-primary-700 text-white block px-3 py-2 rounded-md text-base font-medium mt-4 flex items-center gap-2"
+              className="bg-primary-600 hover:bg-primary-700 text-white block px-3 py-2 rounded-md text-base font-medium mt-4"
               onClick={() => setIsOpen(false)}
             >
-              <SafeIcon icon={FiMail} className="w-4 h-4" />
               Schedule Call
             </a>
           </div>

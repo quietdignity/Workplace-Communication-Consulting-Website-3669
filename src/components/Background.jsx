@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const {FiUser, FiUsers, FiMic} = FiIcons;
+const {FiUser,FiUsers,FiMic} = FiIcons;
 
 const Background = () => {
   return (
@@ -21,25 +21,26 @@ const Background = () => {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center"
           >
-            <img 
-              src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751077031511-james-brown-profile.JPG" 
-              alt="James A. Brown - Communications Professional" 
-              className="w-80 h-80 object-cover rounded-xl shadow-lg mx-auto mb-6" 
-            />
-            <h3 className="text-2xl font-bold text-neutral-900 mb-2">
-              James A. Brown
-            </h3>
-            <p className="text-lg text-primary-600 font-medium">
-              Communications Professional & Workplace Mapping Specialist
-            </p>
+            <div className="text-center lg:text-left">
+              <img
+                src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751077031511-james-brown-profile.JPG"
+                alt="James A. Brown - Communications Professional"
+                className="w-80 h-80 object-cover rounded-xl shadow-lg mx-auto lg:mx-0 mb-6"
+              />
+              <h3 className="text-2xl font-bold text-neutral-900 mb-2">
+                James A. Brown
+              </h3>
+              <p className="text-lg text-primary-600 font-medium">
+                Communications Professional & Workplace Mapping Specialist
+              </p>
+            </div>
           </motion.div>
 
           <motion.div
@@ -66,8 +67,8 @@ const Background = () => {
               </p>
             </div>
 
-            <div className="bg-primary-50 p-6 rounded-xl border border-primary-200 text-center">
-              <p className="text-primary-800 font-medium">
+            <div className="bg-primary-50 p-6 rounded-xl border border-primary-200">
+              <p className="text-primary-800 font-medium text-center">
                 In both contexts, I learned that understanding informal communication networks is just as important as designing formal ones.
               </p>
             </div>
@@ -87,10 +88,10 @@ const Background = () => {
                 <SafeIcon icon={FiUsers} className="w-8 h-8 text-white" />
               </div>
               <div>
-                <blockquote className="text-lg leading-relaxed italic">
+                <blockquote className="text-lg leading-relaxed italic mb-4">
                   "As an investigative journalist, I got good at understanding how information really moves through complex organizations not just through official channels, but through the informal networks that people create to get the information they need. In government, I had to figure out how to design formal communication systems that worked with the communication culture that already existed across field offices, operational sites, and headquarters. Now I help organizations build intentional communication strategies that leverage the informal networks that will develop anyway, rather than pretending they don't exist."
                 </blockquote>
-                <cite className="text-white/80 text-sm mt-4 block">
+                <cite className="text-white/80 text-sm">
                   James A. Brown
                 </cite>
               </div>
@@ -102,9 +103,9 @@ const Background = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
+            className="max-w-4xl mx-auto"
           >
-            <div className="bg-primary-50 p-8 rounded-xl border border-primary-200">
+            <div className="bg-primary-50 p-8 rounded-xl border border-primary-200 text-center">
               <p className="text-lg text-primary-800 font-medium">
                 The philosophy behind this work is simple: every organization will have an internal communication strategy whether you design one or not. We help you make yours intentional and effective.
               </p>

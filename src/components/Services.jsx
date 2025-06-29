@@ -12,7 +12,7 @@ const Services=()=> {
       subtitle: "Rapid Assessment to Identify Critical Gaps",
       icon: FiZap,
       color: "yellow",
-      description: "Get immediate clarity on your distributed workforce communication gaps in just 15 business days. Perfect for leadership teams that need concrete evidence and strategic direction before committing to larger investments.",
+      description: "Get immediate clarity on your distributed workforce communication gaps. Perfect for leadership teams that need concrete evidence and strategic direction before committing to larger investments.",
       deliverables: [
         "Communication Reality Report showing exactly where messages fail and succeed",
         "Risk Assessment Matrix identifying your highest impact communication vulnerabilities",
@@ -21,8 +21,8 @@ const Services=()=> {
         "90 minute strategy session to review findings and discuss implementation",
         "Full credit toward fractional advisory if you proceed within 60 days"
       ],
-      timeline: "15 business days",
-      pricing: "$8,500",
+      timeline: "Rapid turnaround",
+      pricing: "Investment varies by organizational size and complexity",
       popular: false,
       isNew: true,
       ctaText: "Get Started"
@@ -138,13 +138,13 @@ const Services=()=> {
                 <p className="text-neutral-600 font-medium text-sm mb-4">
                   {service.subtitle}
                 </p>
-                
+
                 {/* Pricing */}
                 <div className="mb-4">
                   <div className={`font-bold mb-1 ${
-                    service.name === 'INTERNAL COMMUNICATIONS REBUILD' ? 'text-primary-600 text-lg' : 
-                    service.name === 'FRACTIONAL INTERNAL COMMUNICATIONS STRATEGIST' ? 'text-green-600 text-lg' : 
-                    'text-green-600 text-2xl'
+                    service.name === 'INTERNAL COMMUNICATIONS REBUILD' ? 'text-primary-600 text-lg' :
+                    service.name === 'FRACTIONAL INTERNAL COMMUNICATIONS STRATEGIST' ? 'text-green-600 text-lg' :
+                    'text-green-600 text-lg'
                   }`}>
                     {service.pricing}
                   </div>

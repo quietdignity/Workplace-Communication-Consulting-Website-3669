@@ -29,9 +29,9 @@ const Background = () => {
             viewport={{ once: true }}
           >
             <div className="text-center lg:text-left">
-              <img
-                src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751077031511-james-brown-profile.JPG"
-                alt="James A. Brown, Communications Professional and Fractional Internal Communications Strategist"
+              <img 
+                src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751077031511-james-brown-profile.JPG" 
+                alt="James A. Brown, Communications Professional and Fractional Internal Communications Strategist" 
                 className="w-80 h-80 object-cover rounded-xl shadow-lg mx-auto lg:mx-0 mb-6"
               />
               <h3 className="text-2xl font-bold text-neutral-900 mb-2">
@@ -69,44 +69,6 @@ const Background = () => {
 
             <div className="bg-primary-50 p-6 rounded-xl border border-primary-200">
               <p className="text-primary-800 font-medium text-center">
-                In both contexts, I learned that understanding informal communication networks is just as important as designing formal ones.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-
-        <div className="space-y-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-primary-600 p-8 rounded-xl text-white"
-          >
-            <div className="flex items-start gap-6">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                <SafeIcon icon={FiUsers} className="w-8 h-8 text-white" />
-              </div>
-              <div>
-                <blockquote className="text-lg leading-relaxed italic mb-4">
-                  "As an investigative journalist, I got good at understanding how information really moves through complex organizations not just through official channels, but through the informal networks that people create to get the information they need. In government, I had to figure out how to design formal communication systems that worked with the communication culture that already existed across field offices, operational sites, and headquarters. Now I help organizations build intentional communication strategies that leverage the informal networks that will develop anyway, rather than pretending they don't exist."
-                </blockquote>
-                <cite className="text-white/80 text-sm">
-                  James A. Brown
-                </cite>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="bg-primary-50 p-8 rounded-xl border border-primary-200 text-center">
-              <p className="text-lg text-primary-800 font-medium">
                 The philosophy behind this work is simple: every organization will have an internal communication strategy whether you design one or not. We help you make yours intentional and effective through fractional expertise and systematic workplace mapping.
               </p>
             </div>

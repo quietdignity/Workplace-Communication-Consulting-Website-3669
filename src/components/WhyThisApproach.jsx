@@ -14,11 +14,6 @@ const WhyThisApproach=()=> {
     },
     {
       icon: FiSearch,
-      title: "We Survey AND Investigate", 
-      description: "Most consultants ask people what they think about communication,which tells you about perceptions. We also follow actual messages through your organization to see what really happens. The combination gives you both the subjective experience and the objective reality of your communication ecosystem."
-    },
-    {
-      icon: FiUsers,
       title: "Experience with Complex Communication Ecosystems",
       description: "This approach was developed by James A. Brown through 15+ years managing communication in complex,distributed organizations where informal networks were as important as formal channels—from investigative journalism to handling communications for 3,000+ government employees across 20+ locations."
     },
@@ -39,7 +34,10 @@ const WhyThisApproach=()=> {
     if (element) {
       const navHeight=80;
       const elementPosition=element.offsetTop - navHeight;
-      window.scrollTo({top: elementPosition,behavior: 'smooth'});
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -66,7 +64,7 @@ const WhyThisApproach=()=> {
             viewport={{once: true}}
             className="order-2 lg:order-1 text-center"
           >
-            <img
+            <img 
               src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751076098468-IMG_2775.jpg"
               alt="Professional working in field environment"
               className="w-full h-80 object-cover rounded-xl shadow-lg"
@@ -80,7 +78,7 @@ const WhyThisApproach=()=> {
             viewport={{once: true}}
             className="space-y-8 order-1 lg:order-2"
           >
-            {reasons.slice(0,3).map((reason,index)=> (
+            {reasons.slice(0,2).map((reason,index)=> (
               <motion.div
                 key={index}
                 initial={{opacity: 0,y: 20}}
@@ -108,9 +106,9 @@ const WhyThisApproach=()=> {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
-          {reasons.slice(3).map((reason,index)=> (
+          {reasons.slice(2).map((reason,index)=> (
             <motion.div
-              key={index + 3}
+              key={index + 2}
               initial={{opacity: 0,y: 30}}
               whileInView={{opacity: 1,y: 0}}
               transition={{duration: 0.6,delay: index * 0.2}}
@@ -146,7 +144,7 @@ const WhyThisApproach=()=> {
               Ready to See This Approach in Action?
             </h3>
             <p className="text-neutral-600 mb-6">
-              Explore our DISCOVER • ANALYZE • DESIGN • SUSTAIN methodology and find the right service package for your organization.
+              Explore our Workplace Mapping methodology and find the right service package for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
@@ -157,10 +155,10 @@ const WhyThisApproach=()=> {
                 <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
               </button>
               <button
-                onClick={()=> scrollToSection('packages')}
+                onClick={()=> scrollToSection('services')}
                 className="inline-flex items-center gap-2 border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
               >
-                View Packages
+                View Service Options
                 <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
               </button>
             </div>

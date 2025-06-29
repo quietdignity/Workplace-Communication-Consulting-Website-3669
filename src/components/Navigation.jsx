@@ -1,24 +1,23 @@
-import React, {useState, useEffect} from 'react';
-import {motion} from 'framer-motion';
-import {useLocation} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
-import {trackNavigation, trackCalendarBooking} from '../utils/analytics';
+import { trackNavigation, trackCalendarBooking } from '../utils/analytics';
 
-const {FiMenu, FiX} = FiIcons;
+const { FiMenu, FiX } = FiIcons;
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   const navItems = [
-    {name: 'Communication Reality', href: 'communication-reality'},
-    {name: 'Solution', href: 'solution'},
-    {name: 'Methodology', href: 'methodology'},
-    {name: 'Services', href: 'services'},
-    {name: 'Background', href: 'background'},
-    {name: 'FAQ', href: 'faq', isSpecial: true},
-    {name: 'Contact', href: 'contact'}
+    { name: 'Communication Reality', href: 'communication-reality' },
+    { name: 'Solution', href: 'solution' },
+    { name: 'Methodology', href: 'methodology' },
+    { name: 'Services', href: 'services' },
+    { name: 'FAQ', href: 'faq', isSpecial: true },
+    { name: 'Contact', href: 'contact' }
   ];
 
   const scrollToSection = (sectionId) => {
@@ -106,8 +105,8 @@ const Navigation = () => {
 
     // Check for hash on initial load
     handleHashChange();
-
     window.addEventListener('hashchange', handleHashChange);
+
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, [location.pathname]);
 

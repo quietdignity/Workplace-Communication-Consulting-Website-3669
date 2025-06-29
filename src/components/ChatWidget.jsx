@@ -1,10 +1,10 @@
-import React, {useState, useMemo} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
-import {trackChatInteraction, trackFAQInteraction} from '../utils/analytics';
+import { trackChatInteraction, trackFAQInteraction } from '../utils/analytics';
 
-const {FiMessageCircle, FiX, FiSend, FiMail, FiSearch} = FiIcons;
+const { FiMessageCircle, FiX, FiSend, FiMail, FiSearch } = FiIcons;
 
 const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,12 +16,12 @@ const ChatWidget = () => {
     {
       text: "What is the Communication Diagnostic?",
       keywords: ["diagnostic", "communication diagnostic", "rapid", "quick", "15 days", "8500", "assessment", "gaps"],
-      response: "The Communication Diagnostic is our rapid assessment service designed to give you immediate clarity on your communication gaps without the full investigation process.\n\nPerfect if you suspect communication problems but need concrete evidence before investing in transformation. In just 15 business days for $8,500, we'll:\n\n• Analyze 1 to 2 recent communications to see where they succeed and fail\n• Profile how your office/hybrid/field segments currently communicate\n• Provide 3 to 5 quick wins you can implement immediately\n• Give you a diagnostic report with prioritized recommendations\n• Include a 90-minute strategy session\n• Credit the full amount toward a larger engagement if you proceed within 60 days\n\nIt's the fastest way to get concrete evidence about your distributed workforce communication challenges."
+      response: "The Communication Diagnostic is our rapid assessment service designed to give you immediate clarity on your communication gaps without the full investigation process.\n\nPerfect if you suspect communication problems but need concrete evidence before investing in transformation. In just 15 business days for $8,500, we'll:\n\n• Analyze 1 to 2 recent communications to see where they succeed and fail\n• Profile how your office/hybrid/field segments currently communicate\n• Provide 3 to 5 quick wins you can implement immediately\n• Give you a diagnostic report with prioritized recommendations\n• Include a 90 minute strategy session\n• Credit the full amount toward a larger engagement if you proceed within 60 days\n\nIt's the fastest way to get concrete evidence about your distributed workforce communication challenges."
     },
     {
       text: "What is Fractional Internal Communications Strategist service?",
       keywords: ["fractional", "internal communications", "strategist", "monthly", "advisory", "ongoing", "expert", "guidance"],
-      response: "Our Fractional Internal Communications Strategist service gives you senior-level expertise without the full-time hire. Starting at $8,500/month for 3, 6, or 12 month engagements.\n\nYou get:\n• Monthly 2-hour strategic consultations with communication expertise\n• Crisis communication support with rapid response (within 4 hours)\n• Quarterly team workshops for internal capability building\n• Communication effectiveness tracking and optimization\n• Priority access for urgent distributed workforce decisions\n• Proven tools, templates, and methodologies\n\nPerfect for organizations that need ongoing expert guidance but don't want to hire a full-time internal communications director."
+      response: "Our Fractional Internal Communications Strategist service gives you senior level expertise without the full time hire. Investment varies by organizational size, complexity, and scope. Limited spots available.\n\nYou get:\n• Monthly 2 hour strategic consultations with communication expertise\n• Crisis communication support with rapid response (within 4 hours)\n• Quarterly team workshops for internal capability building\n• Communication effectiveness tracking and optimization\n• Priority access for urgent distributed workforce decisions\n• Proven tools, templates, and methodologies\n\nPerfect for organizations that need ongoing expert guidance but don't want to hire a full time internal communications director."
     },
     {
       text: "What is Workplace Mapping?",
@@ -38,27 +38,27 @@ const ChatWidget = () => {
     {
       text: "What's the investment for your services?",
       keywords: ["cost", "price", "pricing", "budget", "investment", "fees", "expensive"],
-      response: "We offer three clear options:\n\n• Communication Diagnostic: $8,500 (15 business days) - Perfect for getting immediate clarity on your communication gaps\n\n• Fractional Internal Communications Strategist: Starting at $8,500/month (3, 6, or 12 month engagements) - Ongoing expert guidance and team development\n\n• Complete Workplace Mapping Process: Investment varies by organizational size, complexity, and scope (12 to 18 months total) - Full transformation experience\n\nMost organizations start with the Diagnostic to understand their specific challenges, then choose the best path forward based on their needs and budget."
+      response: "We offer three clear options:\n\n• Communication Diagnostic: $8,500 (15 business days) - Perfect for getting immediate clarity on your communication gaps\n\n• Fractional Internal Communications Strategist: Investment varies by organizational size, complexity, and scope. Limited spots available. - Ongoing expert guidance and team development\n\n• Internal Communications Rebuild: Investment varies by organizational size, complexity, and scope (12 to 18 months total) - Full transformation experience\n\nMost organizations start with the Diagnostic to understand their specific challenges, then choose the best path forward based on their needs and budget."
     },
     {
       text: "What's the typical timeline?",
       keywords: ["timeline", "duration", "how long", "time", "schedule", "months", "weeks"],
-      response: "Timelines vary based on service and your organization's size and complexity:\n\n• Communication Diagnostic: 15 business days\n• Fractional Internal Communications Strategist: 3, 6, or 12 month engagements\n• Complete Workplace Mapping Process: 12 to 18 months total\n\nWe can move faster or slower depending on your organization's needs and operational constraints. We typically work with 8 to 12 businesses a year, allowing us to provide focused, high-quality engagement with each organization."
+      response: "Timelines vary based on service and your organization's size and complexity:\n\n• Communication Diagnostic: 15 business days\n• Fractional Internal Communications Strategist: 3, 6, or 12 month engagements\n• Internal Communications Rebuild: 12 to 18 months total\n\nWe can move faster or slower depending on your organization's needs and operational constraints. We typically work with 8 to 12 businesses a year, allowing us to provide focused, high quality engagement with each organization."
     },
     {
       text: "How do you handle distributed workforces?",
       keywords: ["distributed", "remote", "field workers", "multiple locations", "sites", "virtual", "on-site"],
-      response: "We prefer to make at least one site visit to select locations to get a snapshot of what's really happening on the ground. However, many parts of our service including employee interviews can be done virtually.\n\nThis mix of on-site and virtual work depends on the size, scope, and operational limitations of your organization. We're experienced in working with teams across multiple locations, shifts, and work environments."
+      response: "We prefer to make at least one site visit to select locations to get a snapshot of what's really happening on the ground. However, many parts of our service including employee interviews can be done virtually.\n\nThis mix of on site and virtual work depends on the size, scope, and operational limitations of your organization. We're experienced in working with teams across multiple locations, shifts, and work environments."
     },
     {
       text: "What makes this different from traditional consulting?",
       keywords: ["different", "traditional", "consulting", "unique", "approach", "survey", "investigation"],
-      response: "Most consultants survey employees about communication preferences and assume everyone works the same way. We actually investigate how messages travel through your organization by following real communications and mapping both formal and informal networks through our Workplace Mapping methodology.\n\nWe recognize that office workers, hybrid employees, and field workers have fundamentally different communication needs and constraints. Our approach combines surveys (what people think is happening) with investigation (what's actually happening).\n\nOur Fractional Internal Communications Strategist service also gives you ongoing expert guidance rather than one-time consulting projects."
+      response: "Most consultants survey employees about communication preferences and assume everyone works the same way. We actually investigate how messages travel through your organization by following real communications and mapping both formal and informal networks through our Workplace Mapping methodology.\n\nWe recognize that office workers, hybrid employees, and field workers have fundamentally different communication needs and constraints. Our approach combines surveys (what people think is happening) with investigation (what's actually happening).\n\nOur Fractional Internal Communications Strategist service also gives you ongoing expert guidance rather than one time consulting projects."
     },
     {
       text: "What size organizations do you work with?",
       keywords: ["size", "employees", "organization", "company", "250", "3000", "team size"],
-      response: "We typically work with organizations that have 250 to 3,000 employees, especially those with distributed workforces across multiple locations, shifts, or work environments.\n\nThis includes retail chains, manufacturing companies, logistics operations, field services, government agencies, and any multi-location operation where different sites have developed different communication cultures."
+      response: "We typically work with organizations that have 250 to 3,000 employees, especially those with distributed workforces across multiple locations, shifts, or work environments.\n\nThis includes retail chains, manufacturing companies, logistics operations, field services, government agencies, and any multi location operation where different sites have developed different communication cultures."
     },
     {
       text: "What's included in a typical engagement?",
@@ -82,9 +82,9 @@ const ChatWidget = () => {
     if (!searchQuery.trim()) {
       return allFAQs.slice(0, 4); // Show first 4 by default
     }
-    
+
     const query = searchQuery.toLowerCase();
-    return allFAQs.filter(faq => 
+    return allFAQs.filter(faq =>
       faq.text.toLowerCase().includes(query) ||
       faq.keywords.some(keyword => keyword.toLowerCase().includes(query)) ||
       faq.response.toLowerCase().includes(query)
@@ -249,7 +249,6 @@ const ChatWidget = () => {
                     >
                       ← Back to questions
                     </button>
-
                     <div className="bg-primary-50 rounded-lg p-3 mb-3">
                       <h4 className="font-semibold text-primary-900 text-sm mb-2">
                         {selectedFAQ.question}
@@ -258,7 +257,6 @@ const ChatWidget = () => {
                         {selectedFAQ.answer}
                       </div>
                     </div>
-
                     <div className="text-center">
                       <p className="text-xs text-neutral-600 mb-3">
                         Have more questions?
@@ -376,7 +374,6 @@ const ChatWidget = () => {
                     >
                       ← Back
                     </button>
-
                     <div className="bg-primary-50 rounded p-2 mb-3">
                       <h4 className="font-semibold text-primary-900 text-xs mb-1">
                         {selectedFAQ.question}
@@ -385,7 +382,6 @@ const ChatWidget = () => {
                         {selectedFAQ.answer}
                       </div>
                     </div>
-
                     <button
                       onClick={handleEmailTeam}
                       className="w-full bg-primary-600 hover:bg-primary-700 text-white text-xs py-3 px-4 rounded flex items-center justify-center gap-2 transition-colors"

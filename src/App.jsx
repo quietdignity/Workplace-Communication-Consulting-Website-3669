@@ -1,6 +1,6 @@
 import React from 'react';
-import {HashRouter as Router, Routes, Route} from 'react-router-dom';
-import {QuestProvider} from '@questlabs/react-sdk';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { QuestProvider } from '@questlabs/react-sdk';
 import '@questlabs/react-sdk/dist/style.css';
 
 import Navigation from './components/Navigation';
@@ -14,7 +14,6 @@ import WhyThisApproach from './components/WhyThisApproach';
 import Testimonials from './components/Testimonials';
 import Experience from './components/Experience';
 import Results from './components/Results';
-import Background from './components/Background';
 import ContactForm from './components/ContactForm';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
@@ -23,6 +22,7 @@ import BackToTop from './components/BackToTop';
 import FeedbackButton from './components/FeedbackButton';
 import HelpHub from './components/HelpHub';
 import FAQ from './components/FAQ';
+
 import questConfig from './config/questConfig';
 
 function HomePage() {
@@ -38,17 +38,8 @@ function HomePage() {
       <Testimonials />
       <Experience />
       <Results />
-      <Background />
       <section id="contact" className="py-20 bg-gradient-to-br from-neutral-50 to-primary-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-neutral-600">
-              Tell us about your distributed workforce communication challenges
-            </p>
-          </div>
           <ContactForm />
         </div>
       </section>

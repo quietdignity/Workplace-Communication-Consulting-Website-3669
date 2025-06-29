@@ -3,89 +3,74 @@ import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const {FiZap, FiUsers, FiTarget, FiArrowRight, FiCheck, FiClock} = FiIcons;
+const {FiZap,FiUsers,FiTarget,FiArrowRight,FiCheck,FiClock}=FiIcons;
 
-const Services = () => {
-  const services = [
+const Services=()=> {
+  const services=[
     {
       name: "COMMUNICATION DIAGNOSTIC",
       subtitle: "Rapid Assessment to Identify Critical Gaps",
       icon: FiZap,
       color: "yellow",
       description: "Get immediate clarity on your distributed workforce communication gaps in just 15 business days. Perfect for leadership teams that need concrete evidence and strategic direction before committing to larger investments.",
-      whatWeDoFeatures: [
-        "Leadership Strategy Deep Dive: 90-minute session with key stakeholders to understand current communication approach and suspected problem areas.",
-        "Communication Flow Analysis: Trace 2-3 recent company messages to see where they succeed, fail, or get lost between office, hybrid, and field workers.",
-        "Infrastructure Audit: Review existing channels, tools, and informal networks to identify gaps, redundancies, and missed opportunities.",
-        "Strategic Gap Mapping: Use our proven framework to pinpoint exactly where your communication breaks down and why."
-      ],
       deliverables: [
-        "Communication Reality Report (8 pages) showing exactly where messages fail and succeed",
-        "Risk Assessment Matrix identifying your highest-impact communication vulnerabilities",
-        "Quick Wins Action Plan with 3-5 immediate improvements you can implement",
-        "Strategic Roadmap with clear options for next steps based on your findings",
-        "90-minute strategy session to review findings and discuss implementation",
+        "Communication Reality Report showing exactly where messages fail and succeed",
+        "Risk Assessment Matrix identifying your highest impact communication vulnerabilities",
+        "Quick Wins Action Plan with 3 to 5 immediate improvements you can implement",
+        "Strategic Roadmap with clear options for next steps",
+        "90 minute strategy session to review findings and discuss implementation",
         "Full credit toward fractional advisory if you proceed within 60 days"
       ],
       timeline: "15 business days",
       pricing: "$8,500",
       popular: false,
-      isNew: true
+      isNew: true,
+      ctaText: "Get Started"
     },
     {
       name: "FRACTIONAL INTERNAL COMMUNICATIONS STRATEGIST",
-      subtitle: "Expert Guidance Without the Full-Time Hire",
+      subtitle: "Expert Guidance Without the Full Time Hire",
       icon: FiUsers,
       color: "green",
-      description: "Get senior-level internal communications expertise without the full-time hire. Perfect for organizations that want continuous optimization and expert support for their distributed workforce challenges.",
-      whatWeDoFeatures: [
-        "Monthly Strategic Sessions: 2-hour deep-dive consultations to assess communication effectiveness and guide major decisions affecting your distributed workforce.",
-        "Crisis Response Support: Immediate expert guidance when urgent communication challenges arise across your locations or workforce segments.",
-        "Implementation Support: Hands-on help executing communication improvements and measuring their effectiveness across different employee groups.",
-        "Team Development: Quarterly workshops to build your internal team's capability in distributed workforce communication best practices."
-      ],
+      description: "Get senior level internal communications expertise without the full time hire. Perfect for organizations that want continuous optimization and expert support for their distributed workforce challenges.",
       deliverables: [
-        "Monthly 2-hour strategic consultation with senior-level communication expertise",
-        "Quarterly capability-building workshops for your internal team",
-        "Crisis communication support with rapid response (within 4 hours)",
+        "Monthly 2 hour strategic consultation with senior level communication expertise",
+        "Quarterly capability building workshops for your internal team",
+        "Crisis communication support (rapid response available as add on)",
         "Communication effectiveness tracking and optimization recommendations",
         "Priority access for urgent decisions affecting distributed workforce",
         "Proven tools, templates, and methodologies for your ongoing use"
       ],
       timeline: "3, 6, or 12 month engagements",
-      pricing: "Starting at $8,500/month",
+      pricing: "Investment varies by organizational size, complexity, and scope. Limited spots available.",
       popular: true,
-      isNew: false
+      isNew: false,
+      ctaText: "Get Custom Quote"
     },
     {
-      name: "COMPLETE WORKPLACE MAPPING",
-      subtitle: "Full Transformation: Investigation + Implementation + Sustainability",
+      name: "INTERNAL COMMUNICATIONS REBUILD",
+      subtitle: "Hands On Application of Our Workplace Mapping Methodology",
       icon: FiTarget,
       color: "blue",
-      description: "Our signature comprehensive transformation. The complete DISCOVER → ANALYZE → DESIGN → SUSTAIN methodology including employee investigation, custom system design, and full implementation support.",
-      whatWeDoFeatures: [
-        "Complete Investigation Phase: Employee surveys, interviews, message tracing, and informal network mapping across all workforce segments to understand the complete communication reality.",
-        "Deep Analysis and Design: Comprehensive Johari Window analysis leading to custom communication architecture that works with both formal channels and productive informal networks.",
-        "Full Implementation Support: Change management, leadership alignment, internal champion training, and organizational culture transformation over 12-18 months.",
-        "Sustainability Systems: Training, tools, and processes to ensure your intentional communication strategy continues evolving effectively as your organization grows."
-      ],
+      description: "Our comprehensive transformation experience including employee investigation, custom system design, and full implementation support.",
       deliverables: [
         "Complete communication ecosystem investigation including extensive employee input",
         "Custom communication architecture designed specifically for your distributed workforce",
         "Multiple pathway strategies validated through actual employee feedback and testing",
         "Full implementation roadmap with change management and cultural transformation support",
-        "Internal champion certification and capability building for long-term success",
-        "6-month post-implementation optimization and troubleshooting support"
+        "Internal champion certification and capability building for long term success",
+        "6 month post implementation optimization and troubleshooting support"
       ],
-      timeline: "12-18 months total",
+      timeline: "12 to 18 months total",
       pricing: "Investment varies by organizational size, complexity, and scope",
       popular: false,
-      isNew: false
+      isNew: false,
+      ctaText: "Get Custom Quote"
     }
   ];
 
-  const getColorClasses = (color) => {
-    const colors = {
+  const getColorClasses=(color)=> {
+    const colors={
       yellow: "bg-yellow-100 text-yellow-600 border-yellow-200",
       green: "bg-green-100 text-green-600 border-green-200",
       blue: "bg-blue-100 text-blue-600 border-blue-200"
@@ -95,12 +80,12 @@ const Services = () => {
 
   return (
     <section id="services" className="py-20 bg-gradient-to-br from-neutral-50 to-primary-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{opacity: 0,y: 20}}
+          whileInView={{opacity: 1,y: 0}}
+          transition={{duration: 0.8}}
+          viewport={{once: true}}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
@@ -116,113 +101,100 @@ const Services = () => {
           </div>
         </motion.div>
 
-        <div className="space-y-16">
-          {services.map((service, index) => (
+        {/* Services Grid */}
+        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          {services.map((service,index)=> (
             <motion.div
               key={service.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 shadow-lg border border-neutral-200"
+              initial={{opacity: 0,y: 30}}
+              whileInView={{opacity: 1,y: 0}}
+              transition={{duration: 0.6,delay: index * 0.1}}
+              viewport={{once: true}}
+              className={`bg-white rounded-xl p-6 shadow-lg border-2 transition-all duration-300 hover:shadow-xl ${
+                service.popular ? 'border-primary-500 relative' : 
+                service.isNew ? 'border-yellow-500 relative' : 
+                'border-neutral-200 hover:border-primary-300'
+              }`}
             >
-              <div className="flex flex-col lg:flex-row gap-8">
-                {/* Left Column - Overview */}
-                <div className="lg:w-1/3">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className={`w-16 h-16 rounded-full flex items-center justify-center border-2 ${getColorClasses(service.color)} flex-shrink-0 mt-1`}>
-                      <SafeIcon icon={service.icon} className="w-8 h-8" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-neutral-900 mb-2">
-                        {service.name}
-                      </h3>
-                      <p className="text-neutral-600 font-medium leading-tight">
-                        {service.subtitle}
-                      </p>
-                    </div>
-                  </div>
-
-                  {service.isNew && (
-                    <div className="mb-4">
-                      <span className="bg-yellow-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        NEW
-                      </span>
-                    </div>
-                  )}
-
-                  {service.popular && (
-                    <div className="mb-4">
-                      <span className="bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-
-                  <p className="text-neutral-700 leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center gap-2 text-neutral-600">
-                      <SafeIcon icon={FiClock} className="w-5 h-5 flex-shrink-0" />
-                      <span className="text-sm font-medium">{service.timeline}</span>
-                    </div>
-                    <p className={`font-semibold text-lg ${service.name === 'COMPLETE WORKPLACE MAPPING' ? 'text-primary-600' : 'text-green-600'}`}>
-                      {service.pricing}
-                    </p>
-                  </div>
-
-                  <a
-                    href="mailto:team@workplacemapping.com"
-                    className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${service.popular || service.isNew ? 'bg-primary-600 hover:bg-primary-700 text-white' : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-900'}`}
-                  >
-                    {service.name === 'COMPLETE WORKPLACE MAPPING' ? 'Get Custom Quote' : 'Get Started'}
-                    <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
-                  </a>
+              {/* Badge */}
+              {(service.popular || service.isNew) && (
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <span className={`${
+                    service.popular ? 'bg-primary-600 text-white' : 'bg-yellow-500 text-white'
+                  } px-4 py-1 rounded-full text-sm font-semibold shadow-md`}>
+                    {service.popular ? 'Most Popular' : 'NEW'}
+                  </span>
                 </div>
+              )}
 
-                {/* Right Column - Details */}
-                <div className="lg:w-2/3 space-y-8">
-                  {/* What We Do */}
-                  <div>
-                    <h4 className="text-lg font-semibold text-neutral-900 mb-4">What We Do:</h4>
-                    <ul className="space-y-4">
-                      {service.whatWeDoFeatures.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-neutral-700 leading-relaxed text-sm">
-                            {feature}
-                          </p>
-                        </li>
-                      ))}
-                    </ul>
+              {/* Header */}
+              <div className="text-center mb-6">
+                <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${getColorClasses(service.color)}`}>
+                  <SafeIcon icon={service.icon} className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold text-neutral-900 mb-2">
+                  {service.name}
+                </h3>
+                <p className="text-neutral-600 font-medium text-sm mb-4">
+                  {service.subtitle}
+                </p>
+                
+                {/* Pricing */}
+                <div className="mb-4">
+                  <div className={`font-bold mb-1 ${
+                    service.name === 'INTERNAL COMMUNICATIONS REBUILD' ? 'text-primary-600 text-lg' : 
+                    service.name === 'FRACTIONAL INTERNAL COMMUNICATIONS STRATEGIST' ? 'text-green-600 text-lg' : 
+                    'text-green-600 text-2xl'
+                  }`}>
+                    {service.pricing}
                   </div>
-
-                  {/* What You Get */}
-                  <div>
-                    <h4 className="text-lg font-semibold text-neutral-900 mb-4">What You Get:</h4>
-                    <ul className="space-y-4">
-                      {service.deliverables.map((deliverable, deliverableIndex) => (
-                        <li key={deliverableIndex} className="flex items-start gap-3">
-                          <SafeIcon icon={FiCheck} className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span className="text-neutral-700 text-sm leading-relaxed">{deliverable}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="flex items-center justify-center gap-2 text-neutral-500">
+                    <SafeIcon icon={FiClock} className="w-4 h-4" />
+                    <span className="text-sm">{service.timeline}</span>
                   </div>
                 </div>
               </div>
+
+              {/* Description */}
+              <p className="text-neutral-700 text-sm leading-relaxed mb-6 text-center">
+                {service.description}
+              </p>
+
+              {/* Deliverables */}
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-neutral-900 mb-3 text-center">What You Get:</h4>
+                <ul className="space-y-2">
+                  {service.deliverables.map((deliverable,deliverableIndex)=> (
+                    <li key={deliverableIndex} className="flex items-start gap-2">
+                      <SafeIcon icon={FiCheck} className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-neutral-700 text-xs leading-relaxed">{deliverable}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* CTA Button */}
+              <a
+                href="mailto:team@workplacemapping.com?subject=Inquiry About Workplace Mapping Services"
+                className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                  service.popular || service.isNew ? 
+                  'bg-primary-600 hover:bg-primary-700 text-white' : 
+                  'bg-neutral-100 hover:bg-neutral-200 text-neutral-900'
+                }`}
+              >
+                {service.ctaText}
+                <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
+              </a>
             </motion.div>
           ))}
         </div>
 
+        {/* Help Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-16"
+          initial={{opacity: 0,y: 20}}
+          whileInView={{opacity: 1,y: 0}}
+          transition={{duration: 0.8,delay: 0.6}}
+          viewport={{once: true}}
         >
           <div className="bg-white p-8 rounded-xl border border-neutral-200 shadow-lg max-w-4xl mx-auto">
             <div className="text-center">

@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const {FiChevronDown, FiMail, FiMessageCircle} = FiIcons;
+const { FiChevronDown, FiMail, FiMessageCircle } = FiIcons;
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -15,7 +15,7 @@ const FAQ = () => {
     },
     {
       question: "What's the difference between the Fractional Internal Communications Strategist and traditional consulting?",
-      answer: "Our Fractional Internal Communications Strategist service gives you senior-level expertise without the full-time hire. Unlike traditional consultants who come in for short projects, we provide ongoing strategic guidance for 3, 6, or 12 month engagements.\n\nYou get monthly strategic sessions, crisis communication support, quarterly team workshops, and priority access for urgent decisions. Most importantly, we understand distributed workforce communication challenges, not just office workers, but field teams, retail staff, manufacturing employees, and other segments that traditional consultants often overlook."
+      answer: "Our Fractional Internal Communications Strategist service gives you senior level expertise without the full time hire. Unlike traditional consultants who come in for short projects, we provide ongoing strategic guidance for 3, 6, or 12 month engagements.\n\nYou get monthly strategic sessions, crisis communication support, quarterly team workshops, and priority access for urgent decisions. Most importantly, we understand distributed workforce communication challenges, not just office workers, but field teams, retail staff, manufacturing employees, and other segments that traditional consultants often overlook."
     },
     {
       question: "Can we schedule a consultation?",
@@ -26,19 +26,19 @@ const FAQ = () => {
     },
     {
       question: "What's the investment for each service?",
-      answer: "We offer three clear options:\n\n• Communication Diagnostic: $8,500 (15 business days) - Perfect for getting immediate clarity on your communication gaps\n\n• Fractional Internal Communications Strategist: Starting at $8,500/month (3, 6, or 12 month engagements) - Ongoing expert guidance and team development\n\n• Complete Workplace Mapping Process: Investment varies by organizational size, complexity, and scope (12 to 18 months total) - Full transformation experience\n\nMost organizations start with the Diagnostic to understand their specific challenges, then choose the best path forward based on their needs and budget."
+      answer: "We offer three clear options:\n\n• Communication Diagnostic: $8,500 (15 business days) - Perfect for getting immediate clarity on your communication gaps\n\n• Fractional Internal Communications Strategist: Investment varies by organizational size, complexity, and scope. Limited spots available. - Ongoing expert guidance and team development\n\n• Internal Communications Rebuild: Investment varies by organizational size, complexity, and scope (12 to 18 months total) - Full transformation experience\n\nMost organizations start with the Diagnostic to understand their specific challenges, then choose the best path forward based on their needs and budget."
     },
     {
       question: "What's the typical timeline for implementation?",
-      answer: "Timelines vary based on service and your organization's size and complexity:\n\n• Communication Diagnostic: 15 business days\n• Fractional Internal Communications Strategist: 3, 6, or 12 month engagements\n• Complete Workplace Mapping Process: 12 to 18 months total\n\nWe can move faster or slower depending on your organization's needs and operational constraints. We typically work with 8 to 12 businesses a year, allowing us to provide focused, high-quality engagement with each organization."
+      answer: "Timelines vary based on service and your organization's size and complexity:\n\n• Communication Diagnostic: 15 business days\n• Fractional Internal Communications Strategist: 3, 6, or 12 month engagements\n• Internal Communications Rebuild: 12 to 18 months total\n\nWe can move faster or slower depending on your organization's needs and operational constraints. We typically work with 8 to 12 businesses a year, allowing us to provide focused, high quality engagement with each organization."
     },
     {
       question: "How do you handle distributed workforces?",
-      answer: "We prefer to make at least one site visit to select locations to get a snapshot of what's really happening on the ground. However, many parts of our service including employee interviews can be done virtually.\n\nThis mix of on-site and virtual work depends on the size, scope, and operational limitations of your organization. We're experienced in working with teams across multiple locations, shifts, and work environments."
+      answer: "We prefer to make at least one site visit to select locations to get a snapshot of what's really happening on the ground. However, many parts of our service including employee interviews can be done virtually.\n\nThis mix of on site and virtual work depends on the size, scope, and operational limitations of your organization. We're experienced in working with teams across multiple locations, shifts, and work environments."
     },
     {
       question: "What size organizations do you work with?",
-      answer: "We typically work with organizations that have 250 to 3,000 employees, especially those with distributed workforces across multiple locations, shifts, or work environments.\n\nThis includes retail chains, manufacturing companies, logistics operations, field services, government agencies, and any multi-location operation where different sites have developed different communication cultures."
+      answer: "We typically work with organizations that have 250 to 3,000 employees, especially those with distributed workforces across multiple locations, shifts, or work environments.\n\nThis includes retail chains, manufacturing companies, logistics operations, field services, government agencies, and any multi location operation where different sites have developed different communication cultures."
     },
     {
       question: "Do you work with remote/hybrid organizations?",
@@ -46,7 +46,7 @@ const FAQ = () => {
     },
     {
       question: "What does the Fractional Internal Communications Strategist service include?",
-      answer: "Our fractional service includes monthly 2-hour strategic consultations, quarterly capability-building workshops for your team, crisis communication support with rapid response (within 4 hours), communication effectiveness tracking, priority access for urgent decisions, and proven tools and templates.\n\nIt's perfect for organizations that need ongoing expert guidance but don't want to hire a full-time internal communications director. You get senior-level expertise at a fraction of the cost of a full-time hire."
+      answer: "Our fractional service includes monthly 2 hour strategic consultations, quarterly capability building workshops for your team, crisis communication support with rapid response (within 4 hours), communication effectiveness tracking, priority access for urgent decisions, and proven tools and templates.\n\nIt's perfect for organizations that need ongoing expert guidance but don't want to hire a full time internal communications director. You get senior level expertise at a fraction of the cost of a full time hire."
     },
     {
       question: "How do you protect employee confidentiality?",
@@ -58,7 +58,7 @@ const FAQ = () => {
     },
     {
       question: "Do we have to implement all your recommendations?",
-      answer: "Absolutely not. This is your organization, and you know your constraints best. Our job is to give you clear options and help you prioritize based on your reality, resources, and timeline.\n\nWe'll help you identify quick wins alongside longer-term strategic improvements, so you can choose what makes sense for your situation."
+      answer: "Absolutely not. This is your organization, and you know your constraints best. Our job is to give you clear options and help you prioritize based on your reality, resources, and timeline.\n\nWe'll help you identify quick wins alongside longer term strategic improvements, so you can choose what makes sense for your situation."
     },
     {
       question: "What kind of results can we expect?",
@@ -66,7 +66,7 @@ const FAQ = () => {
     },
     {
       question: "Do you provide ongoing support after the engagement?",
-      answer: "Our Workplace Mapping methodology includes training internal champions and building your organizational capability to maintain and evolve the communication systems we design together.\n\nWe also provide post-completion support for questions, and many organizations engage us for our Fractional Internal Communications Strategist service for ongoing guidance as they grow and change."
+      answer: "Our Workplace Mapping methodology includes training internal champions and building your organizational capability to maintain and evolve the communication systems we design together.\n\nWe also provide post completion support for questions, and many organizations engage us for our Fractional Internal Communications Strategist service for ongoing guidance as they grow and change."
     },
     {
       question: "What if we're not sure which service is right for us?",
@@ -74,11 +74,11 @@ const FAQ = () => {
     },
     {
       question: "Can you help with crisis or emergency communication?",
-      answer: "Yes, our Workplace Mapping methodology includes designing communication systems that work for both routine and urgent messaging. We can help you create emergency communication protocols that actually reach field workers, off-shift employees, and distributed teams when it matters most.\n\nThis is especially important for organizations with safety-critical operations or those that need to reach employees quickly across multiple locations and shifts. Our Fractional Internal Communications Strategist service includes crisis response support with rapid guidance within 4 hours."
+      answer: "Yes, our Workplace Mapping methodology includes designing communication systems that work for both routine and urgent messaging. We can help you create emergency communication protocols that actually reach field workers, off shift employees, and distributed teams when it matters most.\n\nThis is especially important for organizations with safety critical operations or those that need to reach employees quickly across multiple locations and shifts. Our Fractional Internal Communications Strategist service includes crisis response support with rapid guidance within 4 hours."
     },
     {
       question: "What makes this different from traditional consulting?",
-      answer: "Most consultants survey employees about communication preferences and assume everyone works the same way. We actually investigate how messages travel through your organization by following real communications and mapping both formal and informal networks through our Workplace Mapping methodology.\n\nWe recognize that office workers, hybrid employees, and field workers have fundamentally different communication needs and constraints. Our approach combines surveys (what people think is happening) with investigation (what's actually happening).\n\nOur Fractional Internal Communications Strategist service also gives you ongoing expert guidance rather than one-time consulting projects."
+      answer: "Most consultants survey employees about communication preferences and assume everyone works the same way. We actually investigate how messages travel through your organization by following real communications and mapping both formal and informal networks through our Workplace Mapping methodology.\n\nWe recognize that office workers, hybrid employees, and field workers have fundamentally different communication needs and constraints. Our approach combines surveys (what people think is happening) with investigation (what's actually happening).\n\nOur Fractional Internal Communications Strategist service also gives you ongoing expert guidance rather than one time consulting projects."
     },
     {
       question: "What's included in a typical engagement?",

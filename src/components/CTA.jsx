@@ -1,10 +1,10 @@
 import React from 'react';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
-import {trackEmailClick, trackCalendarBooking} from '../utils/analytics';
+import { trackEmailClick, trackCalendarBooking } from '../utils/analytics';
 
-const {FiMail, FiCalendar, FiArrowRight} = FiIcons;
+const { FiMail, FiCalendar, FiArrowRight } = FiIcons;
 
 const CTA = () => {
   const handleEmailClick = () => {
@@ -25,40 +25,41 @@ const CTA = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to See Your Complete Communication Picture?
+            Ready to Understand Your Communication Reality?
           </h2>
-          
+
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Let's Start with DISCOVER
+              Let's Talk About Your Specific Challenges
             </h3>
             <p className="text-xl text-white/90 mb-6">
-              We'll map both your formal communication systems and your informal networks to show you the complete picture
+              Every distributed workforce is different. We'll help you determine the best approach for your situation, timeline, and budget.
             </p>
             <p className="text-white/80 leading-relaxed">
-              Want to talk through your distributed workforce communication challenges and understand what's really happening in your organization? Let's schedule a conversation about whether workplace mapping or fractional internal communications strategy makes sense for your situation.
+              Whether you need rapid clarity with our Communication Diagnostic, ongoing expert guidance through our Fractional Internal Communications Strategist service, or complete transformation with our Internal Communications Rebuild - we'll find the right fit for your organization.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 max-w-3xl mx-auto">
             <a
-              href="mailto:team@workplacemapping.com"
-              onClick={handleEmailClick}
-              className="w-full sm:w-auto bg-white hover:bg-neutral-100 text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl flex items-center gap-3 justify-center"
-            >
-              <SafeIcon icon={FiMail} className="w-5 h-5" />
-              team@workplacemapping.com
-            </a>
-            <a
               href="https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleCalendarClick}
-              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 flex items-center gap-3 justify-center"
+              className="w-full sm:w-auto bg-white hover:bg-neutral-100 text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl flex items-center gap-3 justify-center"
             >
               <SafeIcon icon={FiCalendar} className="w-5 h-5" />
-              Schedule a Conversation
+              Schedule a Consultation
               <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
+            </a>
+
+            <a
+              href="mailto:team@workplacemapping.com?subject=Workplace Mapping Consultation Inquiry"
+              onClick={handleEmailClick}
+              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 flex items-center gap-3 justify-center"
+            >
+              <SafeIcon icon={FiMail} className="w-5 h-5" />
+              team@workplacemapping.com
             </a>
           </div>
 
@@ -70,7 +71,7 @@ const CTA = () => {
             className="mt-8"
           >
             <p className="text-white/70 text-sm italic">
-              Pricing varies depending on your organization's size, complexity, and needs. We can work with different budget cycles and organizational needs.
+              Investment varies by organizational size, complexity, and scope. We'll discuss options that work with your budget and timeline.
             </p>
           </motion.div>
         </motion.div>

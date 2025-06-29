@@ -1,9 +1,9 @@
 import React from 'react';
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const {FiMail, FiMic, FiHelpCircle} = FiIcons;
+const { FiMail, FiMic } = FiIcons;
 
 const Footer = () => {
   const location = useLocation();
@@ -15,72 +15,34 @@ const Footer = () => {
       return;
     }
 
-    // If we're trying to go to FAQ
-    if (sectionId === 'faq') {
-      // If already on FAQ page, scroll to top
-      if (location.pathname === '/faq') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        return;
-      }
-
-      // If on homepage, try to find FAQ section, otherwise go to FAQ page
-      if (location.pathname === '/') {
-        const faqElement = document.getElementById('faq');
-        if (faqElement) {
-          const navHeight = 80;
-          const elementPosition = faqElement.offsetTop - navHeight;
-          window.scrollTo({ top: elementPosition, behavior: 'smooth' });
-        } else {
-          window.location.href = '/faq';
-        }
-        return;
-      }
-
-      // From other pages, go to FAQ page
-      window.location.href = '/faq';
-      return;
-    }
-
     // Normal section scrolling
     const element = document.getElementById(sectionId);
     if (element) {
       const navHeight = 80;
       const elementPosition = element.offsetTop - navHeight;
-      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
-    }
-  };
-
-  const handleFAQClick = () => {
-    if (location.pathname === '/faq') {
-      // Already on FAQ page, scroll to top
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      // Navigate to FAQ page
-      window.location.href = '/faq';
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
   // Method mapping - links each service to the most relevant section
   const handleMethodClick = (methodType) => {
     switch(methodType) {
-      case 'investigation':
-        // Links to DISCOVER section which covers investigation
+      case 'investigation': // Links to DISCOVER section which covers investigation
         scrollToSection('methodology');
         break;
-      case 'analysis':
-        // Links to ANALYZE section
+      case 'analysis': // Links to ANALYZE section
         scrollToSection('methodology');
         break;
-      case 'design':
-        // Links to DESIGN section
+      case 'design': // Links to DESIGN section
         scrollToSection('methodology');
         break;
-      case 'implementation':
-        // Links to services section which covers implementation
+      case 'implementation': // Links to services section which covers implementation
         scrollToSection('services');
         break;
-      case 'capability':
-        // Links to SUSTAIN section which covers internal capability building
+      case 'capability': // Links to SUSTAIN section which covers internal capability building
         scrollToSection('methodology');
         break;
       default:
@@ -95,7 +57,8 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">Workplace Mapping</h3>
             <p className="text-neutral-300 leading-relaxed mb-4">
-              Fractional internal communications strategist and systematic communication solutions for distributed workforces. Helping organizations reach every employee segment effectively.
+              Fractional internal communications strategist and systematic communication solutions for distributed workforces. 
+              Helping organizations reach every employee segment effectively.
             </p>
           </div>
 
@@ -158,19 +121,10 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('background')}
+                  onClick={() => scrollToSection('services')}
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200"
                 >
-                  Background
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={handleFAQClick}
-                  className="text-neutral-300 hover:text-primary-300 transition-colors duration-200 flex items-center gap-2"
-                >
-                  <SafeIcon icon={FiHelpCircle} className="w-4 h-4" />
-                  FAQ
+                  Services
                 </button>
               </li>
             </ul>

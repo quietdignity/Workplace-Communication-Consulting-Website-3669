@@ -7,10 +7,10 @@ const {FiSearch, FiBarChart, FiSettings, FiRefreshCw, FiArrowRight} = FiIcons;
 
 const Solution = () => {
   const phases = [
-    {name: "DISCOVER", icon: FiSearch, href: "methodology"},
-    {name: "ANALYZE", icon: FiBarChart, href: "methodology"},
-    {name: "DESIGN", icon: FiSettings, href: "methodology"},
-    {name: "SUSTAIN", icon: FiRefreshCw, href: "methodology"}
+    { name: "DISCOVER", icon: FiSearch, href: "methodology" },
+    { name: "ANALYZE", icon: FiBarChart, href: "methodology" },
+    { name: "DESIGN", icon: FiSettings, href: "methodology" },
+    { name: "SUSTAIN", icon: FiRefreshCw, href: "methodology" }
   ];
 
   const scrollToSection = (sectionId) => {
@@ -18,7 +18,10 @@ const Solution = () => {
     if (element) {
       const navHeight = 80;
       const elementPosition = element.offsetTop - navHeight;
-      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -53,12 +56,6 @@ const Solution = () => {
               </motion.button>
             ))}
           </div>
-
-          <div className="bg-white p-6 rounded-lg border border-primary-200 max-w-2xl mx-auto mb-8">
-            <p className="text-primary-700 font-medium">
-              👆 Click any phase above to explore our complete methodology
-            </p>
-          </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -78,7 +75,7 @@ const Solution = () => {
                 What makes our approach different:
               </h3>
               <p className="text-neutral-700 leading-relaxed">
-                We survey AND investigate. Most consultants ask people what they think about communication, which is valuable but incomplete. We also follow actual messages through your organization to see what really happens. Surveys reveal what people think is happening, while investigation shows what's actually happening. Together, they give us insights that neither approach provides alone.
+                Most consultants ask people what they think about communication, which is valuable but incomplete. We also follow actual messages through your organization to see what really happens. Together, they give us insights that neither approach provides alone.
               </p>
             </div>
 
@@ -104,9 +101,9 @@ const Solution = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <img
-              src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751076090963-IMG_8521.jpg"
-              alt="Team meeting in office environment"
+            <img 
+              src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751076090963-IMG_8521.jpg" 
+              alt="Team meeting in office environment" 
               className="w-full h-80 object-cover rounded-xl shadow-lg"
             />
           </motion.div>

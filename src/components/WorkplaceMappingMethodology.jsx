@@ -16,8 +16,8 @@ const WorkplaceMappingMethodology = () => {
       description: "We start by getting a complete picture of how communication actually works in your organization right now, including both your designed systems and the informal networks that have developed.",
       features: [
         "Survey Component: We'll survey employees across your workforce to understand their perceptions of how communication works, what they think about current channels, and what they believe they need.",
-        "Investigation Component: We'll follow 3-5 recent company communications through your organization to document exactly where they go, how they change, and who they actually reach. We'll also identify informal communication networks and understand how they supplement or compete with your formal channels.",
-        "Employee Conversations: We'll interview people across your workforce, office staff, field workers, managers, frontline employees, to understand both how they officially receive information and how they really get and share information day-to-day.",
+        "Investigation Component: We'll follow 3 to 5 recent company communications through your organization to document exactly where they go, how they change, and who they actually reach. We'll also identify informal communication networks and understand how they supplement or compete with your formal channels.",
+        "Employee Conversations: We'll interview people across your workforce, office staff, field workers, managers, frontline employees, to understand both how they officially receive information and how they really get and share information day to day.",
         "Reality Check: We'll catalog what communication tools and channels you have available and how they're actually being used, not just how they're supposed to be used."
       ],
       timeline: "Timeline depends on how complex your organization is"
@@ -84,7 +84,10 @@ const WorkplaceMappingMethodology = () => {
     if (element) {
       const navHeight = 80;
       const elementPosition = element.offsetTop - navHeight;
-      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -104,6 +107,7 @@ const WorkplaceMappingMethodology = () => {
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
             Our systematic approach to understanding and improving your distributed workforce communication
           </p>
+
           {/* Phase Navigation Pills */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {phases.map((phase, index) => (

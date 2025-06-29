@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const {FiUser,FiUsers,FiMic} = FiIcons;
+const {FiUser, FiUsers, FiMic} = FiIcons;
 
 const Background = () => {
   return (
@@ -31,14 +31,14 @@ const Background = () => {
             <div className="text-center lg:text-left">
               <img
                 src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751077031511-james-brown-profile.JPG"
-                alt="James A. Brown - Communications Professional"
+                alt="James A. Brown, Communications Professional and Fractional Internal Communications Strategist"
                 className="w-80 h-80 object-cover rounded-xl shadow-lg mx-auto lg:mx-0 mb-6"
               />
               <h3 className="text-2xl font-bold text-neutral-900 mb-2">
                 James A. Brown
               </h3>
               <p className="text-lg text-primary-600 font-medium">
-                Communications Professional & Workplace Mapping Specialist
+                Communications Professional and Fractional Internal Communications Strategist
               </p>
             </div>
           </motion.div>
@@ -107,7 +107,7 @@ const Background = () => {
           >
             <div className="bg-primary-50 p-8 rounded-xl border border-primary-200 text-center">
               <p className="text-lg text-primary-800 font-medium">
-                The philosophy behind this work is simple: every organization will have an internal communication strategy whether you design one or not. We help you make yours intentional and effective.
+                The philosophy behind this work is simple: every organization will have an internal communication strategy whether you design one or not. We help you make yours intentional and effective through fractional expertise and systematic workplace mapping.
               </p>
             </div>
           </motion.div>

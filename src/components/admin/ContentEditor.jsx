@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../../common/SafeIcon';
 
-const { FiSave, FiEdit, FiImage, FiType, FiDollarSign } = FiIcons;
+const {FiSave, FiEdit, FiImage, FiType, FiDollarSign} = FiIcons;
 
 const ContentEditor = () => {
   const [activeSection, setActiveSection] = useState('pricing');
   const [unsavedChanges, setUnsavedChanges] = useState(false);
   const [content, setContent] = useState({
     pricing: {
-      serviceStartPrice: '$25,000',
-      packageStartPrice: '$50,000',
+      diagnosticPrice: '$8,500',
+      fractionalStartPrice: '$8,500/month',
       note: 'Pricing varies depending on your organization\'s size, complexity, and needs'
     },
     hero: {
       title: 'Your Corporate Communication Works for Office Staff.',
       subtitle: 'What About Everyone Else?',
-      description: 'When you have employees across different locations, shifts, and work environments, reaching everyone effectively becomes a real challenge.'
+      description: 'When you have employees across different locations, shifts, and work environments, reaching everyone effectively becomes a real challenge. Get expert fractional internal communications strategy without the full-time hire.'
     },
     contact: {
       email: 'team@workplacemapping.com',
@@ -25,17 +25,17 @@ const ContentEditor = () => {
     },
     bio: {
       name: 'James A. Brown',
-      title: 'Communications Professional & Workplace Mapping Specialist',
+      title: 'Communications Professional & Fractional Internal Communications Strategist',
       experience: '15+ years',
-      description: 'James Brown is a communications professional with 15+ years of experience figuring out how information really moves through complex, distributed organizations—and how to work with that reality rather than fight it.'
+      description: 'James Brown is a communications professional with 15+ years of experience figuring out how information really moves through complex, distributed organizations—and how to work with that reality rather than fight it. He provides fractional internal communications strategy expertise to organizations that need senior-level guidance without the full-time hire.'
     }
   });
 
   const sections = [
-    { id: 'pricing', name: 'Pricing', icon: FiDollarSign },
-    { id: 'hero', name: 'Hero Section', icon: FiType },
-    { id: 'contact', name: 'Contact Info', icon: FiEdit },
-    { id: 'bio', name: 'Biography', icon: FiImage }
+    {id: 'pricing', name: 'Pricing', icon: FiDollarSign},
+    {id: 'hero', name: 'Hero Section', icon: FiType},
+    {id: 'contact', name: 'Contact Info', icon: FiEdit},
+    {id: 'bio', name: 'Biography', icon: FiImage}
   ];
 
   const handleContentChange = (section, field, value) => {
@@ -64,23 +64,23 @@ const ContentEditor = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-neutral-700 mb-2">
-                  Individual Service Starting Price
+                  Communication Diagnostic Price
                 </label>
                 <input
                   type="text"
-                  value={content.pricing.serviceStartPrice}
-                  onChange={(e) => handleContentChange('pricing', 'serviceStartPrice', e.target.value)}
+                  value={content.pricing.diagnosticPrice}
+                  onChange={(e) => handleContentChange('pricing', 'diagnosticPrice', e.target.value)}
                   className="w-full px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-neutral-700 mb-2">
-                  Package Starting Price
+                  Fractional Strategist Starting Price
                 </label>
                 <input
                   type="text"
-                  value={content.pricing.packageStartPrice}
-                  onChange={(e) => handleContentChange('pricing', 'packageStartPrice', e.target.value)}
+                  value={content.pricing.fractionalStartPrice}
+                  onChange={(e) => handleContentChange('pricing', 'fractionalStartPrice', e.target.value)}
                   className="w-full px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
                 />
               </div>

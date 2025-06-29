@@ -22,23 +22,20 @@ const Footer = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         return;
       }
-      
+
       // If on homepage, try to find FAQ section, otherwise go to FAQ page
       if (location.pathname === '/') {
         const faqElement = document.getElementById('faq');
         if (faqElement) {
           const navHeight = 80;
           const elementPosition = faqElement.offsetTop - navHeight;
-          window.scrollTo({
-            top: elementPosition,
-            behavior: 'smooth'
-          });
+          window.scrollTo({ top: elementPosition, behavior: 'smooth' });
         } else {
           window.location.href = '/faq';
         }
         return;
       }
-      
+
       // From other pages, go to FAQ page
       window.location.href = '/faq';
       return;
@@ -49,10 +46,7 @@ const Footer = () => {
     if (element) {
       const navHeight = 80;
       const elementPosition = element.offsetTop - navHeight;
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
     }
   };
 
@@ -71,15 +65,15 @@ const Footer = () => {
     switch(methodType) {
       case 'investigation':
         // Links to DISCOVER section which covers investigation
-        scrollToSection('services');
+        scrollToSection('methodology');
         break;
       case 'analysis':
         // Links to ANALYZE section
-        scrollToSection('services');
+        scrollToSection('methodology');
         break;
       case 'design':
         // Links to DESIGN section
-        scrollToSection('services');
+        scrollToSection('methodology');
         break;
       case 'implementation':
         // Links to services section which covers implementation
@@ -87,10 +81,10 @@ const Footer = () => {
         break;
       case 'capability':
         // Links to SUSTAIN section which covers internal capability building
-        scrollToSection('services');
+        scrollToSection('methodology');
         break;
       default:
-        scrollToSection('services');
+        scrollToSection('methodology');
     }
   };
 
@@ -101,43 +95,35 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">Workplace Mapping</h3>
             <p className="text-neutral-300 leading-relaxed mb-4">
-              Systematic communication solutions for distributed workforces. Helping organizations reach every employee segment effectively.
+              Fractional internal communications strategist and systematic communication solutions for distributed workforces. Helping organizations reach every employee segment effectively.
             </p>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Our Method</h4>
+            <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2 text-neutral-300">
               <li>
                 <button
-                  onClick={() => handleMethodClick('investigation')}
+                  onClick={() => scrollToSection('services')}
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200 text-left"
                 >
-                  Communication Investigation
+                  Communication Diagnostic
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => handleMethodClick('analysis')}
+                  onClick={() => scrollToSection('services')}
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200 text-left"
                 >
-                  Workforce Analysis
+                  Fractional Internal Communications Strategist
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => handleMethodClick('design')}
+                  onClick={() => scrollToSection('services')}
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200 text-left"
                 >
-                  System Design
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleMethodClick('implementation')}
-                  className="text-neutral-300 hover:text-primary-300 transition-colors duration-200 text-left"
-                >
-                  Implementation Support
+                  Complete Workplace Mapping
                 </button>
               </li>
               <li>
@@ -164,10 +150,10 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('services')}
+                  onClick={() => scrollToSection('methodology')}
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200"
                 >
-                  How We Work
+                  Our Methodology
                 </button>
               </li>
               <li>
@@ -213,7 +199,7 @@ const Footer = () => {
 
         <div className="border-t border-neutral-700 mt-8 pt-8 text-center">
           <p className="text-neutral-400 text-sm">
-            © 2024 Workplace Mapping. Professional communication consulting and speaking services.
+            © 2024 Workplace Mapping. Professional fractional internal communications strategy and consulting services.
           </p>
         </div>
       </div>

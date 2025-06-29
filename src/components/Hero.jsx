@@ -22,12 +22,12 @@ const Hero = () => {
     <section id="hero" className="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-neutral-50 to-primary-50 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751076059906-IMG_8527.jpg" 
-          alt="Office workers collaborating on workplace communication strategy" 
-          className="w-full h-full object-cover opacity-10" 
+        <img
+          src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751076059906-IMG_8527.jpg"
+          alt="Office workers collaborating on workplace communication strategy"
+          className="w-full h-full object-cover opacity-10"
           loading="eager"
-          width="1200" 
+          width="1200"
           height="800"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-50/90 to-primary-50/90"></div>
@@ -47,7 +47,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg md:text-2xl text-neutral-700 mb-12 md:mb-16 max-w-4xl mx-auto leading-relaxed">
-            When you have employees across different locations, shifts, and work environments, reaching everyone effectively becomes a real challenge.
+            When you have employees across different locations, shifts, and work environments, reaching everyone effectively becomes a real challenge. Get expert fractional internal communications strategy without the full-time hire.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center max-w-2xl mx-auto">
@@ -58,13 +58,12 @@ const Hero = () => {
             >
               Discover the Solution
             </button>
-            
             <a
               href="https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-8 md:px-10 py-4 md:py-5 rounded-lg text-lg font-semibold transition-all duration-200 text-center"
-              aria-label="Schedule a consultation for workplace mapping"
+              aria-label="Schedule a consultation for fractional internal communications strategy"
             >
               Schedule a Conversation
             </a>
@@ -79,14 +78,14 @@ const Hero = () => {
             </div>
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                { name: "DISCOVER", color: "bg-blue-100 text-blue-700 hover:bg-blue-200" },
-                { name: "ANALYZE", color: "bg-green-100 text-green-700 hover:bg-green-200" },
-                { name: "DESIGN", color: "bg-purple-100 text-purple-700 hover:bg-purple-200" },
-                { name: "SUSTAIN", color: "bg-orange-100 text-orange-700 hover:bg-orange-200" }
+                {name: "DISCOVER", color: "bg-blue-100 text-blue-700 hover:bg-blue-200"},
+                {name: "ANALYZE", color: "bg-green-100 text-green-700 hover:bg-green-200"},
+                {name: "DESIGN", color: "bg-purple-100 text-purple-700 hover:bg-purple-200"},
+                {name: "SUSTAIN", color: "bg-orange-100 text-orange-700 hover:bg-orange-200"}
               ].map((phase) => (
                 <button
                   key={phase.name}
-                  onClick={() => scrollToSection('services')}
+                  onClick={() => scrollToSection('methodology')}
                   className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors duration-200 ${phase.color}`}
                 >
                   {phase.name}

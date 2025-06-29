@@ -3,55 +3,54 @@ import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const {FiZap,FiUsers,FiTarget,FiArrowRight,FiCheck,FiClock,FiBookOpen} = FiIcons;
+const {FiZap, FiUsers, FiTarget, FiArrowRight, FiCheck, FiClock} = FiIcons;
 
 const Services = () => {
   const services = [
     {
-      name: "COMMUNICATION ASSESSMENT",
-      subtitle: "Leadership Communication Diagnostic in 14 Days",
+      name: "COMMUNICATION DIAGNOSTIC",
+      subtitle: "Rapid Assessment to Identify Critical Gaps",
       icon: FiZap,
       color: "yellow",
-      description: "Rapid assessment of your distributed workforce communication gaps from the leadership perspective. Perfect for leadership teams that suspect communication problems but need expert analysis before investing in solutions.",
+      description: "Get immediate clarity on your distributed workforce communication gaps in just 15 business days. Perfect for leadership teams that need concrete evidence and strategic direction before committing to larger investments.",
       whatWeDoFeatures: [
-        "Leadership Stakeholder Interviews: 90-minute session with leadership plus 45-minute operations and frontline management follow-ups to understand current communication strategy and perceived challenges.",
-        "Communication Architecture Audit: Review 2-3 recent major communications to analyze intended vs actual message flow and identify obvious failure points.",
-        "Channel & Tool Assessment: Audit existing communication infrastructure to identify gaps, redundancies, and informal patterns leadership is aware of.",
-        "Strategic Gap Analysis: Map communication blind spots from leadership perspective using our proven diagnostic framework."
+        "Leadership Strategy Deep Dive: 90-minute session with key stakeholders to understand current communication approach and suspected problem areas.",
+        "Communication Flow Analysis: Trace 2-3 recent company messages to see where they succeed, fail, or get lost between office, hybrid, and field workers.",
+        "Infrastructure Audit: Review existing channels, tools, and informal networks to identify gaps, redundancies, and missed opportunities.",
+        "Strategic Gap Mapping: Use our proven framework to pinpoint exactly where your communication breaks down and why."
       ],
       deliverables: [
-        "Communication Leadership Diagnostic Report (8 pages) showing your communication reality from management perspective",
-        "Communication Effectiveness Scorecard with leadership confidence ratings and risk assessment",
-        "Strategic Recommendations Roadmap separating quick wins from areas needing employee investigation",
-        "Clear pathway options for next steps (DIY implementation, monthly advisory, or full workplace mapping)",
-        "90-minute strategy session to review findings and discuss implementation approach",
-        "Full credit toward larger engagement if you proceed within 90 days"
+        "Communication Reality Report (8 pages) showing exactly where messages fail and succeed",
+        "Risk Assessment Matrix identifying your highest-impact communication vulnerabilities",
+        "Quick Wins Action Plan with 3-5 immediate improvements you can implement",
+        "Strategic Roadmap with clear options for next steps based on your findings",
+        "90-minute strategy session to review findings and discuss implementation",
+        "Full credit toward fractional advisory if you proceed within 60 days"
       ],
-      timeline: "14 business days",
+      timeline: "15 business days",
       pricing: "$8,500",
       popular: false,
       isNew: true
     },
     {
-      name: "FRACTIONAL INTERNAL COMMUNICATIONS STRATEGY",
-      subtitle: "Senior-Level Expertise for Your Distributed Workforce",
+      name: "FRACTIONAL INTERNAL COMMUNICATIONS STRATEGIST",
+      subtitle: "Expert Guidance Without the Full-Time Hire",
       icon: FiUsers,
       color: "green",
-      description: "Get experienced internal communications leadership at 50-65% the cost of full-time hiring, with specialized expertise in reaching your office workers, hybrid employees, and field teams effectively.",
+      description: "Get senior-level internal communications expertise without the full-time hire. Perfect for organizations that want continuous optimization and expert support for their distributed workforce challenges.",
       whatWeDoFeatures: [
-        "Strategic Communication Leadership: Monthly strategic sessions to assess your distributed workforce communication effectiveness and guide major communication decisions.",
-        "Crisis Communication Response: Immediate expert support when urgent communication challenges arise across your multiple locations or workforce segments.",
-        "Team Development: Quarterly workshops developing your leadership team's capability in distributed workforce communication best practices.",
-        "Ongoing Optimization: Regular reviews of your communications to ensure messages reach office workers, hybrid employees, and field teams effectively.",
-        "Change Management Communication: Strategic guidance for organizational changes, mergers, growth phases, or operational shifts affecting your distributed workforce."
+        "Monthly Strategic Sessions: 2-hour deep-dive consultations to assess communication effectiveness and guide major decisions affecting your distributed workforce.",
+        "Crisis Response Support: Immediate expert guidance when urgent communication challenges arise across your locations or workforce segments.",
+        "Implementation Support: Hands-on help executing communication improvements and measuring their effectiveness across different employee groups.",
+        "Team Development: Quarterly workshops to build your internal team's capability in distributed workforce communication best practices."
       ],
       deliverables: [
-        "Monthly 2-hour strategic consultation sessions with senior-level expertise",
-        "Crisis communication support and rapid response capability",
-        "Quarterly team workshops building internal communication capability",
-        "Communication effectiveness reviews and strategic recommendations",
-        "Access to proven workplace mapping tools and methodologies",
-        "Priority email and phone support for urgent communication decisions"
+        "Monthly 2-hour strategic consultation with senior-level communication expertise",
+        "Quarterly capability-building workshops for your internal team",
+        "Crisis communication support with rapid response (within 4 hours)",
+        "Communication effectiveness tracking and optimization recommendations",
+        "Priority access for urgent decisions affecting distributed workforce",
+        "Proven tools, templates, and methodologies for your ongoing use"
       ],
       timeline: "3, 6, or 12 month engagements",
       pricing: "Starting at $8,500/month",
@@ -59,52 +58,26 @@ const Services = () => {
       isNew: false
     },
     {
-      name: "WORKSHOPS & TRAINING",
-      subtitle: "Build Internal Communication Excellence Through Your Team Development",
-      icon: FiBookOpen,
-      color: "purple",
-      description: "Comprehensive training programs develop your team's capability in distributed workforce communication, creating internal expertise for long-term success.",
-      whatWeDoFeatures: [
-        "Distributed Workforce Communication Fundamentals: Half-day workshops teaching your team to understand office, hybrid, and field worker communication needs and channel effectiveness.",
-        "Workplace Mapping Methodology Training: Full-day programs teaching your organization the complete DISCOVER → ANALYZE → DESIGN → SUSTAIN framework with hands-on practice.",
-        "Crisis Communication for Distributed Teams: Half-day training on rapid communication deployment across all your workforce segments and backup systems when primary communication fails.",
-        "Internal Champion Certification: Multi-day certification program for your key personnel who will lead communication initiatives and train others in your organization."
-      ],
-      deliverables: [
-        "Customized workshops designed for your organizational context and challenges",
-        "Hands-on training using your actual communication challenges",
-        "Practical tools and templates for immediate application in your organization",
-        "Follow-up support to ensure successful implementation of your learnings",
-        "Certification options for your internal champions",
-        "Materials and resources tailored to your specific workforce needs"
-      ],
-      timeline: "Virtual or on-site delivery",
-      pricing: "Starting at $12,500",
-      popular: false,
-      isNew: false
-    },
-    {
-      name: "COMPLETE WORKPLACE MAPPING PROCESS",
-      subtitle: "Full Communication Transformation Including Employee Investigation",
+      name: "COMPLETE WORKPLACE MAPPING",
+      subtitle: "Full Transformation: Investigation + Implementation + Sustainability",
       icon: FiTarget,
       color: "blue",
-      description: "Our signature comprehensive transformation experience. The complete DISCOVER → ANALYZE → DESIGN → SUSTAIN methodology including extensive employee investigation across all workforce segments.",
+      description: "Our signature comprehensive transformation. The complete DISCOVER → ANALYZE → DESIGN → SUSTAIN methodology including employee investigation, custom system design, and full implementation support.",
       whatWeDoFeatures: [
-        "Complete Investigation: Full communication investigation including employee surveys, interviews, message tracing, and informal network mapping across all your workforce segments.",
-        "Deep Analysis: Comprehensive analysis using our Johari Window framework to identify blind spots, hidden areas, and optimization opportunities from both leadership and employee perspectives.",
-        "Custom System Design: Design of integrated communication architecture that works with your formal channels and productive informal networks.",
-        "Implementation Support: Full implementation support including change management, internal champion training, and organizational culture transformation.",
-        "Sustainability Planning: Systems and processes to ensure your intentional communication strategy evolves with your organization."
+        "Complete Investigation Phase: Employee surveys, interviews, message tracing, and informal network mapping across all workforce segments to understand the complete communication reality.",
+        "Deep Analysis and Design: Comprehensive Johari Window analysis leading to custom communication architecture that works with both formal channels and productive informal networks.",
+        "Full Implementation Support: Change management, leadership alignment, internal champion training, and organizational culture transformation over 12-18 months.",
+        "Sustainability Systems: Training, tools, and processes to ensure your intentional communication strategy continues evolving effectively as your organization grows."
       ],
       deliverables: [
-        "Complete communication ecosystem investigation and analysis including extensive employee input",
-        "Custom communication architecture designed for your distributed workforce based on actual employee behavior",
-        "Multiple pathway strategies for your different employee groups validated through employee feedback",
-        "Detailed implementation roadmap with change management support for your culture",
-        "Internal capability building and champion training for your team",
-        "6-month post-implementation optimization support for your continued success"
+        "Complete communication ecosystem investigation including extensive employee input",
+        "Custom communication architecture designed specifically for your distributed workforce",
+        "Multiple pathway strategies validated through actual employee feedback and testing",
+        "Full implementation roadmap with change management and cultural transformation support",
+        "Internal champion certification and capability building for long-term success",
+        "6-month post-implementation optimization and troubleshooting support"
       ],
-      timeline: "12 to 18 months total",
+      timeline: "12-18 months total",
       pricing: "Investment varies by organizational size, complexity, and scope",
       popular: false,
       isNew: false
@@ -115,7 +88,6 @@ const Services = () => {
     const colors = {
       yellow: "bg-yellow-100 text-yellow-600 border-yellow-200",
       green: "bg-green-100 text-green-600 border-green-200",
-      purple: "bg-purple-100 text-purple-600 border-purple-200",
       blue: "bg-blue-100 text-blue-600 border-blue-200"
     };
     return colors[color] || colors.blue;
@@ -132,14 +104,14 @@ const Services = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-            Four Ways We Help Distributed Workforces
+            Three Clear Options for Your Communication Challenges
           </h2>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-6">
-            Choose the level of support that matches your organization's needs and timeline. Every option delivers specific, substantial value.
+            Whether you need rapid clarity, fractional strategic expertise, or complete transformation, each option delivers distinct, substantial value for your organization.
           </p>
           <div className="bg-white p-6 rounded-lg border border-primary-200 max-w-3xl mx-auto">
             <p className="text-primary-700">
-              Start with the Assessment to understand your communication blind spots from the leadership perspective, then choose your path forward.
+              Most organizations start with the Diagnostic to understand their specific challenges, then choose their optimal path forward.
             </p>
           </div>
         </motion.div>
@@ -196,24 +168,16 @@ const Services = () => {
                       <SafeIcon icon={FiClock} className="w-5 h-5 flex-shrink-0" />
                       <span className="text-sm font-medium">{service.timeline}</span>
                     </div>
-                    <p className={`font-semibold text-lg ${
-                      service.name === 'COMPLETE WORKPLACE MAPPING PROCESS' 
-                        ? 'text-primary-600' 
-                        : 'text-green-600'
-                    }`}>
+                    <p className={`font-semibold text-lg ${service.name === 'COMPLETE WORKPLACE MAPPING' ? 'text-primary-600' : 'text-green-600'}`}>
                       {service.pricing}
                     </p>
                   </div>
 
                   <a
                     href="mailto:team@workplacemapping.com"
-                    className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                      service.popular || service.isNew 
-                        ? 'bg-primary-600 hover:bg-primary-700 text-white' 
-                        : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-900'
-                    }`}
+                    className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${service.popular || service.isNew ? 'bg-primary-600 hover:bg-primary-700 text-white' : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-900'}`}
                   >
-                    {service.name === 'COMPLETE WORKPLACE MAPPING PROCESS' ? 'Get Custom Quote' : 'Get Started'}
+                    {service.name === 'COMPLETE WORKPLACE MAPPING' ? 'Get Custom Quote' : 'Get Started'}
                     <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
                   </a>
                 </div>

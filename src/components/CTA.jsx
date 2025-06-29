@@ -27,7 +27,7 @@ const CTA = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to See Your Complete Communication Picture?
           </h2>
-
+          
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Let's Start with DISCOVER
@@ -36,7 +36,7 @@ const CTA = () => {
               We'll map both your formal communication systems and your informal networks to show you the complete picture
             </p>
             <p className="text-white/80 leading-relaxed">
-              Want to talk through your distributed workforce communication challenges and understand what's really happening in your organization? Let's schedule a conversation about whether workplace mapping makes sense for your situation.
+              Want to talk through your distributed workforce communication challenges and understand what's really happening in your organization? Let's schedule a conversation about whether workplace mapping or fractional internal communications strategy makes sense for your situation.
             </p>
           </div>
 
@@ -49,7 +49,6 @@ const CTA = () => {
               <SafeIcon icon={FiMail} className="w-5 h-5" />
               team@workplacemapping.com
             </a>
-
             <a
               href="https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"
               target="_blank"

@@ -49,7 +49,7 @@ const ContactForm = () => {
       window.open(`mailto:team@workplacemapping.com?subject=${subject}&body=${emailBody}`);
 
       // 2. SECOND: Save to Supabase database for analytics/backup
-      const { data, error: supabaseError } = await supabase
+      const {data, error: supabaseError} = await supabase
         .from('contact_submissions_wm2024')
         .insert([
           {
@@ -159,24 +159,24 @@ const ContactForm = () => {
       className="bg-white rounded-xl p-8 shadow-lg border border-neutral-200"
     >
       <div className="text-center mb-8">
-        <h3 className="text-2xl font-bold text-neutral-900 mb-2">
+        <h3 className="text-2xl font-bold text-neutral-900 mb-2 text-center">
           Get Started Today
         </h3>
-        <p className="text-neutral-600">
+        <p className="text-neutral-600 text-center">
           Tell us about your distributed workforce communication challenges
         </p>
       </div>
 
       {error && (
         <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
-          <p className="text-yellow-800 text-sm">{error}</p>
+          <p className="text-yellow-800 text-sm text-center">{error}</p>
         </div>
       )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2 text-center">
               Full Name *
             </label>
             <div className="relative">
@@ -195,7 +195,7 @@ const ContactForm = () => {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2 text-center">
               Email Address *
             </label>
             <div className="relative">
@@ -215,7 +215,7 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-neutral-700 mb-2">
+          <label htmlFor="company" className="block text-sm font-medium text-neutral-700 mb-2 text-center">
             Company Name
           </label>
           <div className="relative">
@@ -233,7 +233,7 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-2 text-center">
             Tell us about your communication challenges *
           </label>
           <div className="relative">
@@ -270,10 +270,10 @@ const ContactForm = () => {
         </button>
 
         <div className="text-center">
-          <p className="text-xs text-neutral-500 mb-2">
+          <p className="text-xs text-neutral-500 mb-2 text-center">
             By submitting this form, you agree to our privacy policy and terms of service.
           </p>
-          <p className="text-xs text-primary-600 font-medium">
+          <p className="text-xs text-primary-600 font-medium text-center">
             📧 A copy will be emailed directly to team@workplacemapping.com
           </p>
         </div>

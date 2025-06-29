@@ -52,13 +52,13 @@ const CommunicationReality = () => {
             viewport={{ once: true }}
             className="order-2 lg:order-1"
           >
-            <img
-              src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751076077600-IMG_2854.jpg"
-              alt="Field workers in discussion"
-              className="w-full h-80 object-cover rounded-xl shadow-lg"
+            <img 
+              src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751076077600-IMG_2854.jpg" 
+              alt="Field workers in discussion" 
+              className="w-full h-80 object-cover rounded-xl shadow-lg" 
             />
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -69,9 +69,11 @@ const CommunicationReality = () => {
             <p className="text-lg text-neutral-700 leading-relaxed">
               Every organization has an internal communication strategy whether they've designed one intentionally or not.
             </p>
+            
             <p className="text-lg text-neutral-700 leading-relaxed">
               If you don't create and manage how information flows through your organization, your team will develop informal networks and communication patterns anyway. They'll figure out how to get the information they need through break room conversations, text message chains, informal supervisor updates, or workplace gossip. You just won't know what those patterns are, whether they're accurate, or if they're helping or hurting your goals.
             </p>
+
             <div className="bg-primary-50 p-6 rounded-lg border-l-4 border-primary-600">
               <p className="text-primary-800 font-medium text-center">
                 The question is: do you want to design your communication strategy intentionally, or let it happen by accident?

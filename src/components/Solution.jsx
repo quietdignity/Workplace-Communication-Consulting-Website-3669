@@ -7,10 +7,10 @@ const {FiSearch, FiBarChart, FiSettings, FiRefreshCw, FiArrowRight} = FiIcons;
 
 const Solution = () => {
   const phases = [
-    {name: "DISCOVER", icon: FiSearch, href: "methodology"},
-    {name: "ANALYZE", icon: FiBarChart, href: "methodology"},
-    {name: "DESIGN", icon: FiSettings, href: "methodology"},
-    {name: "SUSTAIN", icon: FiRefreshCw, href: "methodology"}
+    { name: "DISCOVER", icon: FiSearch, href: "services" },
+    { name: "ANALYZE", icon: FiBarChart, href: "services" },
+    { name: "DESIGN", icon: FiSettings, href: "services" },
+    { name: "SUSTAIN", icon: FiRefreshCw, href: "services" }
   ];
 
   const scrollToSection = (sectionId) => {
@@ -18,7 +18,10 @@ const Solution = () => {
     if (element) {
       const navHeight = 80;
       const elementPosition = element.offsetTop - navHeight;
-      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -56,7 +59,7 @@ const Solution = () => {
 
           <div className="bg-white p-6 rounded-lg border border-primary-200 max-w-2xl mx-auto mb-8">
             <p className="text-primary-700 font-medium">
-              👆 Click any phase above to explore our complete methodology
+              👆 Click any phase above to explore our individual services
             </p>
           </div>
         </motion.div>
@@ -88,10 +91,10 @@ const Solution = () => {
 
             <div className="text-center">
               <button
-                onClick={() => scrollToSection('methodology')}
+                onClick={() => scrollToSection('services')}
                 className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
               >
-                Explore Our Methodology
+                Explore Our Services
                 <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
               </button>
             </div>
@@ -104,10 +107,10 @@ const Solution = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <img
-              src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751076090963-IMG_8521.jpg"
-              alt="Team meeting in office environment"
-              className="w-full h-80 object-cover rounded-xl shadow-lg"
+            <img 
+              src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751076090963-IMG_8521.jpg" 
+              alt="Team meeting in office environment" 
+              className="w-full h-80 object-cover rounded-xl shadow-lg" 
             />
           </motion.div>
         </div>

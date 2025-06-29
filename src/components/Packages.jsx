@@ -3,59 +3,77 @@ import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const {FiZap,FiUsers,FiTarget,FiArrowRight,FiCheck} = FiIcons;
+const {FiZap,FiUsers,FiTarget,FiArrowRight,FiCheck,FiBookOpen} = FiIcons;
 
 const Packages = () => {
   const packages = [
     {
-      name: "Communication Diagnostic",
-      description: "Rapid 15-day assessment to identify your biggest communication gaps and get immediate strategic direction.",
+      name: "Communication Assessment",
+      description: "Rapid diagnostic to identify your biggest communication gaps in just 14 days. Perfect for organizations that need concrete evidence and quick wins before committing to larger transformation.",
       icon: FiZap,
-      timeline: "15 business days",
-      pricing: "$8,500",
+      timeline: "14 business days",
+      pricing: "Starting at $2,500",
       features: [
-        "Strategic stakeholder interviews and communication flow analysis",
-        "Infrastructure audit of channels, tools, and informal networks", 
-        "Communication Reality Report with critical gap identification",
-        "Quick wins action plan with immediate improvements",
-        "90-minute strategy session and implementation roadmap",
-        "Full credit toward monthly advisory if you proceed within 60 days"
+        "Strategic stakeholder interview session with leadership and operations",
+        "Rapid communication audit of recent company messages",
+        "Communication Reality Report with critical gap analysis",
+        "Quick wins action plan with 3 immediate improvements",
+        "60-minute strategy session to review findings",
+        "Full credit toward larger engagement if you proceed within 60 days"
       ],
       popular: false,
       isNew: true,
       color: "yellow"
     },
     {
-      name: "Monthly Strategic Advisory", 
-      description: "Ongoing senior-level expertise for continuous optimization and expert guidance on distributed workforce challenges.",
+      name: "Fractional Internal Communications Strategy", 
+      description: "Ongoing support and senior-level expertise for organizations that want continuous improvement and strategic guidance for their distributed workforce communication.",
       icon: FiUsers,
       timeline: "3, 6, or 12 month engagements",
       pricing: "Starting at $8,500/month",
       features: [
-        "Monthly 2-hour strategic consultations with communication expertise",
-        "Crisis response support with rapid guidance (within 4 hours)", 
-        "Quarterly team workshops for internal capability building",
-        "Implementation support and effectiveness tracking",
-        "Priority access for urgent distributed workforce decisions",
-        "Proven tools, templates, and methodologies for ongoing use"
+        "Monthly 2-hour strategic consultation sessions with senior-level expertise",
+        "Crisis communication support and rapid response capability", 
+        "Quarterly team workshops building internal communication capability",
+        "Communication effectiveness reviews and strategic recommendations",
+        "Access to proven workplace mapping tools and methodologies",
+        "Priority email and phone support for urgent communication decisions"
       ],
       popular: true,
       isNew: false,
       color: "green"
     },
     {
-      name: "Complete Workplace Mapping",
-      description: "Full transformation experience with employee investigation, custom system design, and comprehensive implementation support.",
+      name: "Workshops & Training",
+      description: "Comprehensive training programs that develop your team's capability in distributed workforce communication, creating internal expertise for long-term success.",
+      icon: FiBookOpen,
+      timeline: "Virtual or on-site delivery",
+      pricing: "Starting at $8,500",
+      features: [
+        "Customized workshops designed for your organizational context",
+        "Hands-on training using your actual communication challenges",
+        "Practical tools and templates for immediate application",
+        "Follow-up support to ensure successful implementation",
+        "Certification options for your internal champions",
+        "Materials and resources tailored to your specific workforce needs"
+      ],
+      popular: false,
+      isNew: false,
+      color: "purple"
+    },
+    {
+      name: "Complete Workplace Mapping Process",
+      description: "Full transformation experience - the complete DISCOVER → ANALYZE → DESIGN → SUSTAIN methodology for comprehensive communication strategy development and implementation.",
       icon: FiTarget,
       timeline: "12-18 months total",
-      pricing: "Investment varies by organizational size and complexity",
+      pricing: "Investment varies by organizational size, complexity, and scope",
       features: [
-        "Complete communication investigation including employee surveys and interviews",
-        "Custom communication architecture designed for your distributed workforce",
-        "Multiple pathway strategies validated through employee feedback", 
-        "Full implementation with change management and culture transformation",
-        "Internal champion certification and capability building",
-        "6-month post-implementation optimization and support"
+        "Complete communication ecosystem investigation and analysis",
+        "Custom communication architecture for your distributed workforce",
+        "Multiple pathway strategies for different employee groups",
+        "Detailed implementation roadmap with change management support", 
+        "Internal capability building and champion training",
+        "6-month post-implementation optimization support"
       ],
       popular: false,
       isNew: false,
@@ -67,6 +85,7 @@ const Packages = () => {
     const colors = {
       yellow: 'bg-yellow-100 text-yellow-600 border-yellow-200',
       green: 'bg-green-100 text-green-600 border-green-200',
+      purple: 'bg-purple-100 text-purple-600 border-purple-200',
       blue: 'bg-blue-100 text-blue-600 border-blue-200'
     };
     return colors[color] || colors.blue;
@@ -83,19 +102,19 @@ const Packages = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-            Three Clear Options for Your Communication Challenges
+            Four Clear Options for Distributed Workforce Communication
           </h2>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-6">
-            Whether you need rapid clarity, ongoing guidance, or complete transformation - each pathway delivers distinct value for your distributed workforce.
+            Whether you need rapid clarity, ongoing support, training development, or complete transformation - we have the right solution for your organization's needs.
           </p>
           <div className="bg-white p-6 rounded-lg border border-primary-200 max-w-2xl mx-auto">
             <p className="text-primary-700">
-              Most organizations start with the Diagnostic to understand their specific gaps, then choose their optimal path forward.
+              Most organizations start with the Assessment to identify their critical gaps, then choose the best path forward.
             </p>
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           {packages.map((pkg, index) => (
             <motion.div
               key={index}
@@ -110,7 +129,7 @@ const Packages = () => {
               }`}
             >
               {(pkg.popular || pkg.isNew) && (
-                <div className="text-center mb-6">
+                <div className="mb-6">
                   <span className={`${
                     pkg.popular ? 'bg-primary-600 text-white' : 'bg-yellow-500 text-white'
                   } px-4 py-1 rounded-full text-sm font-semibold`}>
@@ -119,33 +138,36 @@ const Packages = () => {
                 </div>
               )}
 
-              <div className="text-center mb-6">
-                <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${getColorClasses(pkg.color)}`}>
+              <div className="flex items-start gap-4 mb-6">
+                <div className={`w-16 h-16 rounded-full flex items-center justify-center ${getColorClasses(pkg.color)} flex-shrink-0`}>
                   <SafeIcon icon={pkg.icon} className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-2">
-                  {pkg.name}
-                </h3>
-                <div className="space-y-1 mb-4">
-                  <div className={`text-2xl font-bold ${
-                    pkg.name === 'Complete Workplace Mapping' ? 'text-primary-600' : 'text-green-600'
-                  }`}>
-                    {pkg.pricing}
-                  </div>
-                  <div className="text-sm text-neutral-600">
-                    {pkg.timeline}
+                <div>
+                  <h4 className="text-2xl font-bold text-neutral-900 mb-3">
+                    {pkg.name}
+                  </h4>
+                  <div className="space-y-2 mb-4">
+                    <p className="text-primary-600 font-semibold text-sm">
+                      {pkg.timeline}
+                    </p>
+                    <p className={`font-medium text-lg ${
+                      pkg.name === 'Complete Workplace Mapping Process' ? 'text-primary-600' : 'text-green-600'
+                    }`}>
+                      {pkg.pricing}
+                    </p>
                   </div>
                 </div>
-                <p className="text-neutral-600 text-sm">
-                  {pkg.description}
-                </p>
               </div>
+
+              <p className="text-neutral-600 leading-relaxed text-sm mb-6">
+                {pkg.description}
+              </p>
 
               <ul className="space-y-3 mb-8">
                 {pkg.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center gap-3">
-                    <SafeIcon icon={FiCheck} className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-neutral-700 text-sm">{feature}</span>
+                  <li key={featureIndex} className="flex items-start gap-3">
+                    <SafeIcon icon={FiCheck} className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-neutral-700 text-sm leading-relaxed">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -158,7 +180,7 @@ const Packages = () => {
                     'bg-neutral-100 hover:bg-neutral-200 text-neutral-900'
                 }`}
               >
-                {pkg.name === 'Complete Workplace Mapping' ? 'Get Custom Quote' : 'Get Started'}
+                {pkg.name === 'Complete Workplace Mapping Process' ? 'Get Custom Quote' : 'Get Started'}
                 <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
               </a>
             </motion.div>

@@ -2,7 +2,6 @@ import React, {useState, useMemo} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
-import {trackChatInteraction, trackFAQInteraction} from '../utils/analytics';
 
 const {FiMessageCircle, FiX, FiSend, FiMail, FiSearch} = FiIcons;
 
@@ -16,17 +15,12 @@ const ChatWidget = () => {
     {
       text: "What is the Communication Diagnostic?",
       keywords: ["diagnostic", "communication diagnostic", "rapid", "quick", "15 days", "8500", "assessment", "gaps"],
-      response: "The Communication Diagnostic is our rapid assessment service designed to give you immediate clarity on your communication gaps without the full investigation process.\n\nPerfect if you suspect communication problems but need concrete evidence before investing in transformation. In just 15 business days for $8,500, we'll:\n\n• Analyze 1 to 2 recent communications to see where they succeed and fail\n• Profile how your office/hybrid/field segments currently communicate\n• Provide 3 to 5 quick wins you can implement immediately\n• Give you a diagnostic report with prioritized recommendations\n• Include a 90-minute strategy session\n• Credit the full amount toward a larger engagement if you proceed within 60 days\n\nIt's the fastest way to get concrete evidence about your distributed workforce communication challenges."
-    },
-    {
-      text: "What is Fractional Internal Communications Strategist service?",
-      keywords: ["fractional", "internal communications", "strategist", "monthly", "advisory", "ongoing", "expert", "guidance"],
-      response: "Our Fractional Internal Communications Strategist service gives you senior-level expertise without the full-time hire. Starting at $8,500/month for 3, 6, or 12 month engagements.\n\nYou get:\n• Monthly 2-hour strategic consultations with communication expertise\n• Crisis communication support with rapid response (within 4 hours)\n• Quarterly team workshops for internal capability building\n• Communication effectiveness tracking and optimization\n• Priority access for urgent distributed workforce decisions\n• Proven tools, templates, and methodologies\n\nPerfect for organizations that need ongoing expert guidance but don't want to hire a full-time internal communications director."
+      response: "The Communication Diagnostic is our rapid assessment service designed to give you immediate clarity on your communication gaps without the full investigation process.\n\nPerfect if you suspect communication problems but need concrete evidence before investing in transformation. In just 15 business days for $8,500, we'll:\n\n• Analyze 1 to 2 recent communications to see where they succeed and fail\n• Profile how your office/hybrid/field segments currently communicate\n• Provide 3 to 5 quick wins you can implement immediately\n• Give you a diagnostic report with prioritized recommendations\n• Include a 30-minute strategy session\n• Credit the full amount toward a larger engagement if you proceed within 60 days\n\nIt's the fastest way to get concrete evidence about your distributed workforce communication challenges."
     },
     {
       text: "What is Workplace Mapping?",
       keywords: ["workplace mapping", "definition", "what is", "methodology", "approach", "communication", "distributed workforce"],
-      response: "Workplace Mapping is our systematic approach to understanding how communication actually flows through your organization, not how it's supposed to work, but how it really works.\n\nWe help organizations with distributed workforces build communication systems that reach everyone effectively. Our Workplace Mapping methodology maps your communication reality and creates solutions that work with your actual workforce constraints, whether you have office workers, field staff, retail locations, manufacturing plants, or other distributed teams."
+      response: "Workplace Mapping is our systematic approach to understanding how communication actually flows through your organization—not how it's supposed to work, but how it really works.\n\nWe help organizations with distributed workforces build communication systems that reach everyone effectively. Our DISCOVER • ANALYZE • DESIGN • SUSTAIN methodology maps your communication reality and creates solutions that work with your actual workforce constraints, whether you have office workers, field staff, retail locations, manufacturing plants, or other distributed teams."
     },
     {
       text: "Can we schedule a consultation?",
@@ -38,12 +32,12 @@ const ChatWidget = () => {
     {
       text: "What's the investment for your services?",
       keywords: ["cost", "price", "pricing", "budget", "investment", "fees", "expensive"],
-      response: "We offer three clear options:\n\n• Communication Diagnostic: $8,500 (15 business days) - Perfect for getting immediate clarity on your communication gaps\n\n• Fractional Internal Communications Strategist: Starting at $8,500/month (3, 6, or 12 month engagements) - Ongoing expert guidance and team development\n\n• Complete Workplace Mapping Process: Investment varies by organizational size, complexity, and scope (12 to 18 months total) - Full transformation experience\n\nMost organizations start with the Diagnostic to understand their specific challenges, then choose the best path forward based on their needs and budget."
+      response: "We offer three clear options:\n\n• Communication Diagnostic: $8,500 (15 business days) - Perfect for getting immediate clarity on your communication gaps\n\n• Retainer & Workshops: Starting at $8,500/month (3, 6, or 12 month engagements) - Ongoing support and team development\n\n• Workplace Mapping Process: Investment varies by organizational size, complexity, and scope (12 to 18 months total) - Complete transformation experience\n\nMost organizations start with the Diagnostic to understand their specific challenges, then choose the best path forward based on their needs and budget."
     },
     {
       text: "What's the typical timeline?",
       keywords: ["timeline", "duration", "how long", "time", "schedule", "months", "weeks"],
-      response: "Timelines vary based on service and your organization's size and complexity:\n\n• Communication Diagnostic: 15 business days\n• Fractional Internal Communications Strategist: 3, 6, or 12 month engagements\n• Complete Workplace Mapping Process: 12 to 18 months total\n\nWe can move faster or slower depending on your organization's needs and operational constraints. We typically work with 8 to 12 businesses a year, allowing us to provide focused, high-quality engagement with each organization."
+      response: "Timelines vary based on service and your organization's size and complexity:\n\n• Communication Diagnostic: 15 business days\n• Retainer & Workshops: 3, 6, or 12 month engagements\n• Complete Workplace Mapping Process: 12 to 18 months total\n\nWe can move faster or slower depending on your organization's needs and operational constraints. We typically work with 8 to 12 businesses a year, allowing us to provide focused, high-quality engagement with each organization."
     },
     {
       text: "How do you handle distributed workforces?",
@@ -53,7 +47,7 @@ const ChatWidget = () => {
     {
       text: "What makes this different from traditional consulting?",
       keywords: ["different", "traditional", "consulting", "unique", "approach", "survey", "investigation"],
-      response: "Most consultants survey employees about communication preferences and assume everyone works the same way. We actually investigate how messages travel through your organization by following real communications and mapping both formal and informal networks through our Workplace Mapping methodology.\n\nWe recognize that office workers, hybrid employees, and field workers have fundamentally different communication needs and constraints. Our approach combines surveys (what people think is happening) with investigation (what's actually happening).\n\nOur Fractional Internal Communications Strategist service also gives you ongoing expert guidance rather than one-time consulting projects."
+      response: "Most consultants survey employees about communication preferences and assume everyone works the same way. We actually investigate how messages travel through your organization by following real communications and mapping both formal and informal networks.\n\nWe recognize that office workers, hybrid employees, and field workers have fundamentally different communication needs and constraints. Our approach combines surveys (what people think is happening) with investigation (what's actually happening)."
     },
     {
       text: "What size organizations do you work with?",
@@ -63,12 +57,12 @@ const ChatWidget = () => {
     {
       text: "What's included in a typical engagement?",
       keywords: ["engagement", "included", "deliverables", "what do we get", "services", "package"],
-      response: "Depending on your service level, we'll conduct employee interviews across your workforce segments, trace actual company messages through your organization, analyze your communication infrastructure, and develop tailored solutions using our Workplace Mapping methodology.\n\nYou'll receive concrete deliverables like communication trace analysis, employee persona profiles, channel effectiveness scorecards, and implementation roadmaps, not just reports. Everything is designed to help you take action and see real results."
+      response: "Depending on your service level, we'll conduct employee interviews across your workforce segments, trace actual company messages through your organization, analyze your communication infrastructure, and develop tailored solutions.\n\nYou'll receive concrete deliverables like communication trace analysis, employee persona profiles, channel effectiveness scorecards, and implementation roadmaps—not just reports. Everything is designed to help you take action and see real results."
     },
     {
       text: "Do you work with remote/hybrid teams?",
       keywords: ["remote", "hybrid", "work from home", "virtual teams", "distributed teams"],
-      response: "Yes, but our specialty is organizations with true workforce distribution challenges, not just remote office workers, but employees who work in warehouses, retail stores, manufacturing plants, field locations, or other environments where traditional digital communication doesn't work well.\n\nWe help organizations reach frontline workers, field teams, and operational staff who often get left out of standard communication strategies."
+      response: "Yes, but our specialty is organizations with true workforce distribution challenges—not just remote office workers, but employees who work in warehouses, retail stores, manufacturing plants, field locations, or other environments where traditional digital communication doesn't work well.\n\nWe help organizations reach frontline workers, field teams, and operational staff who often get left out of standard communication strategies."
     },
     {
       text: "What kind of results can we expect?",
@@ -91,11 +85,7 @@ const ChatWidget = () => {
     ).slice(0, 6); // Show up to 6 search results
   }, [searchQuery]);
 
-  const handleQuickMessage = async (msgObj) => {
-    // Track chat interaction
-    await trackChatInteraction('faq_click', msgObj.text);
-    await trackFAQInteraction(msgObj.text);
-
+  const handleQuickMessage = (msgObj) => {
     if (msgObj.isLink && msgObj.linkUrl) {
       window.open(msgObj.linkUrl, '_blank');
       setIsOpen(false);
@@ -112,9 +102,6 @@ const ChatWidget = () => {
       const subject = encodeURIComponent('Workplace Mapping Inquiry');
       const body = encodeURIComponent(message);
       window.open(`mailto:team@workplacemapping.com?subject=${subject}&body=${body}`);
-      
-      // Track custom message
-      trackChatInteraction('custom_message', message);
       setMessage('');
       setIsOpen(false);
     }
@@ -127,15 +114,7 @@ const ChatWidget = () => {
 
   const handleEmailTeam = () => {
     window.open('mailto:team@workplacemapping.com?subject=Workplace Mapping Question');
-    trackChatInteraction('email_team');
     setIsOpen(false);
-  };
-
-  const handleChatOpen = () => {
-    setIsOpen(!isOpen);
-    if (!isOpen) {
-      trackChatInteraction('chat_opened');
-    }
   };
 
   return (
@@ -158,7 +137,7 @@ const ChatWidget = () => {
                       <SafeIcon icon={FiMessageCircle} className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-white">Hi, I'm Josie!</h3>
+                      <h3 className="font-semibold text-white">Hi, I'm here to help!</h3>
                       <p className="text-xs text-white/80">Workplace Mapping Assistant</p>
                     </div>
                   </div>
@@ -177,7 +156,7 @@ const ChatWidget = () => {
                     <div className="mb-4">
                       <div className="bg-neutral-100 rounded-lg p-3 mb-3">
                         <p className="text-sm text-neutral-700">
-                          👋 Hi! I'm Josie, here to help with your distributed workforce communication challenges. Search or browse below!
+                          👋 Hi! I'm here to help with your distributed workforce communication challenges. Search or browse below!
                         </p>
                       </div>
                     </div>
@@ -249,7 +228,6 @@ const ChatWidget = () => {
                     >
                       ← Back to questions
                     </button>
-
                     <div className="bg-primary-50 rounded-lg p-3 mb-3">
                       <h4 className="font-semibold text-primary-900 text-sm mb-2">
                         {selectedFAQ.question}
@@ -258,7 +236,6 @@ const ChatWidget = () => {
                         {selectedFAQ.answer}
                       </div>
                     </div>
-
                     <div className="text-center">
                       <p className="text-xs text-neutral-600 mb-3">
                         Have more questions?
@@ -279,7 +256,7 @@ const ChatWidget = () => {
         </AnimatePresence>
 
         <motion.button
-          onClick={handleChatOpen}
+          onClick={() => setIsOpen(!isOpen)}
           className="bg-primary-600 hover:bg-primary-700 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-colors duration-200"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -305,7 +282,7 @@ const ChatWidget = () => {
                       <SafeIcon icon={FiMessageCircle} className="w-3 h-3 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-sm font-semibold text-white">Hi, I'm Josie!</h3>
+                      <h3 className="text-sm font-semibold text-white">Hi, I'm here to help!</h3>
                       <p className="text-xs text-white/80">Communication Assistant</p>
                     </div>
                   </div>
@@ -323,7 +300,7 @@ const ChatWidget = () => {
                   <>
                     <div className="bg-neutral-100 rounded p-2 mb-3">
                       <p className="text-xs text-neutral-700">
-                        👋 Hi! I'm Josie. Search or browse your questions below!
+                        👋 Hi! Search or browse your questions below!
                       </p>
                     </div>
 
@@ -376,7 +353,6 @@ const ChatWidget = () => {
                     >
                       ← Back
                     </button>
-
                     <div className="bg-primary-50 rounded p-2 mb-3">
                       <h4 className="font-semibold text-primary-900 text-xs mb-1">
                         {selectedFAQ.question}
@@ -385,7 +361,6 @@ const ChatWidget = () => {
                         {selectedFAQ.answer}
                       </div>
                     </div>
-
                     <button
                       onClick={handleEmailTeam}
                       className="w-full bg-primary-600 hover:bg-primary-700 text-white text-xs py-3 px-4 rounded flex items-center justify-center gap-2 transition-colors"
@@ -401,7 +376,7 @@ const ChatWidget = () => {
         </AnimatePresence>
 
         <motion.button
-          onClick={handleChatOpen}
+          onClick={() => setIsOpen(!isOpen)}
           className="bg-primary-600 hover:bg-primary-700 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

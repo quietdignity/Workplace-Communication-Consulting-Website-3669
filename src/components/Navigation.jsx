@@ -13,7 +13,7 @@ const Navigation=()=> {
   const location=useLocation();
 
   const navItems=[
-    {name: 'Communication Reality',href: 'communication-reality'},
+    {name: 'Reality',href: 'communication-reality'},
     {name: 'Solution',href: 'solution'},
     {name: 'Methodology',href: 'methodology'},
     {name: 'Services',href: 'services'},

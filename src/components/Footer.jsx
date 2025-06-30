@@ -1,25 +1,25 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const { FiMail, FiMic } = FiIcons;
+const {FiMail,FiMic}=FiIcons;
 
-const Footer = () => {
-  const location = useLocation();
+const Footer=()=> {
+  const location=useLocation();
 
-  const scrollToSection = (sectionId) => {
-    // If we're on FAQ page and trying to navigate to other sections, go to home first
-    if (location.pathname === '/faq' && sectionId !== 'faq') {
-      window.location.href = `/#${sectionId}`;
+  const scrollToSection=(sectionId)=> {
+    // If we're on FAQ page and trying to navigate to other sections,go to home first
+    if (location.pathname==='/faq' && sectionId !=='faq') {
+      window.location.href=`/#${sectionId}`;
       return;
     }
 
     // Normal section scrolling
-    const element = document.getElementById(sectionId);
+    const element=document.getElementById(sectionId);
     if (element) {
-      const navHeight = 80;
-      const elementPosition = element.offsetTop - navHeight;
+      const navHeight=80;
+      const elementPosition=element.offsetTop - navHeight;
       window.scrollTo({
         top: elementPosition,
         behavior: 'smooth'
@@ -28,26 +28,21 @@ const Footer = () => {
   };
 
   // Method mapping - links each service to the most relevant section
-  const handleMethodClick = (methodType) => {
+  const handleMethodClick=(methodType)=> {
     switch(methodType) {
-      case 'investigation':
-        // Links to DISCOVER section which covers investigation
+      case 'investigation': // Links to DISCOVER section which covers investigation
         scrollToSection('methodology');
         break;
-      case 'analysis':
-        // Links to ANALYZE section
+      case 'analysis': // Links to ANALYZE section
         scrollToSection('methodology');
         break;
-      case 'design':
-        // Links to DESIGN section
+      case 'design': // Links to DESIGN section
         scrollToSection('methodology');
         break;
-      case 'implementation':
-        // Links to services section which covers implementation
+      case 'implementation': // Links to services section which covers implementation
         scrollToSection('services');
         break;
-      case 'capability':
-        // Links to SUSTAIN section which covers internal capability building
+      case 'capability': // Links to SUSTAIN section which covers internal capability building
         scrollToSection('methodology');
         break;
       default:
@@ -71,7 +66,7 @@ const Footer = () => {
             <ul className="space-y-2 text-neutral-300">
               <li>
                 <button
-                  onClick={() => scrollToSection('services')}
+                  onClick={()=> scrollToSection('services')}
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200 text-left"
                 >
                   Communication Diagnostic
@@ -79,7 +74,7 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('services')}
+                  onClick={()=> scrollToSection('services')}
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200 text-left"
                 >
                   Fractional Internal Communications Strategist
@@ -87,7 +82,7 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('services')}
+                  onClick={()=> scrollToSection('services')}
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200 text-left"
                 >
                   Complete Workplace Mapping
@@ -95,7 +90,7 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => handleMethodClick('capability')}
+                  onClick={()=> handleMethodClick('capability')}
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200 text-left"
                 >
                   Internal Capability Building
@@ -109,15 +104,15 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <button
-                  onClick={() => scrollToSection('communication-reality')}
+                  onClick={()=> scrollToSection('communication-reality')}
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200"
                 >
-                  Communication Reality
+                  Reality
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('methodology')}
+                  onClick={()=> scrollToSection('methodology')}
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200"
                 >
                   Our Methodology
@@ -125,7 +120,7 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('services')}
+                  onClick={()=> scrollToSection('services')}
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200"
                 >
                   Services
@@ -133,7 +128,7 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('case-studies')}
+                  onClick={()=> scrollToSection('case-studies')}
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200"
                 >
                   Case Studies

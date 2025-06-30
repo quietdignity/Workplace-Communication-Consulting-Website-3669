@@ -22,8 +22,8 @@ import ChatWidget from './components/ChatWidget';
 import BackToTop from './components/BackToTop';
 import FeedbackButton from './components/FeedbackButton';
 import HelpHub from './components/HelpHub';
+import StickyCTABar from './components/StickyCTABar';
 import FAQ from './components/FAQ';
-
 import questConfig from './config/questConfig';
 
 function HomePage() {
@@ -67,6 +67,7 @@ function App() {
               path="/"
               element={
                 <>
+                  <StickyCTABar />
                   <Navigation />
                   <HomePage />
                   <Footer />
@@ -81,6 +82,7 @@ function App() {
               path="/faq"
               element={
                 <>
+                  <StickyCTABar />
                   <Navigation />
                   <FAQ />
                   <Footer />

@@ -23,9 +23,27 @@ body {
   height: 100%;
 }
 
-/* Ensure smooth scrolling works with fixed navigation */
+/* Ensure smooth scrolling works with fixed navigation and sticky CTA */
 section {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 80px; /* Standard navigation height */
+}
+
+/* Desktop-specific: Adjust scroll margin when sticky CTA is visible */
+@media (min-width: 768px) {
+  .sticky-cta-active section {
+    scroll-margin-top: 140px; /* Navigation + sticky CTA */
+  }
+}
+
+/* Ensure proper spacing for hero section when sticky CTA pushes navigation down */
+#hero {
+  padding-top: 8rem; /* Default padding for navigation */
+}
+
+@media (min-width: 768px) {
+  .sticky-cta-active #hero {
+    padding-top: 9rem; /* Extra padding when sticky CTA is active */
+  }
 }
 
 /* HelpHub z-index override to ensure it appears above all other elements */
@@ -41,7 +59,7 @@ section {
   z-index: 9999 !important;
 }
 
-/* Ensure HelpHub modal appears above everything */
+/* Ensure HelpHub modal appears above everything including sticky CTA */
 .quest-help-hub-modal,
 [data-quest-component="help-hub-modal"] {
   z-index: 10000 !important;

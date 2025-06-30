@@ -1,9 +1,5 @@
 import React from 'react';
 import {motion} from 'framer-motion';
-import * as FiIcons from 'react-icons/fi';
-import SafeIcon from '../common/SafeIcon';
-
-const {FiUser,FiUsers,FiMic} = FiIcons;
 
 const Background = () => {
   return (
@@ -17,7 +13,7 @@ const Background = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-            About Our Founder
+            About This Approach
           </h2>
         </motion.div>
 
@@ -31,14 +27,14 @@ const Background = () => {
             <div className="text-center lg:text-left">
               <img
                 src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1751077031511-james-brown-profile.JPG"
-                alt="James A. Brown, Communications Professional and Fractional Internal Communications Strategist"
+                alt="James A. Brown, Communications Professional"
                 className="w-80 h-80 object-cover rounded-xl shadow-lg mx-auto lg:mx-0 mb-6"
               />
               <h3 className="text-2xl font-bold text-neutral-900 mb-2">
                 James A. Brown
               </h3>
               <p className="text-lg text-primary-600 font-medium">
-                Communications Professional and Fractional Internal Communications Strategist
+                Founder, Workplace Mapping
               </p>
             </div>
           </motion.div>
@@ -50,26 +46,22 @@ const Background = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="bg-neutral-50 p-8 rounded-xl border border-neutral-200">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <SafeIcon icon={FiUser} className="w-6 h-6 text-primary-600" />
-                </div>
-                <h4 className="text-xl font-bold text-neutral-900">
-                  15+ Years Experience
-                </h4>
-              </div>
-              <p className="text-neutral-700 leading-relaxed mb-4">
-                James Brown is a communications professional with <strong>15+ years of experience figuring out how information really moves through complex, distributed organizations</strong> and how to work with that reality rather than fight it.
-              </p>
-              <p className="text-neutral-600 leading-relaxed">
-                His background includes award winning investigative reporting, where he learned to trace how information flows through organizations and communities, and managing internal communications for 1,800+ employees across 15 departments in government operations. Through these experiences, he developed a special set of skills that he used to develop Workplace Mapping, a new approach to understanding how organizations communicate.
-              </p>
-            </div>
+            <p className="text-lg text-neutral-700 leading-relaxed">
+              James A. Brown founded Workplace Mapping after discovering a fundamental communication divide while managing internal communications for 3,000+ municipal employees across 100+ sites. The methodology emerged from real-world experience with complex distributed workforce communication in high-stakes environments.
+            </p>
+
+            <p className="text-lg text-neutral-700 leading-relaxed">
+              Our approach acknowledges that every organization develops both formal and informal communication networks. The question is whether these networks support or undermine your operational goals.
+            </p>
+
+            <p className="text-lg text-neutral-700 leading-relaxed">
+              We help organizations build intentional communication infrastructure that works with workforce reality, not against it.
+            </p>
 
             <div className="bg-primary-50 p-6 rounded-xl border border-primary-200">
-              <p className="text-primary-800 font-medium text-center">
-                The philosophy behind this work is simple: every organization will have an internal communication strategy whether you design one or not. We help you make yours intentional and effective through fractional expertise and systematic workplace mapping.
+              <h4 className="font-semibold text-primary-900 mb-3">Multi-Workforce Expertise</h4>
+              <p className="text-primary-800">
+                Whether your challenge involves office workers, hybrid teams, field crews, or all three, we design infrastructure that reaches everyone effectively.
               </p>
             </div>
           </motion.div>

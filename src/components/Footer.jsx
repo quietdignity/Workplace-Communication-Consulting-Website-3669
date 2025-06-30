@@ -30,19 +30,24 @@ const Footer = () => {
   // Method mapping - links each service to the most relevant section
   const handleMethodClick = (methodType) => {
     switch(methodType) {
-      case 'investigation': // Links to DISCOVER section which covers investigation
+      case 'investigation':
+        // Links to DISCOVER section which covers investigation
         scrollToSection('methodology');
         break;
-      case 'analysis': // Links to ANALYZE section
+      case 'analysis':
+        // Links to ANALYZE section
         scrollToSection('methodology');
         break;
-      case 'design': // Links to DESIGN section
+      case 'design':
+        // Links to DESIGN section
         scrollToSection('methodology');
         break;
-      case 'implementation': // Links to services section which covers implementation
+      case 'implementation':
+        // Links to services section which covers implementation
         scrollToSection('services');
         break;
-      case 'capability': // Links to SUSTAIN section which covers internal capability building
+      case 'capability':
+        // Links to SUSTAIN section which covers internal capability building
         scrollToSection('methodology');
         break;
       default:
@@ -57,8 +62,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">Workplace Mapping</h3>
             <p className="text-neutral-300 leading-relaxed mb-4">
-              Fractional internal communications strategist and systematic communication solutions for distributed workforces. 
-              Helping organizations reach every employee segment effectively.
+              Fractional internal communications strategist and systematic communication solutions for distributed workforces. Helping organizations reach every employee segment effectively.
             </p>
           </div>
 
@@ -125,6 +129,14 @@ const Footer = () => {
                   className="text-neutral-300 hover:text-primary-300 transition-colors duration-200"
                 >
                   Services
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection('case-studies')}
+                  className="text-neutral-300 hover:text-primary-300 transition-colors duration-200"
+                >
+                  Case Studies
                 </button>
               </li>
             </ul>

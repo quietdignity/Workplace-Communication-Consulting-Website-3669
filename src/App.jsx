@@ -10,6 +10,7 @@ import Solution from './components/Solution';
 import JohariWindow from './components/JohariWindow';
 import WorkplaceMappingMethodology from './components/WorkplaceMappingMethodology';
 import Services from './components/Services';
+import CaseStudies from './components/CaseStudies';
 import WhyThisApproach from './components/WhyThisApproach';
 import Testimonials from './components/Testimonials';
 import Experience from './components/Experience';
@@ -34,6 +35,7 @@ function HomePage() {
       <JohariWindow />
       <WorkplaceMappingMethodology />
       <Services />
+      <CaseStudies />
       <WhyThisApproach />
       <Testimonials />
       <Experience />
@@ -61,28 +63,34 @@ function App() {
       <Router>
         <div className="min-h-screen bg-white">
           <Routes>
-            <Route path="/" element={
-              <>
-                <Navigation />
-                <HomePage />
-                <Footer />
-                <ChatWidget />
-                <BackToTop />
-                <FeedbackButton />
-                <HelpHub />
-              </>
-            } />
-            <Route path="/faq" element={
-              <>
-                <Navigation />
-                <FAQ />
-                <Footer />
-                <ChatWidget />
-                <BackToTop />
-                <FeedbackButton />
-                <HelpHub />
-              </>
-            } />
+            <Route
+              path="/"
+              element={
+                <>
+                  <Navigation />
+                  <HomePage />
+                  <Footer />
+                  <ChatWidget />
+                  <BackToTop />
+                  <FeedbackButton />
+                  <HelpHub />
+                </>
+              }
+            />
+            <Route
+              path="/faq"
+              element={
+                <>
+                  <Navigation />
+                  <FAQ />
+                  <Footer />
+                  <ChatWidget />
+                  <BackToTop />
+                  <FeedbackButton />
+                  <HelpHub />
+                </>
+              }
+            />
           </Routes>
         </div>
       </Router>

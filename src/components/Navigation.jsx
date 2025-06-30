@@ -16,6 +16,7 @@ const Navigation = () => {
     { name: 'Solution', href: 'solution' },
     { name: 'Methodology', href: 'methodology' },
     { name: 'Services', href: 'services' },
+    { name: 'Case Studies', href: 'case-studies' },
     { name: 'FAQ', href: 'faq', isSpecial: true },
     { name: 'Contact', href: 'contact' }
   ];
@@ -38,7 +39,10 @@ const Navigation = () => {
         if (faqElement) {
           const navHeight = 80;
           const elementPosition = faqElement.offsetTop - navHeight;
-          window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+          window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+          });
           setIsOpen(false);
           return;
         } else {
@@ -64,9 +68,11 @@ const Navigation = () => {
     if (element) {
       const navHeight = 80;
       const elementPosition = element.offsetTop - navHeight;
-      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
-
     setIsOpen(false);
   };
 
@@ -97,7 +103,10 @@ const Navigation = () => {
           if (element) {
             const navHeight = 80;
             const elementPosition = element.offsetTop - navHeight;
-            window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+            window.scrollTo({
+              top: elementPosition,
+              behavior: 'smooth'
+            });
           }
         }, 100);
       }
@@ -105,8 +114,8 @@ const Navigation = () => {
 
     // Check for hash on initial load
     handleHashChange();
-    window.addEventListener('hashchange', handleHashChange);
 
+    window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, [location.pathname]);
 

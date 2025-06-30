@@ -15,7 +15,7 @@ const CaseStudies = () => {
       result: "We mapped actual information flow and redesigned the communication structure to eliminate departmental silos. Established emergency protocols ensuring critical updates reach all teams reliably",
       icon: FiUsers,
       color: "blue",
-      metrics: "Coordinated communication across all departments",
+      impact: "Coordinated communication across all departments",
       timeline: "System-wide transformation"
     },
     {
@@ -26,7 +26,7 @@ const CaseStudies = () => {
       result: "We redesigned training communication using our Purpose-Process-Payoff framework. Transformed vague announcements into clear, actionable messages that fit their work reality",
       icon: FiShield,
       color: "green",
-      metrics: "Full participation achieved without enforcement",
+      impact: "100% participation achieved without enforcement",
       timeline: "Single training cycle redesign"
     },
     {
@@ -37,7 +37,7 @@ const CaseStudies = () => {
       result: "We investigated communication patterns and identified how information actually travels. Implemented multi-channel approach combining digital messaging, physical notices, and supervisor engagement",
       icon: FiHeart,
       color: "purple",
-      metrics: "Strong attendance across all employee segments",
+      impact: "Strong attendance across all employee segments",
       timeline: "Event communication redesign"
     },
     {
@@ -48,7 +48,7 @@ const CaseStudies = () => {
       result: "We developed a four-stage crisis response framework: Acknowledge, Inform, Resolve, Reinforce. Implemented controlled messaging protocols to prevent future communication breakdowns",
       icon: FiAlertTriangle,
       color: "red",
-      metrics: "Restored narrative control and organizational trust",
+      impact: "Restored narrative control and organizational trust",
       timeline: "Real-time crisis response"
     },
     {
@@ -59,7 +59,7 @@ const CaseStudies = () => {
       result: "We analyzed information flow patterns and designed channel-specific protocols for each group. Created communication pathways that align with how different teams actually operate",
       icon: FiTruck,
       color: "orange",
-      metrics: "Streamlined operations with reduced errors",
+      impact: "Streamlined operations with reduced errors",
       timeline: "Multi-phase implementation"
     },
     {
@@ -70,7 +70,7 @@ const CaseStudies = () => {
       result: "We looked beyond surface metrics to understand the underlying factors. Discovered communication was reaching employees, but work schedules and personal preferences influenced participation decisions",
       icon: FiAward,
       color: "teal",
-      metrics: "Strategic understanding of engagement versus awareness",
+      impact: "Strategic understanding of engagement vs awareness",
       timeline: "Diagnostic investigation"
     }
   ];
@@ -133,12 +133,12 @@ const CaseStudies = () => {
               className="bg-white rounded-xl p-6 shadow-lg border border-neutral-200 hover:shadow-xl transition-all duration-300"
             >
               {/* Header */}
-              <div className="flex items-start gap-4 mb-4">
-                <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${getColorClasses(study.color)}`}>
+              <div className="flex items-start gap-4 mb-6">
+                <div className={`w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 ${getColorClasses(study.color)}`}>
                   <SafeIcon icon={study.icon} className="w-6 h-6" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-neutral-900 mb-1">
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-bold text-neutral-900 mb-2 leading-tight">
                     {study.title}
                   </h3>
                   <p className="text-sm text-primary-600 font-medium">
@@ -156,18 +156,30 @@ const CaseStudies = () => {
               </div>
 
               {/* Result */}
-              <div className="mb-4">
+              <div className="mb-6">
                 <h4 className="text-sm font-semibold text-neutral-700 mb-2">Solution & Impact:</h4>
                 <p className="text-sm text-neutral-600 leading-relaxed">
                   {study.result}
                 </p>
               </div>
 
-              {/* Metrics */}
-              <div className="bg-neutral-50 p-3 rounded-lg mb-4">
-                <div className="flex justify-between items-center text-xs">
-                  <span className="text-neutral-600">Impact:</span>
-                  <span className="font-semibold text-neutral-900">{study.metrics}</span>
+              {/* Impact & Timeline */}
+              <div className="space-y-3 mb-6">
+                <div className="bg-neutral-50 p-3 rounded-lg">
+                  <div className="flex justify-between items-start">
+                    <span className="text-xs text-neutral-500 font-medium">Impact:</span>
+                    <span className="text-xs font-semibold text-neutral-900 text-right leading-tight max-w-[70%]">
+                      {study.impact}
+                    </span>
+                  </div>
+                </div>
+                <div className="bg-neutral-50 p-3 rounded-lg">
+                  <div className="flex justify-between items-center">
+                    <span className="text-xs text-neutral-500 font-medium">Timeline:</span>
+                    <span className="text-xs font-semibold text-neutral-900">
+                      {study.timeline}
+                    </span>
+                  </div>
                 </div>
               </div>
 

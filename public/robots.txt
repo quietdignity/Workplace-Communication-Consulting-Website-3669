@@ -1,14 +1,20 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://workplacemapping.com/sitemap.xml
+# Allow all public pages
+Allow: /faq
+Allow: /*.css
+Allow: /*.js
+Allow: /images/
 
-# Disallow admin areas (if any)
+# Block admin and private areas only
 Disallow: /admin/
 Disallow: /quest-login/
 Disallow: /quest-admin/
+Disallow: /quest-onboarding/
 
-# Allow important pages
-Allow: /
-Allow: /faq
+# Sitemap location
+Sitemap: https://workplacemapping.com/sitemap.xml
+
+# Crawl delay (optional - helps with server load)
+Crawl-delay: 1

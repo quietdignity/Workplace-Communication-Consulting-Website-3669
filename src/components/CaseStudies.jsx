@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const {FiUsers,FiCalendar,FiBookOpen,FiTruck,FiAlertTriangle,FiTarget,FiArrowRight} = FiIcons;
+const {FiUsers,FiShield,FiHeart,FiAlertTriangle,FiTruck,FiAward,FiArrowRight} = FiIcons;
 
 const CaseStudies = () => {
   const caseStudies = [
@@ -11,67 +11,67 @@ const CaseStudies = () => {
       id: 1,
       title: "Multi-Department Government Agency Transformation",
       industry: "Government/Public Sector",
-      challenge: "1,800+ employees across 15 departments experiencing critical communication failures that affected public services and safety compliance",
-      result: "Eliminated information silos and established reliable emergency communication pathways. Created framework ensuring critical updates reach all departments within required timeframes",
+      challenge: "Communication gaps across 15 departments serving 1,800+ employees were affecting public services and creating safety compliance issues",
+      result: "We mapped actual information flow and redesigned the communication structure to eliminate departmental silos. Established emergency protocols ensuring critical updates reach all teams reliably",
       icon: FiUsers,
       color: "blue",
-      metrics: "1,800+ employees, 15 departments",
-      timeline: "18-month transformation"
+      metrics: "Coordinated communication across all departments",
+      timeline: "System-wide transformation"
     },
     {
       id: 2,
-      title: "Wellness Fair Attendance Breakthrough",
-      industry: "Municipal Operations",
-      challenge: "Annual wellness events consistently drew only 12-18 attendees because communication methods only reached office staff, completely missing field crews",
-      result: "Redesigned communication strategy using physical notices, supervisor briefings, and targeted digital outreach. Achieved 280+ attendees with sustained engagement",
-      icon: FiCalendar,
+      title: "Manufacturing Safety Training Success",
+      industry: "Manufacturing/Safety",
+      challenge: "Production floor workers consistently avoided mandatory safety training due to unclear instructions and competing priorities during operational hours",
+      result: "We redesigned training communication using our Purpose-Process-Payoff framework. Transformed vague announcements into clear, actionable messages that fit their work reality",
+      icon: FiShield,
       color: "green",
-      metrics: "280+ attendees (from 12-18)",
-      timeline: "Single event redesign"
+      metrics: "Full participation achieved without enforcement",
+      timeline: "Single training cycle redesign"
     },
     {
       id: 3,
-      title: "Manufacturing Safety Training Overhaul",
-      industry: "Manufacturing/Safety",
-      challenge: "Mandatory safety training had poor completion rates due to unclear messaging and competing priorities on the production floor",
-      result: "Applied Purpose-Process-Payoff framework to training communications. Achieved full compliance with significantly fewer manager follow-ups required",
-      icon: FiBookOpen,
+      title: "Wellness Event Breakthrough",
+      industry: "Municipal Operations",
+      challenge: "Corporate wellness events consistently reached only office workers while missing field crews entirely, resulting in poor attendance year after year",
+      result: "We investigated communication patterns and identified how information actually travels. Implemented multi-channel approach combining digital messaging, physical notices, and supervisor engagement",
+      icon: FiHeart,
       color: "purple",
-      metrics: "100% completion achieved",
-      timeline: "Single training cycle"
+      metrics: "Strong attendance across all employee segments",
+      timeline: "Event communication redesign"
     },
     {
       id: 4,
-      title: "Logistics Operations Communication Fix",
-      industry: "Distribution/Logistics",
-      challenge: "Warehouse and driver communications were inconsistent, causing delays, errors, and frustration among frontline staff",
-      result: "Implemented channel-specific messaging protocols. Reduced operational errors, improved response times, and increased staff satisfaction with information flow",
-      icon: FiTruck,
-      color: "orange",
-      metrics: "Measurable error reduction",
-      timeline: "Multi-phase implementation"
+      title: "Crisis Communication Recovery",
+      industry: "Crisis Management",
+      challenge: "Internal memo leaked to media before employees received it, creating organizational confusion and undermining leadership credibility",
+      result: "We developed a four-stage crisis response framework: Acknowledge, Inform, Resolve, Reinforce. Implemented controlled messaging protocols to prevent future communication breakdowns",
+      icon: FiAlertTriangle,
+      color: "red",
+      metrics: "Restored narrative control and organizational trust",
+      timeline: "Real-time crisis response"
     },
     {
       id: 5,
-      title: "Executive Crisis Communication Recovery",
-      industry: "Crisis Management",
-      challenge: "Confidential internal memo leaked to press before reaching employees, creating confusion and speculation throughout the organization",
-      result: "Developed four-stage crisis response protocol (Acknowledge, Inform, Resolve, Reinforce) with controlled messaging and clear response procedures",
-      icon: FiAlertTriangle,
-      color: "red",
-      metrics: "Crisis narrative controlled",
-      timeline: "Real-time response"
+      title: "Warehouse Communication Overhaul",
+      industry: "Distribution/Logistics",
+      challenge: "Inconsistent messaging between office staff, warehouse teams, and drivers was causing operational delays and frustrating frontline workers",
+      result: "We analyzed information flow patterns and designed channel-specific protocols for each group. Created communication pathways that align with how different teams actually operate",
+      icon: FiTruck,
+      color: "orange",
+      metrics: "Streamlined operations with reduced errors",
+      timeline: "Multi-phase implementation"
     },
     {
       id: 6,
-      title: "Retail Chain Communication Architecture",
-      industry: "Multi-Location Retail",
-      challenge: "Corporate messages failed to reach store-level employees effectively, while field teams developed their own informal networks to share information",
-      result: "Designed integrated approach leveraging both formal channels and productive informal networks. Ensured comprehensive reach across all employee segments",
-      icon: FiTarget,
+      title: "Veterans Recognition Insights",
+      industry: "Government/Employee Relations",
+      challenge: "Only 12 of 250 veteran employees attended recognition events despite comprehensive outreach, suggesting significant communication failure",
+      result: "We looked beyond surface metrics to understand the underlying factors. Discovered communication was reaching employees, but work schedules and personal preferences influenced participation decisions",
+      icon: FiAward,
       color: "teal",
-      metrics: "Complete segment coverage",
-      timeline: "System-wide redesign"
+      metrics: "Strategic understanding of engagement versus awareness",
+      timeline: "Diagnostic investigation"
     }
   ];
 
@@ -80,8 +80,8 @@ const CaseStudies = () => {
       blue: "bg-blue-100 text-blue-600 border-blue-200",
       green: "bg-green-100 text-green-600 border-green-200",
       purple: "bg-purple-100 text-purple-600 border-purple-200",
-      orange: "bg-orange-100 text-orange-600 border-orange-200",
       red: "bg-red-100 text-red-600 border-red-200",
+      orange: "bg-orange-100 text-orange-600 border-orange-200",
       teal: "bg-teal-100 text-teal-600 border-teal-200"
     };
     return colors[color] || colors.blue;
@@ -201,27 +201,27 @@ const CaseStudies = () => {
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <SafeIcon icon={FiUsers} className="w-8 h-8 text-blue-600" />
               </div>
-              <h4 className="font-semibold text-neutral-900 mb-2">Segment-Specific Strategies</h4>
+              <h4 className="font-semibold text-neutral-900 mb-2">Communication Mapping</h4>
               <p className="text-sm text-neutral-600">
-                Office workers, field staff, and hybrid employees require completely different communication approaches
+                Understanding how information actually flows reveals gaps between intended and real communication patterns
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <SafeIcon icon={FiTarget} className="w-8 h-8 text-green-600" />
+                <SafeIcon icon={FiShield} className="w-8 h-8 text-green-600" />
               </div>
-              <h4 className="font-semibold text-neutral-900 mb-2">Channel Optimization</h4>
+              <h4 className="font-semibold text-neutral-900 mb-2">Channel-Specific Design</h4>
               <p className="text-sm text-neutral-600">
-                Physical notices and supervisor briefings often outperform digital-only approaches for field workers
+                Different workforce segments require tailored communication approaches that match their work realities
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <SafeIcon icon={FiBookOpen} className="w-8 h-8 text-purple-600" />
+                <SafeIcon icon={FiHeart} className="w-8 h-8 text-purple-600" />
               </div>
-              <h4 className="font-semibold text-neutral-900 mb-2">Message Structure</h4>
+              <h4 className="font-semibold text-neutral-900 mb-2">Beyond Surface Metrics</h4>
               <p className="text-sm text-neutral-600">
-                Clear Purpose, Process, and Payoff messaging dramatically improves participation rates
+                True communication success requires understanding both message delivery and underlying engagement factors
               </p>
             </div>
           </div>

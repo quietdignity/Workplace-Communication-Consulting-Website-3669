@@ -22,7 +22,7 @@ const Services=()=> {
         "Full credit toward fractional advisory if you proceed within 60 days"
       ],
       timeline: "Rapid turnaround",
-      pricing: "Investment varies by organizational size and complexity",
+      pricing: "$8,500",
       popular: false,
       isNew: true,
       ctaText: "Get Started"
@@ -42,7 +42,7 @@ const Services=()=> {
         "Proven tools, templates, and methodologies for your ongoing use"
       ],
       timeline: "3, 6, or 12 month engagements",
-      pricing: "Investment varies by organizational size, complexity, and scope. Limited spots available.",
+      pricing: "Contact for pricing",
       popular: true,
       isNew: false,
       ctaText: "Get Custom Quote"
@@ -142,9 +142,9 @@ const Services=()=> {
                 {/* Pricing */}
                 <div className="mb-4">
                   <div className={`font-bold mb-1 ${
-                    service.name === 'INTERNAL COMMUNICATIONS REBUILD' ? 'text-primary-600 text-lg' :
-                    service.name === 'FRACTIONAL INTERNAL COMMUNICATIONS STRATEGIST' ? 'text-green-600 text-lg' :
-                    'text-green-600 text-lg'
+                    service.name === 'COMMUNICATION DIAGNOSTIC' ? 'text-2xl text-green-600' :
+                    service.name === 'FRACTIONAL INTERNAL COMMUNICATIONS STRATEGIST' ? 'text-lg text-primary-600' :
+                    'text-lg text-primary-600'
                   }`}>
                     {service.pricing}
                   </div>

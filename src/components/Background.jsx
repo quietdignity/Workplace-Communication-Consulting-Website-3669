@@ -6,10 +6,10 @@ const Background = () => {
     <section id="background" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{opacity: 0, y: 20}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{duration: 0.8}}
+          viewport={{once: true}}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
@@ -19,10 +19,10 @@ const Background = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{opacity: 0, x: -20}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{duration: 0.8}}
+            viewport={{once: true}}
           >
             <div className="text-center lg:text-left">
               <img
@@ -30,20 +30,22 @@ const Background = () => {
                 alt="James A. Brown, Communications Professional"
                 className="w-80 h-80 object-cover rounded-xl shadow-lg mx-auto lg:mx-0 mb-6"
               />
-              <h3 className="text-2xl font-bold text-neutral-900 mb-2">
-                James A. Brown
-              </h3>
-              <p className="text-lg text-primary-600 font-medium">
-                Founder, Workplace Mapping
-              </p>
+              <div className="text-center lg:text-left">
+                <h3 className="text-2xl font-bold text-neutral-900 mb-2">
+                  James A. Brown
+                </h3>
+                <p className="text-lg text-primary-600 font-medium">
+                  Founder, Workplace Mapping
+                </p>
+              </div>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{opacity: 0, x: 20}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{duration: 0.8}}
+            viewport={{once: true}}
             className="space-y-6"
           >
             <p className="text-lg text-neutral-700 leading-relaxed">

@@ -1,99 +1,80 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const { FiCheck, FiShoppingBag, FiSettings, FiCoffee, FiTruck, FiTool, FiMapPin } = FiIcons;
+const {FiUsers, FiBuilding, FiAward} = FiIcons;
 
 const Experience = () => {
-  const experiences = [
-    {
-      icon: FiShoppingBag,
-      title: "Retail operations",
-      description: "where store-level informal networks often supplement corporate communication"
-    },
-    {
-      icon: FiSettings,
-      title: "Manufacturing companies",
-      description: "where plant floor communication culture may differ significantly from office environments"
-    },
-    {
-      icon: FiCoffee,
-      title: "Hospitality businesses",
-      description: "where location-level teams develop their own information-sharing patterns"
-    },
-    {
-      icon: FiTruck,
-      title: "Logistics companies",
-      description: "where drivers and warehouse workers create informal networks out of operational necessity"
-    },
-    {
-      icon: FiTool,
-      title: "Field service organizations",
-      description: "where technicians develop informal communication systems to share knowledge and solve problems"
-    },
-    {
-      icon: FiMapPin,
-      title: "Municipalities and government agencies",
-      description: "where field crews, public-facing staff, and administrative teams operate in completely different communication environments"
-    }
-  ];
-
   return (
-    <section id="experience" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-20 bg-gradient-to-br from-neutral-50 to-primary-50">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{opacity: 0, y: 20}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{duration: 0.8}}
+          viewport={{once: true}}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-            This Works Well for Organizations With:
+            Experience That Counts
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-neutral-50 p-6 rounded-lg border border-neutral-200 hover:shadow-lg transition-shadow duration-300"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <SafeIcon icon={FiCheck} className="w-6 h-6 text-green-600" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <SafeIcon icon={exp.icon} className="w-5 h-5 text-primary-600" />
-                    <h3 className="font-bold text-neutral-900">
-                      {exp.title}
-                    </h3>
-                  </div>
-                  <p className="text-neutral-600 text-sm">
-                    {exp.description}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <motion.div
+            initial={{opacity: 0, y: 30}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{duration: 0.6, delay: 0.1}}
+            viewport={{once: true}}
+            className="text-center"
+          >
+            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <SafeIcon icon={FiUsers} className="w-8 h-8 text-blue-600" />
+            </div>
+            <h3 className="text-2xl font-bold text-neutral-900 mb-2">3,000+</h3>
+            <p className="text-neutral-600">Distributed employees managed</p>
+          </motion.div>
+
+          <motion.div
+            initial={{opacity: 0, y: 30}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{duration: 0.6, delay: 0.2}}
+            viewport={{once: true}}
+            className="text-center"
+          >
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <SafeIcon icon={FiBuilding} className="w-8 h-8 text-green-600" />
+            </div>
+            <h3 className="text-2xl font-bold text-neutral-900 mb-2">15+ Years</h3>
+            <p className="text-neutral-600">Communication strategy experience</p>
+          </motion.div>
+
+          <motion.div
+            initial={{opacity: 0, y: 30}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{duration: 0.6, delay: 0.3}}
+            viewport={{once: true}}
+            className="text-center"
+          >
+            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <SafeIcon icon={FiAward} className="w-8 h-8 text-purple-600" />
+            </div>
+            <h3 className="text-2xl font-bold text-neutral-900 mb-2">Proven</h3>
+            <p className="text-neutral-600">Workplace mapping methodology</p>
+          </motion.div>
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center max-w-4xl mx-auto"
+          initial={{opacity: 0, y: 20}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{duration: 0.8, delay: 0.6}}
+          viewport={{once: true}}
+          className="text-center"
         >
-          <div className="bg-primary-50 p-6 rounded-xl border border-primary-200">
-            <p className="text-primary-800 font-medium">
-              Any multi-location operation where different sites have developed different communication cultures that need to be understood and worked with
+          <div className="bg-white p-8 rounded-xl shadow-lg border border-neutral-200 max-w-3xl mx-auto">
+            <p className="text-lg text-neutral-700 leading-relaxed">
+              Developed through managing communications for 3,000+ distributed employees across government and private sector organizations. Our approach combines investigative techniques with practical communication strategy.
             </p>
           </div>
         </motion.div>

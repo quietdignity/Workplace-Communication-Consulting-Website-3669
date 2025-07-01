@@ -1,0 +1,6 @@
+# Netlify redirects file
+/admin/* /index.html 200
+/quest-login/* /index.html 200
+/quest-onboarding/* /index.html 200
+# Handle SPA routing
+/* /index.html 200

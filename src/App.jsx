@@ -2,7 +2,6 @@ import React from 'react';
 import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 import {QuestProvider} from '@questlabs/react-sdk';
 import '@questlabs/react-sdk/dist/style.css';
-
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import WhyItMatters from './components/WhyItMatters';
@@ -18,7 +17,6 @@ import FeedbackButton from './components/FeedbackButton';
 import HelpHub from './components/HelpHub';
 import StickyCTABar from './components/StickyCTABar';
 import FAQ from './components/FAQ';
-
 import questConfig from './config/questConfig';
 
 function HomePage() {

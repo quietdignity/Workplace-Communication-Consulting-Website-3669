@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const {FiZap, FiUsers, FiTarget, FiArrowRight, FiCheck} = FiIcons;
+const {FiZap,FiUsers,FiTarget,FiArrowRight,FiCheck} = FiIcons;
 
 const Services = () => {
   const services = [
@@ -88,8 +88,8 @@ const Services = () => {
               transition={{duration: 0.6, delay: index * 0.1}}
               viewport={{once: true}}
               className={`bg-white rounded-xl p-6 shadow-lg border-2 transition-all duration-300 hover:shadow-xl ${
-                service.popular 
-                  ? 'border-primary-500 relative' 
+                service.popular
+                  ? 'border-primary-500 relative'
                   : 'border-neutral-200 hover:border-primary-300'
               }`}
             >
@@ -130,8 +130,8 @@ const Services = () => {
               <a
                 href="mailto:team@workplacemapping.com"
                 className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                  service.popular 
-                    ? 'bg-primary-600 hover:bg-primary-700 text-white' 
+                  service.popular
+                    ? 'bg-primary-600 hover:bg-primary-700 text-white'
                     : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-900'
                 }`}
               >
@@ -149,22 +149,31 @@ const Services = () => {
             transition={{duration: 0.8, delay: 0.6}}
             viewport={{once: true}}
           >
-            <div className="bg-neutral-50 p-8 rounded-xl border border-neutral-200 max-w-4xl mx-auto">
-              <h3 className="text-xl font-bold text-neutral-900 mb-4">
+            <div className="bg-neutral-50 p-6 md:p-8 rounded-xl border border-neutral-200 max-w-4xl mx-auto">
+              <h3 className="text-lg md:text-xl font-bold text-neutral-900 mb-4 text-center">
                 Questions About Which Option Is Right for You?
               </h3>
-              <p className="text-neutral-600 mb-6">
-                Contact us to discuss your specific distributed workforce communication challenges.
+              <p className="text-neutral-600 mb-6 text-center px-2">
+                Email us or book a discovery call to discuss your specific distributed workforce communication challenges.
               </p>
-              <a
-                href="https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
-              >
-                Book a Discovery Call
-                <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
-              </a>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+                <a
+                  href="mailto:team@workplacemapping.com"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-4 md:px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+                >
+                  Email Us
+                  <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-4 md:px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+                >
+                  Book Discovery Call
+                  <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>

@@ -25,31 +25,31 @@ const CTA = () => {
           viewport={{once: true}}
           className="text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-6 md:mb-8">
             Stop Losing Critical Information in Communication Gaps
           </h2>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 max-w-2xl mx-auto">
+
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-6 md:mb-8 max-w-2xl mx-auto">
             <button
               onClick={() => {
                 handleCalendarClick();
                 document.getElementById('services')?.scrollIntoView({behavior: 'smooth'});
               }}
-              className="w-full sm:w-auto bg-white hover:bg-neutral-100 text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl flex items-center gap-3 justify-center"
+              className="w-full sm:w-auto bg-white hover:bg-neutral-100 text-primary-600 px-6 md:px-8 py-3 md:py-4 rounded-lg text-base md:text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 md:gap-3 justify-center"
             >
               Get Your 20-Day Diagnostic
-              <SafeIcon icon={FiArrowRight} className="w-5 h-5" />
+              <SafeIcon icon={FiArrowRight} className="w-4 md:w-5 h-4 md:h-5" />
             </button>
-            
+
             <a
               href="https://tidycal.com/jamesbrowntv/workplace-mapping-consultation"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleCalendarClick}
-              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 flex items-center gap-3 justify-center"
+              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-primary-600 px-6 md:px-8 py-3 md:py-4 rounded-lg text-base md:text-lg font-semibold transition-all duration-200 flex items-center gap-2 md:gap-3 justify-center"
             >
               Book a Discovery Call
-              <SafeIcon icon={FiCalendar} className="w-5 h-5" />
+              <SafeIcon icon={FiCalendar} className="w-4 md:w-5 h-4 md:h-5" />
             </a>
           </div>
 
@@ -58,9 +58,9 @@ const CTA = () => {
             whileInView={{opacity: 1}}
             transition={{delay: 0.5, duration: 0.5}}
             viewport={{once: true}}
-            className="mt-8"
+            className="mt-6 md:mt-8"
           >
-            <p className="text-white/70 text-sm italic">
+            <p className="text-white/70 text-sm text-center px-2">
               Questions? Email team@workplacemapping.com to discuss your specific communication challenges.
             </p>
           </motion.div>

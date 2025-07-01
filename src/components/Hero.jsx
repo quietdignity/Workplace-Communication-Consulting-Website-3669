@@ -46,12 +46,8 @@ const Hero = () => {
             </span>
           </h1>
           
-          <p className="text-lg md:text-2xl text-neutral-700 mb-8 md:mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-2xl text-neutral-700 mb-12 md:mb-16 max-w-4xl mx-auto leading-relaxed">
             Your messages reach headquarters effectively. But frontline workers, virtual teams, distributed staff, retail associates, delivery drivers, and field technicians miss critical updates every day.
-          </p>
-          
-          <p className="text-lg md:text-xl text-neutral-600 mb-12 md:mb-16 max-w-4xl mx-auto leading-relaxed">
-            We trace how information travels through your organization, then partner with you to build a communication infrastructure that reaches <em>every employee segment</em> - office, hybrid, frontline, virtual, and distributed workers.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center max-w-2xl mx-auto">

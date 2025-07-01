@@ -67,10 +67,10 @@ const CaseStudies = () => {
     <section id="case-studies" className="py-20 bg-gradient-to-br from-neutral-50 to-primary-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{opacity: 0, y: 20}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{duration: 0.8}}
+          viewport={{once: true}}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
@@ -85,10 +85,10 @@ const CaseStudies = () => {
           {caseStudies.map((study, index) => (
             <motion.div
               key={study.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              initial={{opacity: 0, y: 30}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 0.6, delay: index * 0.1}}
+              viewport={{once: true}}
               className="bg-white rounded-xl p-6 shadow-lg border border-neutral-200 hover:shadow-xl transition-all duration-300"
             >
               {/* Header */}
@@ -158,10 +158,10 @@ const CaseStudies = () => {
 
         {/* Key Insights */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
+          initial={{opacity: 0, y: 20}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{duration: 0.8, delay: 0.3}}
+          viewport={{once: true}}
           className="bg-white p-8 rounded-xl border border-neutral-200 shadow-lg"
         >
           <h3 className="text-xl font-bold text-neutral-900 mb-6 text-center">
@@ -200,10 +200,10 @@ const CaseStudies = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          viewport={{ once: true }}
+          initial={{opacity: 0, y: 20}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{duration: 0.8, delay: 0.5}}
+          viewport={{once: true}}
           className="mt-12 text-center"
         >
           <div className="bg-primary-600 p-8 rounded-xl text-white">

@@ -3,14 +3,14 @@ import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const {FiArrowDown}=FiIcons;
+const {FiArrowDown} = FiIcons;
 
-const Hero=()=> {
-  const scrollToSection=(sectionId)=> {
-    const element=document.getElementById(sectionId);
+const Hero = () => {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
     if (element) {
-      const navHeight=80;
-      const elementPosition=element.offsetTop - navHeight;
+      const navHeight = 80;
+      const elementPosition = element.offsetTop - navHeight;
       window.scrollTo({
         top: elementPosition,
         behavior: 'smooth'
@@ -35,14 +35,14 @@ const Hero=()=> {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
-          initial={{opacity: 0,y: 20}}
-          animate={{opacity: 1,y: 0}}
+          initial={{opacity: 0, y: 20}}
+          animate={{opacity: 1, y: 0}}
           transition={{duration: 0.8}}
         >
           <h1 className="text-3xl md:text-6xl font-bold text-neutral-900 mb-6 md:mb-8 leading-tight max-w-5xl mx-auto">
             Your Office Staff Get the Memo.
             <span className="text-primary-600 block mt-2 md:mt-4">
-              How About Your Frontline Workers?
+              What About Your Frontline Workers?
             </span>
           </h1>
 
@@ -52,7 +52,7 @@ const Hero=()=> {
 
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center max-w-2xl mx-auto">
             <button
-              onClick={()=> scrollToSection('services')}
+              onClick={() => scrollToSection('services')}
               className="w-full sm:w-auto bg-primary-600 hover:bg-primary-700 text-white px-8 md:px-10 py-4 md:py-5 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl"
               aria-label="Start a 20-day diagnostic"
             >
@@ -79,14 +79,14 @@ const Hero=()=> {
             </div>
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                {name: "DISCOVER",color: "bg-blue-100 text-blue-700 hover:bg-blue-200"},
-                {name: "ANALYZE",color: "bg-green-100 text-green-700 hover:bg-green-200"},
-                {name: "DESIGN",color: "bg-purple-100 text-purple-700 hover:bg-purple-200"},
-                {name: "SUSTAIN",color: "bg-orange-100 text-orange-700 hover:bg-orange-200"}
-              ].map((phase)=> (
+                {name: "DISCOVER", color: "bg-blue-100 text-blue-700 hover:bg-blue-200"},
+                {name: "ANALYZE", color: "bg-green-100 text-green-700 hover:bg-green-200"},
+                {name: "DESIGN", color: "bg-purple-100 text-purple-700 hover:bg-purple-200"},
+                {name: "SUSTAIN", color: "bg-orange-100 text-orange-700 hover:bg-orange-200"}
+              ].map((phase) => (
                 <button
                   key={phase.name}
-                  onClick={()=> scrollToSection('methodology')}
+                  onClick={() => scrollToSection('methodology')}
                   className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors duration-200 ${phase.color}`}
                 >
                   {phase.name}
@@ -99,11 +99,11 @@ const Hero=()=> {
         <motion.div
           initial={{opacity: 0}}
           animate={{opacity: 1}}
-          transition={{delay: 1,duration: 0.5}}
+          transition={{delay: 1, duration: 0.5}}
           className="mt-16 md:mt-24"
         >
           <button
-            onClick={()=> scrollToSection('communication-reality')}
+            onClick={() => scrollToSection('communication-reality')}
             className="cursor-pointer hover:text-primary-600 transition-colors"
             aria-label="Scroll to learn more about communication challenges"
           >

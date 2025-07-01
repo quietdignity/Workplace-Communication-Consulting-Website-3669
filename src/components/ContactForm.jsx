@@ -1,13 +1,13 @@
-import React,{useState} from 'react';
+import React, {useState} from 'react';
 import {motion} from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 import supabase from '../lib/supabase';
 
-const {FiMail,FiUser,FiMessageSquare,FiBuilding,FiPhone,FiSend,FiCheck,FiChevronDown}=FiIcons;
+const {FiMail, FiUser, FiMessageSquare, FiBuilding, FiPhone, FiSend, FiCheck, FiChevronDown} = FiIcons;
 
-const ContactForm=()=> {
-  const [formData,setFormData]=useState({
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -15,11 +15,12 @@ const ContactForm=()=> {
     inquiryType: '',
     message: ''
   });
-  const [isSubmitting,setIsSubmitting]=useState(false);
-  const [isSubmitted,setIsSubmitted]=useState(false);
-  const [error,setError]=useState('');
 
-  const inquiryTypes=[
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState('');
+
+  const inquiryTypes = [
     {value: 'consultation', label: 'Schedule a Consultation'},
     {value: 'communication-diagnostic', label: 'Communication Diagnostic'},
     {value: 'fractional-strategist', label: 'Fractional Internal Communications Strategist'},
@@ -30,22 +31,22 @@ const ContactForm=()=> {
     {value: 'other', label: 'Other Inquiry'}
   ];
 
-  const handleChange=(e)=> {
-    setFormData(prev=> ({
+  const handleChange = (e) => {
+    setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }));
   };
 
-  const handleSubmit=async (e)=> {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
 
     try {
       // 1. FIRST: Create email content and open email client (PRIMARY BACKUP)
-      const subject=encodeURIComponent(`NEW INQUIRY - ${inquiryTypes.find(type => type.value === formData.inquiryType)?.label || 'General'} - ${formData.name}`);
-      const emailBody=encodeURIComponent(
+      const subject = encodeURIComponent(`NEW INQUIRY - ${inquiryTypes.find(type => type.value === formData.inquiryType)?.label || 'General'} - ${formData.name}`);
+      const emailBody = encodeURIComponent(
         `NEW CONTACT FORM SUBMISSION\n` +
         `================================\n\n` +
         `Name: ${formData.name}\n` +
@@ -58,15 +59,9 @@ const ContactForm=()=> {
         `${formData.message}\n\n` +
         `================================\n` +
         `PRIORITY LEVEL:\n` +
-        `${formData.inquiryType === 'press' ? 'HIGH - Press Inquiry' : 
-          formData.inquiryType === 'speaking' ? 'MEDIUM - Speaking Engagement' : 
-          formData.inquiryType === 'consultation' ? 'HIGH - Consultation Request' :
-          'STANDARD - Service Inquiry'}\n\n` +
+        `${formData.inquiryType === 'press' ? 'HIGH - Press Inquiry' : formData.inquiryType === 'speaking' ? 'MEDIUM - Speaking Engagement' : formData.inquiryType === 'consultation' ? 'HIGH - Consultation Request' : 'STANDARD - Service Inquiry'}\n\n` +
         `SUGGESTED NEXT STEPS:\n` +
-        `${formData.inquiryType === 'consultation' ? '1. Respond within 4 hours\n2. Send TidyCal link\n3. Prepare consultation materials' :
-          formData.inquiryType === 'press' ? '1. Respond within 2 hours\n2. Send media kit\n3. Schedule interview' :
-          formData.inquiryType === 'speaking' ? '1. Respond within 24 hours\n2. Send speaker packet\n3. Discuss availability' :
-          '1. Respond within 24 hours\n2. Send relevant service information\n3. Schedule discovery call'}\n\n` +
+        `${formData.inquiryType === 'consultation' ? '1. Respond within 4 hours\n2. Send TidyCal link\n3. Prepare consultation materials' : formData.inquiryType === 'press' ? '1. Respond within 2 hours\n2. Send media kit\n3. Schedule interview' : formData.inquiryType === 'speaking' ? '1. Respond within 24 hours\n2. Send speaker packet\n3. Discuss availability' : '1. Respond within 24 hours\n2. Send relevant service information\n3. Schedule discovery call'}\n\n` +
         `This message was submitted via workplacemapping.com contact form`
       );
 
@@ -74,7 +69,7 @@ const ContactForm=()=> {
       window.open(`mailto:team@workplacemapping.com?subject=${subject}&body=${emailBody}`);
 
       // 2. SECOND: Save to Supabase database for analytics/backup
-      const {data,error: supabaseError}=await supabase
+      const {data, error: supabaseError} = await supabase
         .from('contact_submissions_wm2024')
         .insert([
           {
@@ -90,14 +85,14 @@ const ContactForm=()=> {
         ]);
 
       if (supabaseError) {
-        console.error('Supabase error:',supabaseError);
+        console.error('Supabase error:', supabaseError);
         // Don't throw here - email backup already sent
       }
 
-      // 3. THIRD: Track analytics (optional,don't let this fail the submission)
+      // 3. THIRD: Track analytics (optional, don't let this fail the submission)
       try {
-        if (typeof window !=='undefined' && typeof window.gtag !=='undefined') {
-          window.gtag('event','form_submission',{
+        if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
+          window.gtag('event', 'form_submission', {
             event_category: 'lead_generation',
             event_label: formData.inquiryType || 'general',
             value: 1
@@ -122,14 +117,14 @@ const ContactForm=()=> {
             }
           ]);
       } catch (analyticsError) {
-        console.error('Analytics tracking error:',analyticsError);
+        console.error('Analytics tracking error:', analyticsError);
         // Don't fail the form submission for analytics errors
       }
 
       setIsSubmitted(true);
 
       // Reset form after 5 seconds
-      setTimeout(()=> {
+      setTimeout(() => {
         setIsSubmitted(false);
         setFormData({
           name: '',
@@ -139,14 +134,14 @@ const ContactForm=()=> {
           inquiryType: '',
           message: ''
         });
-      },5000);
+      }, 5000);
 
     } catch (err) {
-      console.error('Error submitting form:',err);
-      
-      // Even if everything else fails,try email backup one more time
-      const fallbackSubject=encodeURIComponent('FALLBACK - Contact Form Submission');
-      const fallbackBody=encodeURIComponent(
+      console.error('Error submitting form:', err);
+
+      // Even if everything else fails, try email backup one more time
+      const fallbackSubject = encodeURIComponent('FALLBACK - Contact Form Submission');
+      const fallbackBody = encodeURIComponent(
         `FALLBACK SUBMISSION (System Error Occurred)\n\n` +
         `Name: ${formData.name}\n` +
         `Email: ${formData.email}\n` +
@@ -158,7 +153,9 @@ const ContactForm=()=> {
       );
 
       window.open(`mailto:team@workplacemapping.com?subject=${fallbackSubject}&body=${fallbackBody}`);
-      setError('There was a system error,but we\'ve opened your email client to send the message directly. Please send the email to ensure we receive your inquiry.');
+
+      setError('There was a system error, but we\'ve opened your email client to send the message directly. Please send the email to ensure we receive your inquiry.');
+
     } finally {
       setIsSubmitting(false);
     }
@@ -167,8 +164,8 @@ const ContactForm=()=> {
   if (isSubmitted) {
     return (
       <motion.div
-        initial={{opacity: 0,scale: 0.9}}
-        animate={{opacity: 1,scale: 1}}
+        initial={{opacity: 0, scale: 0.9}}
+        animate={{opacity: 1, scale: 1}}
         className="bg-white rounded-xl p-8 shadow-lg border border-green-200 text-center"
       >
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -194,8 +191,8 @@ const ContactForm=()=> {
 
   return (
     <motion.div
-      initial={{opacity: 0,y: 20}}
-      whileInView={{opacity: 1,y: 0}}
+      initial={{opacity: 0, y: 20}}
+      whileInView={{opacity: 1, y: 0}}
       transition={{duration: 0.8}}
       viewport={{once: true}}
       className="bg-white rounded-xl p-8 shadow-lg border border-neutral-200"
@@ -234,7 +231,7 @@ const ContactForm=()=> {
               className="w-full pl-10 pr-10 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent appearance-none bg-white"
             >
               <option value="">Select inquiry type...</option>
-              {inquiryTypes.map((type)=> (
+              {inquiryTypes.map((type) => (
                 <option key={type.value} value={type.value}>
                   {type.label}
                 </option>
@@ -367,7 +364,7 @@ const ContactForm=()=> {
 
         <div className="text-center">
           <p className="text-xs text-neutral-500">
-            By submitting this form,you agree to our privacy policy and terms of service.
+            By submitting this form, you agree to our privacy policy and terms of service.
           </p>
           {(formData.inquiryType === 'press' || formData.inquiryType === 'consultation') && (
             <p className="text-xs text-primary-600 mt-2 font-medium">
